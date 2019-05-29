@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.fnzs.tk/"/>
-  <updated>2019-05-29T12:51:38.457Z</updated>
+  <updated>2019-05-29T17:03:12.832Z</updated>
   <id>http://blog.fnzs.tk/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://blog.fnzs.tk/2019/05/29/prepre/"/>
     <id>http://blog.fnzs.tk/2019/05/29/prepre/</id>
     <published>2019-05-29T12:49:01.000Z</published>
-    <updated>2019-05-29T12:51:38.457Z</updated>
+    <updated>2019-05-29T17:03:12.832Z</updated>
     
-    <content type="html"><![CDATA[<p>#初阶 level 1<br>1.注册一个<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>账号<br>2.follow我<a href="https://github.com/lkds" target="_blank" rel="noopener">Link</a><br>3.fork 我的任意一个repo<br>4.clone 我的任意一个repo到本地<br>5.创建一个repo</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="初阶-level-1"><a href="#初阶-level-1" class="headerlink" title="初阶 level 1"></a>初阶 level 1</h1><p><del>1.注册一个<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>账号</del><br><del>2.follow我<a href="https://github.com/lkds" target="_blank" rel="noopener">Link</a></del><br><del>3.fork 我的任意一个repo</del><br><del>4.clone 我的任意一个repo到本地</del><br><del>5.创建一个repo</del></p><h1 id="初阶-level-2"><a href="#初阶-level-2" class="headerlink" title="初阶 level 2"></a>初阶 level 2</h1><ol start="6"><li>找到we重大的fork的repo</li><li>找到算法导论第三版答案并fork</li><li>emmmmm再找个你觉得我没见过的有点意思的新奇玩意？</li><li>找到vue.js的repo 阅读README 找到其中文文档并且根据文档弄清楚Vue.js是什么东西，有什么用</li><li>同理找到React.js的repo，与Vue.js比较，借助第三方工具（百度、知乎等），你更喜欢哪个？</li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;#初阶 level 1&lt;br&gt;1.注册一个&lt;a href=&quot;https://github.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;账号&lt;br&gt;2.follow我&lt;a href=&quot;https://github.com/lkd
+        &lt;h1 id=&quot;初阶-level-1&quot;&gt;&lt;a href=&quot;#初阶-level-1&quot; class=&quot;headerlink&quot; title=&quot;初阶 level 1&quot;&gt;&lt;/a&gt;初阶 level 1&lt;/h1&gt;&lt;p&gt;&lt;del&gt;1.注册一个&lt;a href=&quot;https://github.com
       
     
     </summary>
