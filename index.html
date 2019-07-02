@@ -24,12 +24,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2">
 
 
 
@@ -48,26 +42,21 @@
 
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
 
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
 
 
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
-
-<link rel="stylesheet" href="/css/main.css?v=6.7.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.7.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.7.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.7.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.7.0" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
 
 
 
@@ -80,11 +69,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    version: '6.7.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":true},
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
     fancybox: false,
     fastclick: false,
-    lazyload: true,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
@@ -120,7 +111,8 @@
 
 
 
-
+  
+  
   <link rel="canonical" href="http://blog.fnzs.tk/">
 
 
@@ -182,7 +174,6 @@
   <div class="container sidebar-position-left 
   page-home">
     <div class="headband"></div>
-		<a href="https://github.com/lkds" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -223,7 +214,6 @@
 
     
     
-    
       
     
 
@@ -236,43 +226,8 @@
         
         
           
-          <li class="menu-item menu-item-tags">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-archives">
 
-    
     
     
       
@@ -286,14 +241,6 @@
 
       
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
     </ul>
   
 
@@ -302,27 +249,6 @@
 
   
 
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
   
 </nav>
 
@@ -366,7 +292,7 @@
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="飞鸟">
       <meta itemprop="description" content="伤心桥下春波绿 曾是惊鸿照影来">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -388,13 +314,13 @@
         
 
         <div class="post-meta">
-          <span class="post-time">
 
-            
-            
-            
+          
+          
+          
 
-            
+          
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -407,16 +333,14 @@
               
 
               <time title="创建时间：2019-05-29 20:49:01" itemprop="dateCreated datePublished" datetime="2019-05-29T20:49:01+08:00">2019-05-29</time>
+            </span>
+          
+
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
@@ -424,49 +348,45 @@
                   <span class="post-meta-item-text">更新于</span>
                 
                 <time title="修改时间：2019-05-30 01:03:12" itemprop="dateModified" datetime="2019-05-30T01:03:12+08:00">2019-05-30</time>
-              
-            
-          </span>
-
-          
-
-          
+              </span>
             
           
 
           
+
+          
+            
+            
+          
+
+          
           
 
           
 
+          <br>
           
-            <div class="post-symbolscount">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">0</span>
+            </span>
+          
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
               
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">268</span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
+              <span title="阅读时长">1 分钟</span>
+            </span>
           
 
           
@@ -486,23 +406,16 @@
       
         
           
-            <p>
-              初阶 level 11.注册一个GitHub账号2.follow我Link3.fork 我的任意一个repo4.clone 我的任意一个repo到本地5.创建一个repo
-初阶 level 2
-找到we重大的fork的repo
-找到算法导论第三版答案并fork
-emmmmm再找个你觉得我没见过的有点
-              ...
-            </p>
-          <!--noindex-->
+            <h1 id="初阶-level-1"><a href="#初阶-level-1" class="headerlink" title="初阶 level 1"></a>初阶 level 1</h1><p><del>1.注册一个<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>账号</del><br><del>2.follow我<a href="https://github.com/lkds" target="_blank" rel="noopener">Link</a></del><br><del>3.fork 我的任意一个repo</del><br><del>4.clone 我的任意一个repo到本地</del><br><del>5.创建一个repo</del></p>
+<h1 id="初阶-level-2"><a href="#初阶-level-2" class="headerlink" title="初阶 level 2"></a>初阶 level 2</h1><ol start="6">
+<li>找到we重大的fork的repo</li>
+<li>找到算法导论第三版答案并fork</li>
+<li>emmmmm再找个你觉得我没见过的有点意思的新奇玩意？</li>
+<li>找到vue.js的repo 阅读README 找到其中文文档并且根据文档弄清楚Vue.js是什么东西，有什么用</li>
+<li>同理找到React.js的repo，与Vue.js比较，借助第三方工具（百度、知乎等），你更喜欢哪个？</li>
+</ol>
+
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/29/prepre/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -562,7 +475,7 @@ emmmmm再找个你觉得我没见过的有点
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="飞鸟">
       <meta itemprop="description" content="伤心桥下春波绿 曾是惊鸿照影来">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -584,13 +497,13 @@ emmmmm再找个你觉得我没见过的有点
         
 
         <div class="post-meta">
-          <span class="post-time">
 
-            
-            
-            
+          
+          
+          
 
-            
+          
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -603,19 +516,20 @@ emmmmm再找个你觉得我没见过的有点
               
 
               <time title="创建时间：2019-03-12 20:21:16 / 修改时间：20:32:37" itemprop="dateCreated datePublished" datetime="2019-03-12T20:21:16+08:00">2019-03-12</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
+            </span>
           
 
           
             
+
+            
+          
+
+          
+
+          
+            
+            
           
 
           
@@ -623,34 +537,29 @@ emmmmm再找个你觉得我没见过的有点
 
           
 
+          <br>
           
-            <div class="post-symbolscount">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">0</span>
+            </span>
+          
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
               
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">112</span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
+              <span title="阅读时长">1 分钟</span>
+            </span>
           
 
           
@@ -670,21 +579,10 @@ emmmmm再找个你觉得我没见过的有点
       
         
           
-            <p>
-              春夜之章这本来是一间祠堂，庙堂之下，民宅之上，却也使得小村里的人踏破了门槛。倘若一切顺利的话，也便是个十里八方大家族般的威严。但是因为那场变故，香火渐淡，本来的神圣之处便成了破落的古筑。
-百年之后的面貌，是谁也料想不到的。
+            <h1 id="春夜之章"><a href="#春夜之章" class="headerlink" title="春夜之章"></a>春夜之章</h1><p>这本来是一间祠堂，庙堂之下，民宅之上，却也使得小村里的人踏破了门槛。<br>倘若一切顺利的话，也便是个十里八方大家族般的威严。<br>但是因为那场变故，香火渐淡，本来的神圣之处便成了破落的古筑。</p>
+<p>百年之后的面貌，是谁也料想不到的。</p>
 
-              
-            </p>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/12/教室/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -744,7 +642,7 @@ emmmmm再找个你觉得我没见过的有点
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="飞鸟">
       <meta itemprop="description" content="伤心桥下春波绿 曾是惊鸿照影来">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -766,13 +664,13 @@ emmmmm再找个你觉得我没见过的有点
         
 
         <div class="post-meta">
-          <span class="post-time">
 
-            
-            
-            
+          
+          
+          
 
-            
+          
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -785,20 +683,17 @@ emmmmm再找个你觉得我没见过的有点
               
 
               <time title="创建时间：2019-01-27 17:24:41 / 修改时间：19:47:24" itemprop="dateCreated datePublished" datetime="2019-01-27T17:24:41+08:00">2019-01-27</time>
-            
-
-            
-              
-
-              
-            
-          </span>
+            </span>
+          
 
           
-            <span class="post-category">
             
-              <span class="post-meta-divider">|</span>
+
             
+          
+
+          
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
@@ -816,6 +711,7 @@ emmmmm再找个你觉得我没见过的有点
 
           
             
+            
           
 
           
@@ -823,34 +719,29 @@ emmmmm再找个你觉得我没见过的有点
 
           
 
+          <br>
           
-            <div class="post-symbolscount">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">0</span>
+            </span>
+          
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
               
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">187</span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
+              <span title="阅读时长">1 分钟</span>
+            </span>
           
 
           
@@ -870,26 +761,16 @@ emmmmm再找个你觉得我没见过的有点
       
         
           
-            <p>
-              浮云吹作雪
-月，阴晴圆缺，如你的发梢
+            <h1 id="浮云吹作雪"><a href="#浮云吹作雪" class="headerlink" title="浮云吹作雪"></a>浮云吹作雪</h1><blockquote>
+<p>月，阴晴圆缺，如你的发梢</p>
+</blockquote>
+<p>转眼又是如此的岁末年初，对于年这个从古至今深深烙印在中国人脑海记忆深处的印记，我似乎是丧失了只停留在儿时的敏锐的嗅觉<br>转而觉得难以忘却的，更多的化成了一种时过境迁，命途难测<br>感时伤事的道理，竟是如此的令人萧条<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548591653184&amp;di=7a5fb12124ca3e891fa552178fed8b2f&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20190111%2F4066627e6c364360b5eef23caa369cd0.jpeg" alt="寒冰冻，珠钗掉" title="珠钗掉"></p>
+<h1 id="世味煮成茶"><a href="#世味煮成茶" class="headerlink" title="世味煮成茶"></a>世味煮成茶</h1><blockquote>
+<p>结，年年今夜，悄悄地缠绕</p>
+</blockquote>
+<p>说不清楚，依旧是那样的繁复纠缠地事务。却没了一种完成后的依托，它的经由也是如此的凄冷。<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548599683372&amp;di=29881c1f7cee12899f26b23741695f91&amp;imgtype=0&amp;src=http%3A%2F%2Fpic.rmb.bdstatic.com%2F49cf8854a349611ec5198d5ccb3dc93b.jpeg" alt="花飞尽 草无垠" title="花飞尽"></p>
 
-转眼又是如此的岁末年初，对于年这个从古至今深深烙印在中国人脑海记忆深处的印记，我似乎是丧失了只停留在儿时的敏锐的嗅觉转而觉得难以忘却的，更多的化成了一种时过境迁，命途难测感时伤事的道理，竟是如此的令人萧条
-世味煮成茶
-结，年年今夜，悄悄地缠绕
-
-说不清楚，依旧
-              ...
-            </p>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/01/27/来世聚散/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -949,7 +830,7 @@ emmmmm再找个你觉得我没见过的有点
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="飞鸟">
       <meta itemprop="description" content="伤心桥下春波绿 曾是惊鸿照影来">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -971,13 +852,13 @@ emmmmm再找个你觉得我没见过的有点
         
 
         <div class="post-meta">
-          <span class="post-time">
 
-            
-            
-            
+          
+          
+          
 
-            
+          
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -990,16 +871,14 @@ emmmmm再找个你觉得我没见过的有点
               
 
               <time title="创建时间：2019-01-14 10:45:37" itemprop="dateCreated datePublished" datetime="2019-01-14T10:45:37+08:00">2019-01-14</time>
+            </span>
+          
+
+          
             
 
             
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
+              <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
@@ -1007,15 +886,12 @@ emmmmm再找个你觉得我没见过的有点
                   <span class="post-meta-item-text">更新于</span>
                 
                 <time title="修改时间：2019-01-20 11:46:23" itemprop="dateModified" datetime="2019-01-20T11:46:23+08:00">2019-01-20</time>
-              
+              </span>
             
-          </span>
+          
 
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
@@ -1033,6 +909,7 @@ emmmmm再找个你觉得我没见过的有点
 
           
             
+            
           
 
           
@@ -1040,34 +917,29 @@ emmmmm再找个你觉得我没见过的有点
 
           
 
+          <br>
           
-            <div class="post-symbolscount">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">0</span>
+            </span>
+          
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
               
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">209</span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
+              <span title="阅读时长">1 分钟</span>
+            </span>
           
 
           
@@ -1087,24 +959,16 @@ emmmmm再找个你觉得我没见过的有点
       
         
           
-            <p>
-              
-细雨斜风作晓寒淡烟疏柳媚晴滩入淮清洛渐漫漫雪沫乳花浮午盏蓼茸蒿笋试春盘人间有味是清欢
-
-细雨长廊的尽头是被风拂过的翠绿 少了些许红艳的点缀 但却丝毫没有单调的气氛只要有那些晶莹透亮的山风细雨就满足了
-
-乳花我站立在无尽的白桦林的边缘，漫天的黄沙是我的眼睛蒙上了一层浑浊的水雾。我不知道哪座山背后栖息
-              ...
-            </p>
-          <!--noindex-->
+            <blockquote>
+<p>细雨斜风作晓寒<br>淡烟疏柳媚晴滩<br>入淮清洛渐漫漫<br>雪沫乳花浮午盏<br>蓼茸蒿笋试春盘<br>人间有味是清欢</p>
+</blockquote>
+<h2 id="细雨"><a href="#细雨" class="headerlink" title="细雨"></a>细雨</h2><p>长廊的尽头是被风拂过的翠绿 少了些许红艳的点缀 但却丝毫没有单调的气氛<br>只要有那些晶莹透亮的山风细雨就满足了</p>
+<p><img src="/img/xfxy.jpg" alt="细雨斜风作晓寒" title="细雨斜风作晓寒"></p>
+<h2 id="乳花"><a href="#乳花" class="headerlink" title="乳花"></a>乳花</h2><p>我站立在无尽的白桦林的边缘，漫天的黄沙是我的眼睛蒙上了一层浑浊的水雾。<br>我不知道哪座山背后栖息着来自故乡的啼鸣，我只是走着，走着。</p>
+<p><img src="http://ppe.oss-cn-shenzhen.aliyuncs.com/collections/130/2/thumb.jpg" alt="雪沫乳花浮午盏" title="雪沫乳花浮午盏"></p>
+<h2 id="清欢"><a href="#清欢" class="headerlink" title="清欢"></a>清欢</h2><p>最好是有阳光的 梳着无限细分的发丝的 清圆的脸<br><img src="/img/rjyw.jpg" alt="人间有味是清欢" title="人间有味是清欢"></p>
+<h1 id="徒步亦是逆旅-从来依依不舍"><a href="#徒步亦是逆旅-从来依依不舍" class="headerlink" title="徒步亦是逆旅 从来依依不舍"></a>徒步亦是逆旅 从来依依不舍</h1>
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/01/14/“望春归/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -1164,7 +1028,7 @@ emmmmm再找个你觉得我没见过的有点
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="飞鸟">
       <meta itemprop="description" content="伤心桥下春波绿 曾是惊鸿照影来">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1186,13 +1050,13 @@ emmmmm再找个你觉得我没见过的有点
         
 
         <div class="post-meta">
-          <span class="post-time">
 
-            
-            
-            
+          
+          
+          
 
-            
+          
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -1205,19 +1069,20 @@ emmmmm再找个你觉得我没见过的有点
               
 
               <time title="创建时间：2019-01-12 12:08:41 / 修改时间：12:30:04" itemprop="dateCreated datePublished" datetime="2019-01-12T12:08:41+08:00">2019-01-12</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
+            </span>
           
 
           
             
+
+            
+          
+
+          
+
+          
+            
+            
           
 
           
@@ -1225,34 +1090,29 @@ emmmmm再找个你觉得我没见过的有点
 
           
 
+          <br>
           
-            <div class="post-symbolscount">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">0</span>
+            </span>
+          
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
               
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">121</span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
+              <span title="阅读时长">1 分钟</span>
+            </span>
           
 
           
@@ -1272,26 +1132,15 @@ emmmmm再找个你觉得我没见过的有点
       
         
           
-            <p>
-              别后有天相见时难别亦难
-一年将尽夜 万里未归人
+            <h1 id="别后有天"><a href="#别后有天" class="headerlink" title="别后有天"></a>别后有天</h1><h2 id="相见时难别亦难"><a href="#相见时难别亦难" class="headerlink" title="相见时难别亦难"></a>相见时难别亦难</h2><blockquote>
+<p>一年将尽夜 万里未归人</p>
+</blockquote>
+<p><img src="https://cdn.pixabay.com/photo/2018/11/29/23/32/dawn-3846778__340.jpg" alt="风起于青萍 坠于草莽" title="微茫天地"></p>
+<p><img src="https://cdn.magdeleine.co/wp-content/uploads/2018/12/winter_frost_9-860x573.jpg" alt="清霜最醉" title="寒芒"></p>
+<p>辗转于天地，莫非时间一个回首<br><a href="http://cqu.fnzs.tk" target="_blank" rel="noopener">CQU Market</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function Like(You)</span><br><span class="line">&#123;</span><br><span class="line">	alert(&quot;Just For You!&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
-辗转于天地，莫非时间一个回首CQU Market
-function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
-
-              
-            </p>
-          <!--noindex-->
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/01/12/Another-Day/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -1351,7 +1200,7 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="飞鸟">
       <meta itemprop="description" content="伤心桥下春波绿 曾是惊鸿照影来">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
@@ -1373,13 +1222,13 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
         
 
         <div class="post-meta">
-          <span class="post-time">
 
-            
-            
-            
+          
+          
+          
 
-            
+          
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
@@ -1392,14 +1241,15 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
               
 
               <time title="创建时间：2019-01-12 11:50:01" itemprop="dateCreated datePublished" datetime="2019-01-12T11:50:01+08:00">2019-01-12</time>
+            </span>
+          
+
+          
+
+          
+
+          
             
-
-            
-          </span>
-
-          
-
-          
             
           
 
@@ -1408,34 +1258,29 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
 
           
 
+          <br>
           
-            <div class="post-symbolscount">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
               
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">0</span>
+            </span>
+          
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
               
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">430</span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
+              <span title="阅读时长">1 分钟</span>
+            </span>
           
 
           
@@ -1455,19 +1300,17 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
       
         
           
-            <p>
-              Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-              ...
-            </p>
-          <!--noindex-->
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
           
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/01/12/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
         
       
     </div>
@@ -1528,9 +1371,6 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
   </div>
 
   <aside id="sidebar" class="sidebar">
-    
-      <div id="sidebar-dimmer"></div>
-    
     <div class="sidebar-inner">
 
       
@@ -1541,10 +1381,8 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="飞鸟">
-            
               <p class="site-author-name" itemprop="name">飞鸟</p>
-              <p class="site-description motion-element" itemprop="description">伤心桥下春波绿 曾是惊鸿照影来</p>
+              <div class="site-description motion-element" itemprop="description">伤心桥下春波绿 曾是惊鸿照影来</div>
           </div>
 
           
@@ -1564,7 +1402,11 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
                 
                 
                 <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
                     
                     
                       
@@ -1579,7 +1421,11 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
                 
                 
                 <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
                     
                     
                       
@@ -1610,42 +1456,7 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
           
 
           
-            <div class="links-of-author motion-element">
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/lkds" title="GitHub &rarr; https://github.com/lkds" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://weibo.com/2772481062" title="Weibo &rarr; https://weibo.com/2772481062" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="http://www.zhihu.com/people/liu-hao-86-14-11" title="知乎 &rarr; http://www.zhihu.com/people/liu-hao-86-14-11" rel="noopener" target="_blank"><i class="fa fa-fw fa-send"></i>知乎</a>
-                </span>
-              
-            </div>
+
           
 
           
@@ -1664,16 +1475,10 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
       
 
       
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
 
     </div>
   </aside>
+  
 
 
         
@@ -1682,16 +1487,13 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">飞鸟</span>
 
   
-	
-
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
@@ -1719,38 +1521,12 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.7.0</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
 
 
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-user"></i>
-    </span>
-    <span class="site-uv" title="总访客量">
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
-    <span class="post-meta-divider">|</span>
-  
-
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-eye"></i>
-    </span>
-    <span class="site-pv" title="总访问量">
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
-</div>
-
 
 
 
@@ -1763,6 +1539,11 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
     
@@ -1786,8 +1567,6 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
 
 
 
-  
-
 
 
 
@@ -1808,10 +1587,7 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
 
 
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
 
   
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
@@ -1823,356 +1599,39 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
   
 
 
-  <script src="/js/src/utils.js?v=6.7.0"></script>
+  <script src="/js/utils.js?v=7.2.0"></script>
 
-  <script src="/js/src/motion.js?v=6.7.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/src/schemes/muse.js?v=6.7.0"></script>
+  <script src="/js/motion.js?v=7.2.0"></script>
 
 
 
   
-
   
 
 
-  <script src="/js/src/bootstrap.js?v=6.7.0"></script>
+  <script src="/js/schemes/muse.js?v=7.2.0"></script>
 
 
 
   
 
+  
 
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
 
 
   
 
-  <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
+  
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
+  
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
 
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
+  
 
 
 
@@ -2198,17 +1657,8 @@ function Like(You)&#123;	alert(&quot;Just For You!&quot;);&#125;
   
 
   
-  
-  
-    
-  
-  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-bookmark@latest/bookmark.min.js"></script>
-  <script>
-  
-    bookmark.loadBookmark();
-  
-  </script>
 
+  
 
   
 
