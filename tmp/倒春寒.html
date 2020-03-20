@@ -1,21 +1,125 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>倒春寒 | 影照惊鸿</title><meta name="description" content="倒春寒"><meta name="keywords" content="Python/React Native/ML/诗词"><meta name="author" content="飞鸟"><meta name="copyright" content="飞鸟"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="倒春寒"><meta name="twitter:description" content="倒春寒"><meta name="twitter:image" content="http://blog.fnzs.tk/img/post.jpg"><meta property="og:type" content="website"><meta property="og:title" content="倒春寒"><meta property="og:url" content="http://blog.fnzs.tk/tmp/%E5%80%92%E6%98%A5%E5%AF%92.html"><meta property="og:site_name" content="影照惊鸿"><meta property="og:description" content="倒春寒"><meta property="og:image" content="http://blog.fnzs.tk/img/post.jpg"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
-block content
-  if page.type === 'tags'
-    include page-tags.pug
-  else if page.type === 'link'
-    include flink.pug
-  else if page.type === 'categories'    
-    .category-content
-      .category-lists
-        .category__title= _p('page.category')
-          |  - 
-          span.category__amount= site.categories.length
-        div!= list_categories()
-      if page.comments !== false
-        include includes/comments/index.pug
-  else
-    #page
-      #article-container!= page.content
-      if page.comments !== false
-        include includes/comments/index.pug
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      now = new Date();
+      hour = now.getHours();
+      isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://blog.fnzs.tk/tmp/%E5%80%92%E6%98%A5%E5%AF%92.html"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: false,
+  isFontAwesomeV5: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: false
+}</script><meta name="generator" content="Hexo 4.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">11</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">8</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><div id="body-wrap"><div class="not-index-bg" id="nav" style="background-image: url(/img/index.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">影照惊鸿</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></span></div><div id="page_site-info"><h1 id="site_title">倒春寒</h1></div></div><main class="layout_page" id="content-inner"><div id="page"><div id="article-container"><p><img src="/" alt="本尊" class="lazyload" data-src="https://s2.ax1x.com/2019/04/28/EQOgit.jpg"></p>
+<h2 id="再续前缘"><a href="#再续前缘" class="headerlink" title="再续前缘"></a>再续前缘</h2><pre><code>黄伟业总是这样的人，喜欢探险。
+在深山老林的古树盘根里来一发总是很爽的，他如是说道。
+甚至于他的接近他所说的极致的体验。
+近几日总是破不宁静的，春雷过后，夏日的烈阳总是无情的灼烧着地面，显示出一种死的伟岸。
+
+“雷紧~，开空调。我顶不住了”
+“为什么找我，我这又没有遥控器”
+“我手机没有红外，你手机有，我只有NFC”
+“你找张晗泽，他手机也可以”
+“张晗泽~”
+“你啥时候练车”
+“......”
+“赵紫博，开空调”
+“哦？是吗？”
+“我顶不住了”
+“那我想不到的”
+“遥控器有又不在我这，我很早就没见着了”
+“遥控器好像就在你那，我记得之前你拿了”
+“不会吧”
+“我透！”
+</code></pre><p>一声长啸划破天际，剧烈的敲门声在整个楼道回荡，一向耳聋的黄伟业也瞬时怔住了，只剩下耳机里的谈笑风生。<br>八只眼睛死死的盯着褐黄色的木门，阴风从每个人的背后吹来，伴着嘶嘶地哀嚎。。。</p>
+<h2 id="水管上"><a href="#水管上" class="headerlink" title="水管上"></a>水管上</h2><pre><code>且先不说门口的庞然大物，按照黄伟业的习性，自然是不会理会的，也便是任凭喧嚣与死寂发生着。
+他也是径自的恰着他所谓的瓜
+似乎是无奈于黄伟业的练车般的执着，门口那阴风也消散了，一切重归于寂寞
+夜很快就深了，黄伟业的春天再度降临
+似是闪现般的，他便冲到了厕所
+也不知是掩人耳目还是夜行之物的习性
+恍惚之间便从阳台阴风袭来的地处传来了哗啦啦啦的水声
+他又在冲了
+每个人的脑袋里同时闪过这个邪念
+但每个人都并不觉得有任何不妥
+似乎黄伟业就是这样一个人
+喝水、大便、手冲、练车
+没有任何怀疑的，每个人隔绝了疲念
+入了梦
+狭窄的房间里，只剩下了一张空荡荡的
+被赵紫博所称为
+“大狗窝”的欲望与母亲的乱葬岗
+三个在梦中神游的魂
+和似有似无的门口的张飞般的身影
+在不远处的放着光的小小的簇拥着大便的小屋内
+四次元的圣器在三次元的世界里逐渐展露头角
+
+翌日
+微风裹挟着丝丝细雨从外面吹来
+当我们怀着无限的敬畏推开那扇神曾经降临过的门时
+赫然在目的是
+</code></pre><p><img src="/" alt="惊魂时刻" class="lazyload" data-src="https://s2.ax1x.com/2019/04/29/E33O39.jpg"><br>    那东西虽然处在暗淡之处<br>    随意的耷拉在水管上<br>    却似乎散发着神的气息<br>    还在诉说着昨夜的猛烈的冲击<br>    而那瘦弱的小水管<br>    似乎在整夜的重复着那句<br>    “这谁顶得住啊……”<br><img src="/" alt="惊魂时刻" class="lazyload" data-src="https://s2.ax1x.com/2019/04/29/E33O39.jpg"><br><img src="/" alt="惊魂时刻" class="lazyload" data-src="https://s2.ax1x.com/2019/04/29/E33O39.jpg"><br><img src="/" alt="惊魂时刻" class="lazyload" data-src="https://s2.ax1x.com/2019/04/29/E33O39.jpg"><br><img src="/" alt="惊魂时刻" class="lazyload" data-src="https://s2.ax1x.com/2019/04/29/E33O39.jpg"></p>
+<h2 id="他说她是臭鱼"><a href="#他说她是臭鱼" class="headerlink" title="他说她是臭鱼"></a>他说她是臭鱼</h2><h2 id="频频死亡的岳母"><a href="#频频死亡的岳母" class="headerlink" title="频频死亡的岳母"></a>频频死亡的岳母</h2><h2 id="你们的🐴都没了"><a href="#你们的🐴都没了" class="headerlink" title="你们的🐴都没了"></a>你们的🐴都没了</h2><h2 id="苏文的反击"><a href="#苏文的反击" class="headerlink" title="苏文的反击"></a>苏文的反击</h2><h2 id="性感的驾校教练"><a href="#性感的驾校教练" class="headerlink" title="性感的驾校教练"></a>性感的驾校教练</h2><h2 id="爱上练车"><a href="#爱上练车" class="headerlink" title="爱上练车"></a>爱上练车</h2><h2 id="暴露！嘴臭的喝水狂魔"><a href="#暴露！嘴臭的喝水狂魔" class="headerlink" title="暴露！嘴臭的喝水狂魔"></a>暴露！嘴臭的喝水狂魔</h2><h2 id="苏文的质问"><a href="#苏文的质问" class="headerlink" title="苏文的质问"></a>苏文的质问</h2><h2 id="问候岳母！那没事了"><a href="#问候岳母！那没事了" class="headerlink" title="问候岳母！那没事了"></a>问候岳母！那没事了</h2><h2 id="丈八蛇矛与咆哮"><a href="#丈八蛇矛与咆哮" class="headerlink" title="丈八蛇矛与咆哮"></a>丈八蛇矛与咆哮</h2><h2 id="被铲平的驾校"><a href="#被铲平的驾校" class="headerlink" title="被铲平的驾校"></a>被铲平的驾校</h2><h2 id="妥协？！频频被堵的厕所"><a href="#妥协？！频频被堵的厕所" class="headerlink" title="妥协？！频频被堵的厕所"></a>妥协？！频频被堵的厕所</h2><h2 id="灵活走位"><a href="#灵活走位" class="headerlink" title="灵活走位"></a>灵活走位</h2><h2 id="独自讨水的伟业！口渴的苏文！"><a href="#独自讨水的伟业！口渴的苏文！" class="headerlink" title="独自讨水的伟业！口渴的苏文！"></a>独自讨水的伟业！口渴的苏文！</h2><h2 id="逃往深山"><a href="#逃往深山" class="headerlink" title="逃往深山"></a>逃往深山</h2></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">飞鸟</div><div class="author-info__description">桃李春风 江湖夜雨</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">11</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">8</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">2</div></a></div></div><div class="card-info-bookmark is-center"><a class="bookmark button--primary button--animated" id="bookmark-it" href="javascript:;" title="加入书签" target="_self"><i class="fa fa-bookmark" aria-hidden="true"></i><span>加入书签</span></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/jerryc127" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a><a class="social-icon" href="mailto:xxxxxxxx@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a><a class="social-icon" href="/atom.xml" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fa fa-bullhorn card-announcement-animation" aria-hidden="true"></i><span>公告</span></div><div class="announcement_content">感謝訪問本站，若喜歡請收藏 ^_^</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fa fa-history" aria-hidden="true"></i><span>最新文章</span></div><div class="aside-recent-item"> <div class="aside-recent-post"><a href="/2020/02/13/django-channels/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="django-channels开发日记" alt="django-channels开发日记"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2020/02/13/django-channels/" title="django-channels开发日记">django-channels开发日记</div><time class="aside-post_meta post-meta__date">2020-02-13</time></div></a></div><div class="aside-recent-post"><a href="/2019/11/07/drf/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="drf" alt="drf"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2019/11/07/drf/" title="drf">drf</div><time class="aside-post_meta post-meta__date">2019-11-07</time></div></a></div><div class="aside-recent-post"><a href="/2019/09/23/%E7%A7%91%E5%AD%A6%E5%BC%80%E5%8F%91/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="科学开发" alt="科学开发"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2019/09/23/%E7%A7%91%E5%AD%A6%E5%BC%80%E5%8F%91/" title="科学开发">科学开发</div><time class="aside-post_meta post-meta__date">2019-09-23</time></div></a></div><div class="aside-recent-post"><a href="/2019/08/23/%E6%9C%AA%E6%9D%A5%E4%B9%8B%E4%BD%9C/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="未来之作" alt="未来之作"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2019/08/23/%E6%9C%AA%E6%9D%A5%E4%B9%8B%E4%BD%9C/" title="未来之作">未来之作</div><time class="aside-post_meta post-meta__date">2019-08-23</time></div></a></div><div class="aside-recent-post"><a href="/2019/08/19/%E8%AF%B4%E6%98%8E%E4%B9%A6%E5%AE%87%E5%AE%99/"><div class="aside-post-cover"><img class="aside-post-bg lazyload" data-src="/img/post.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" title="说明书宇宙" alt="说明书宇宙"/></div><div class="aside-post-title"><div class="aside-post_title" href="/2019/08/19/%E8%AF%B4%E6%98%8E%E4%B9%A6%E5%AE%87%E5%AE%99/" title="说明书宇宙">说明书宇宙</div><time class="aside-post_meta post-meta__date">2019-08-19</time></div></a></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fa fa-folder-open" aria-hidden="true"></i><span>分类</span></div><ul class="aside-category-item">       <li class="aside-category-list"><a class="aside-category-list_link" href="/categories/coding/"><span class="aside-category-list_name">coding</span><span class="aside-category-list_length">1</span></a></li><li class="aside-category-list"><a class="aside-category-list_link" href="/categories/%E6%96%87%E8%BE%9E/"><span class="aside-category-list_name">文辞</span><span class="aside-category-list_length">2</span></a></li></ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fa fa-tags" aria-hidden="true"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Passage/" style="font-size: 16px; color: #999">Passage</a> <a href="/tags/coding/" style="font-size: 16px; color: #999">coding</a> <a href="/tags/django-django-channels-%E9%87%87%E5%A3%B0-Python/" style="font-size: 16px; color: #999">django django-channels 采声 Python</a> <a href="/tags/passage/" style="font-size: 16px; color: #999">passage</a> <a href="/tags/tech/" style="font-size: 16px; color: #999">tech</a> <a href="/tags/%E6%98%A5/" style="font-size: 16px; color: #999">春</a> <a href="/tags/%E7%92%A0%E4%B9%8B%E8%AF%B4%E6%98%8E/" style="font-size: 16px; color: #999">璠之说明</a> <a href="/tags/%E8%81%9A-%E6%95%A3/" style="font-size: 16px; color: #999">聚 散</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fa fa-archive" aria-hidden="true"></i><span>归档</span></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/"><span class="archive-list-date">2020年02月</span><span class="archive-list-count">1</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/"><span class="archive-list-date">2019年11月</span><span class="archive-list-count">1</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/"><span class="archive-list-date">2019年09月</span><span class="archive-list-count">1</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/"><span class="archive-list-date">2019年08月</span><span class="archive-list-count">2</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/"><span class="archive-list-date">2019年05月</span><span class="archive-list-count">1</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/"><span class="archive-list-date">2019年03月</span><span class="archive-list-count">1</span></a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/"><span class="archive-list-date">2019年01月</span><span class="archive-list-count">4</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fa fa-line-chart" aria-hidden="true"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">11</div></div><div class="webinfo-item"><div class="webinfo-runtime-name">已运行时间 :</div><div class="webinfo-runtime-count" id="webinfo-runtime-count" start_date="6/7/2018 00:00:00">     </div></div><div class="webinfo-item">      <div class="webinfo-site-uv-name">本站访客数 :</div><div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By 飞鸟</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script></body></html>
