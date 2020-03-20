@@ -1,27 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[django-channels开发日记]]></title>
-    <url>%2F2020%2F02%2F13%2Fdjango-channels%2F</url>
-    <content type="text"><![CDATA[前言原本打算用dwebsocket从头开始撸个简单的通讯框架，写了一点简单的通信功能，感觉还行。但是偶尔去作者的GitHub时发现作者是国人，原以为沟通会比较好，但是查看issue的时候发现很多issue都没有回复就被草草的关闭了。本来以为dwebsocket是个比较成熟的项目，但其实只有200余个star，顿时心生失落。几天后，收到了消息模块写完了的消息，pull下来一看，挺专业。但是框架用的是django-channels。这个django-channels，我也早有耳闻。是django官方推荐的websocket通信框架，但是django的东西几乎都有个特点，有门槛。但是本着不重复造轮子的名言我就开始看看django-channels。 文档之前几天陆陆续续看了一下，还是老样子，摸不着头脑，连如何使用都一时找不到由头。代码借鉴了一个现有的GitHub开源项目onehome，从而导致代码和我们的项目的吻合度不高，阅读有些障碍。于是今天粗略的看了一下django-channels的官方文档，发现主要的内容其实不算多。大致看了之后就着手修改、运行已有的代码。 调试按照网上的教程（CSDN、简书），尝试跑起来，连接。发现在Chanel_layer那里死活连不上，后来发现其实不仅需要这个框架，还需要redis的支持。安装好redis后发现能够连接上，但是后来又不行。调试了一上午，发现是断点的锅，把断点打在了一个await语句上。导致正常运行出错。 鉴权 &amp;&amp; 认证由于项目使用的是JWT的鉴权机制，而channels自带的是session的鉴权，所以需要自己手动实现鉴权。此处参考了EarthChen的Django使用Channels实现websocket]]></content>
+    <title>django-channels开发日记</title>
+    <url>/2020/02/13/django-channels/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>原本打算用dwebsocket从头开始撸个简单的通讯框架，写了一点简单的通信功能，感觉还行。但是偶尔去作者的<a href="https://github.com/duanhongyi/dwebsocket" target="_blank" rel="noopener">GitHub</a>时发现作者是国人，原以为沟通会比较好，但是查看issue的时候发现很多issue都没有回复就被草草的关闭了。本来以为dwebsocket是个比较成熟的项目，但其实只有200余个star，顿时心生失落。<br>几天后，收到了消息模块写完了的消息，pull下来一看，挺专业。但是框架用的是django-channels。<br>这个django-channels，我也早有耳闻。是django官方推荐的websocket通信框架，但是django的东西几乎都有个特点，有门槛。但是本着不重复造轮子的名言我就开始看看django-channels。</p>
+<h1 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h1><p>之前几天陆陆续续看了一下，还是老样子，摸不着头脑，连如何使用都一时找不到由头。代码借鉴了一个现有的GitHub开源项目<a href="https://github.com/michwh/onehome-server" target="_blank" rel="noopener">onehome</a>，从而导致代码和我们的项目的吻合度不高，阅读有些障碍。<br>于是今天粗略的看了一下django-channels的<a href="https://channels.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">官方文档</a>，发现主要的内容其实不算多。大致看了之后就着手修改、运行已有的代码。</p>
+<h1 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h1><p>按照网上的教程（CSDN、简书），尝试跑起来，连接。发现在Chanel_layer那里死活连不上，后来发现其实不仅需要这个框架，还需要<a href="https://github.com/microsoftarchive/redis/releases" target="_blank" rel="noopener">redis</a>的支持。<br>安装好redis后发现能够连接上，但是后来又不行。调试了一上午，发现是断点的锅，把断点打在了一个await语句上。导致正常运行出错。</p>
+<h1 id="鉴权-amp-amp-认证"><a href="#鉴权-amp-amp-认证" class="headerlink" title="鉴权 &amp;&amp; 认证"></a>鉴权 &amp;&amp; 认证</h1><p>由于项目使用的是JWT的鉴权机制，而channels自带的是session的鉴权，所以需要自己手动实现鉴权。此处参考了<a href="https://www.jianshu.com/u/85a919706c15" target="_blank" rel="noopener">EarthChen</a>的<a href="https://www.jianshu.com/p/3de90e457bb4" target="_blank" rel="noopener">Django使用Channels实现websocket</a></p>
+]]></content>
       <tags>
         <tag>django django-channels 采声 Python</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[drf]]></title>
-    <url>%2F2019%2F11%2F07%2Fdrf%2F</url>
-    <content type="text"><![CDATA[DRF重写serializer create(self, validated_data)利用validated_data创建实例返货一个serializer实例 12345678def create(self, validated_data):#重载# print(self.context)print(validated_data)user = super(userSerializers, self).create(validated_data=validated_data)user.set_password(validated_data['password'])user.save()return user update(self, instance, validated_data)setattr(instance,attr,value)修改现有实例 viewSet perform_create(self, serializer)执行创建,serializer为已经实例化的serializer可以通过serializer.save()修改或者添加数据 1234567def perform_create(self,serializer):user = Noneif self.request and hasattr(self.request,'user'):#必须要有request并且request里面有user user = self.request.userelse:#否则不予创建 returnserializer.save(user=user) perform_update(self,instance)同 perform_delete(self,instance)同123456#重写destroy，删除联系的时候likeCount--def perform_destroy(self,instance): post = instance.post post.replyCount-=1 post.save() instance.delete() @action修饰器@action(methods=[‘get’],detail=True)定义一个动作,执行不同的操作,detail指明是否对单个实例 获取列表 123456@action(methods=['get'],detail=False)def getMyPost(self,request): #保证又权限 queryset = self.get_queryset().filter(user=request.user.id) serializer = self.get_serializer(queryset,many=True) return Response(serializer.data) 修改数据 12345678910111213141516# 删除或者添加关注@action(methods=['post'],detail=True) def addOrDeleteFollow(self,request,pk=None): obj = self.get_object() # print(request.data) try: targetUserID = request.data['targetUser']#传id if targetUserID: targetUser = User.objects.get(id=targetUserID) if obj.following.filter(pk = targetUserID): obj.following.remove(targetUser) else: obj.following.add(targetUser) return Response(&#123;'msg':'success'&#125;) except: return Response(&#123;'msg':'fail'&#125;)]]></content>
+    <title>drf</title>
+    <url>/2019/11/07/drf/</url>
+    <content><![CDATA[<h2 id="DRF重写"><a href="#DRF重写" class="headerlink" title="DRF重写"></a>DRF重写</h2><h3 id="serializer"><a href="#serializer" class="headerlink" title="serializer"></a>serializer</h3><ul>
+<li><p>create(self, validated_data)<br>利用validated_data创建实例<br>返货一个serializer实例</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create</span><span class="params">(self, validated_data)</span>:</span></span><br><span class="line"><span class="comment">#重载</span></span><br><span class="line"><span class="comment"># print(self.context)</span></span><br><span class="line">print(validated_data)</span><br><span class="line">user = super(userSerializers, self).create(validated_data=validated_data)</span><br><span class="line">user.set_password(validated_data[<span class="string">'password'</span>])</span><br><span class="line">user.save()</span><br><span class="line"><span class="keyword">return</span> user</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>update(self, instance, validated_data)<br>setattr(instance,attr,value)修改现有实例</p>
+</li>
+</ul>
+<h3 id="viewSet"><a href="#viewSet" class="headerlink" title="viewSet"></a>viewSet</h3><ul>
+<li><p>perform_create(self, serializer)<br>执行创建,serializer为已经实例化的serializer<br>可以通过serializer.save()修改或者添加数据</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">perform_create</span><span class="params">(self,serializer)</span>:</span></span><br><span class="line">user = <span class="keyword">None</span></span><br><span class="line"><span class="keyword">if</span> self.request <span class="keyword">and</span> hasattr(self.request,<span class="string">'user'</span>):<span class="comment">#必须要有request并且request里面有user</span></span><br><span class="line">    user = self.request.user</span><br><span class="line"><span class="keyword">else</span>:<span class="comment">#否则不予创建</span></span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">serializer.save(user=user)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>perform_update(self,instance)同</p>
+</li>
+<li>perform_delete(self,instance)同<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#重写destroy，删除联系的时候likeCount--</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">perform_destroy</span><span class="params">(self,instance)</span>:</span></span><br><span class="line">    post = instance.post</span><br><span class="line">    post.replyCount-=<span class="number">1</span></span><br><span class="line">    post.save()</span><br><span class="line">    instance.delete()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="action修饰器"><a href="#action修饰器" class="headerlink" title="@action修饰器"></a>@action修饰器</h2><p>@action(methods=[‘get’],detail=True)<br>定义一个动作,执行不同的操作,detail指明是否对单个实例</p>
+<ul>
+<li><p>获取列表</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@action(methods=['get'],detail=False)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getMyPost</span><span class="params">(self,request)</span>:</span></span><br><span class="line">    <span class="comment">#保证又权限</span></span><br><span class="line">    queryset = self.get_queryset().filter(user=request.user.id)</span><br><span class="line">    serializer = self.get_serializer(queryset,many=<span class="keyword">True</span>)</span><br><span class="line">    <span class="keyword">return</span> Response(serializer.data)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改数据</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 删除或者添加关注</span></span><br><span class="line"><span class="meta">@action(methods=['post'],detail=True) </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">addOrDeleteFollow</span><span class="params">(self,request,pk=None)</span>:</span></span><br><span class="line">    obj = self.get_object()</span><br><span class="line">    <span class="comment"># print(request.data)</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        targetUserID = request.data[<span class="string">'targetUser'</span>]<span class="comment">#传id</span></span><br><span class="line">        <span class="keyword">if</span> targetUserID:</span><br><span class="line">            targetUser = User.objects.get(id=targetUserID)</span><br><span class="line">            <span class="keyword">if</span> obj.following.filter(pk = targetUserID):</span><br><span class="line">                obj.following.remove(targetUser)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                obj.following.add(targetUser)            </span><br><span class="line">            <span class="keyword">return</span> Response(&#123;<span class="string">'msg'</span>:<span class="string">'success'</span>&#125;)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> Response(&#123;<span class="string">'msg'</span>:<span class="string">'fail'</span>&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
   </entry>
   <entry>
-    <title><![CDATA[科学开发]]></title>
-    <url>%2F2019%2F09%2F23%2F%E7%A7%91%E5%AD%A6%E5%BC%80%E5%8F%91%2F</url>
-    <content type="text"></content>
+    <title>科学开发</title>
+    <url>/2019/09/23/%E7%A7%91%E5%AD%A6%E5%BC%80%E5%8F%91/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title><![CDATA[未来之作]]></title>
-    <url>%2F2019%2F08%2F23%2F%E6%9C%AA%E6%9D%A5%E4%B9%8B%E4%BD%9C%2F</url>
-    <content type="text"><![CDATA[#TODO 发表评论 获取评论 内容请求工具化 登录]]></content>
+    <title>未来之作</title>
+    <url>/2019/08/23/%E6%9C%AA%E6%9D%A5%E4%B9%8B%E4%BD%9C/</url>
+    <content><![CDATA[<p>#TODO</p>
+<ul>
+<li style="list-style: none"><input type="checkbox"> 发表评论</li>
+<li style="list-style: none"><input type="checkbox" checked> 获取评论</li>
+<li style="list-style: none"><input type="checkbox"> 内容请求工具化</li>
+<li style="list-style: none"><input type="checkbox"> 登录</li>
+</ul>
+]]></content>
       <categories>
         <category>coding</category>
       </categories>
@@ -30,33 +65,65 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[说明书宇宙]]></title>
-    <url>%2F2019%2F08%2F19%2F%E8%AF%B4%E6%98%8E%E4%B9%A6%E5%AE%87%E5%AE%99%2F</url>
-    <content type="text"><![CDATA[海威特蓝牙闹钟蓝牙音箱 简介一个闹钟伪装的蓝牙音箱–即是闹钟，也是蓝牙音箱 用途 吵醒自己 吵醒室友 在没人的时候放歌 再有人的时候放歌 在洗澡的时候放歌 在上厕所的时候放歌 （但我不能放歌） 使用说明*]]></content>
+    <title>说明书宇宙</title>
+    <url>/2019/08/19/%E8%AF%B4%E6%98%8E%E4%B9%A6%E5%AE%87%E5%AE%99/</url>
+    <content><![CDATA[<h1 id="海威特蓝牙闹钟蓝牙音箱"><a href="#海威特蓝牙闹钟蓝牙音箱" class="headerlink" title="海威特蓝牙闹钟蓝牙音箱"></a>海威特蓝牙闹钟蓝牙音箱</h1><ul>
+<li>简介<br>一个闹钟伪装的蓝牙音箱–即是闹钟，也是蓝牙音箱</li>
+<li>用途<ul>
+<li>吵醒自己</li>
+<li>吵醒室友</li>
+<li>在没人的时候放歌</li>
+<li>再有人的时候放歌</li>
+<li>在洗澡的时候放歌</li>
+<li>在上厕所的时候放歌</li>
+<li>（但我不能放歌）</li>
+</ul>
+</li>
+<li>使用说明<br>* </li>
+</ul>
+]]></content>
       <tags>
         <tag>璠之说明</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[prepre]]></title>
-    <url>%2F2019%2F05%2F29%2Fprepre%2F</url>
-    <content type="text"><![CDATA[初阶 level 11.注册一个GitHub账号2.follow我Link3.fork 我的任意一个repo4.clone 我的任意一个repo到本地5.创建一个repo 初阶 level 2 找到we重大的fork的repo 找到算法导论第三版答案并fork emmmmm再找个你觉得我没见过的有点意思的新奇玩意？ 找到vue.js的repo 阅读README 找到其中文文档并且根据文档弄清楚Vue.js是什么东西，有什么用 同理找到React.js的repo，与Vue.js比较，借助第三方工具（百度、知乎等），你更喜欢哪个？]]></content>
+    <title>prepre</title>
+    <url>/2019/05/29/prepre/</url>
+    <content><![CDATA[<h1 id="初阶-level-1"><a href="#初阶-level-1" class="headerlink" title="初阶 level 1"></a>初阶 level 1</h1><p><del>1.注册一个<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>账号</del><br><del>2.follow我<a href="https://github.com/lkds" target="_blank" rel="noopener">Link</a></del><br><del>3.fork 我的任意一个repo</del><br><del>4.clone 我的任意一个repo到本地</del><br><del>5.创建一个repo</del></p>
+<h1 id="初阶-level-2"><a href="#初阶-level-2" class="headerlink" title="初阶 level 2"></a>初阶 level 2</h1><ol start="6">
+<li>找到we重大的fork的repo</li>
+<li>找到算法导论第三版答案并fork</li>
+<li>emmmmm再找个你觉得我没见过的有点意思的新奇玩意？</li>
+<li>找到vue.js的repo 阅读README 找到其中文文档并且根据文档弄清楚Vue.js是什么东西，有什么用</li>
+<li>同理找到React.js的repo，与Vue.js比较，借助第三方工具（百度、知乎等），你更喜欢哪个？</li>
+</ol>
+]]></content>
       <tags>
         <tag>tech</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[教室]]></title>
-    <url>%2F2019%2F03%2F12%2F%E6%95%99%E5%AE%A4%2F</url>
-    <content type="text"><![CDATA[春夜之章这本来是一间祠堂，庙堂之下，民宅之上，却也使得小村里的人踏破了门槛。倘若一切顺利的话，也便是个十里八方大家族般的威严。但是因为那场变故，香火渐淡，本来的神圣之处便成了破落的古筑。 百年之后的面貌，是谁也料想不到的。]]></content>
+    <title>教室</title>
+    <url>/2019/03/12/%E6%95%99%E5%AE%A4/</url>
+    <content><![CDATA[<h1 id="春夜之章"><a href="#春夜之章" class="headerlink" title="春夜之章"></a>春夜之章</h1><p>这本来是一间祠堂，庙堂之下，民宅之上，却也使得小村里的人踏破了门槛。<br>倘若一切顺利的话，也便是个十里八方大家族般的威严。<br>但是因为那场变故，香火渐淡，本来的神圣之处便成了破落的古筑。</p>
+<p>百年之后的面貌，是谁也料想不到的。</p>
+]]></content>
       <tags>
         <tag>passage</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[来世聚散]]></title>
-    <url>%2F2019%2F01%2F27%2F%E6%9D%A5%E4%B8%96%E8%81%9A%E6%95%A3%2F</url>
-    <content type="text"><![CDATA[浮云吹作雪 月，阴晴圆缺，如你的发梢 转眼又是如此的岁末年初，对于年这个从古至今深深烙印在中国人脑海记忆深处的印记，我似乎是丧失了只停留在儿时的敏锐的嗅觉转而觉得难以忘却的，更多的化成了一种时过境迁，命途难测感时伤事的道理，竟是如此的令人萧条 世味煮成茶 结，年年今夜，悄悄地缠绕 说不清楚，依旧是那样的繁复纠缠地事务。却没了一种完成后的依托，它的经由也是如此的凄冷。]]></content>
+    <title>来世聚散</title>
+    <url>/2019/01/27/%E6%9D%A5%E4%B8%96%E8%81%9A%E6%95%A3/</url>
+    <content><![CDATA[<h1 id="浮云吹作雪"><a href="#浮云吹作雪" class="headerlink" title="浮云吹作雪"></a>浮云吹作雪</h1><blockquote>
+<p>月，阴晴圆缺，如你的发梢</p>
+</blockquote>
+<p>转眼又是如此的岁末年初，对于年这个从古至今深深烙印在中国人脑海记忆深处的印记，我似乎是丧失了只停留在儿时的敏锐的嗅觉<br>转而觉得难以忘却的，更多的化成了一种时过境迁，命途难测<br>感时伤事的道理，竟是如此的令人萧条<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548591653184&amp;di=7a5fb12124ca3e891fa552178fed8b2f&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20190111%2F4066627e6c364360b5eef23caa369cd0.jpeg" alt="寒冰冻，珠钗掉" title="珠钗掉"></p>
+<h1 id="世味煮成茶"><a href="#世味煮成茶" class="headerlink" title="世味煮成茶"></a>世味煮成茶</h1><blockquote>
+<p>结，年年今夜，悄悄地缠绕</p>
+</blockquote>
+<p>说不清楚，依旧是那样的繁复纠缠地事务。却没了一种完成后的依托，它的经由也是如此的凄冷。<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548599683372&amp;di=29881c1f7cee12899f26b23741695f91&amp;imgtype=0&amp;src=http%3A%2F%2Fpic.rmb.bdstatic.com%2F49cf8854a349611ec5198d5ccb3dc93b.jpeg" alt="花飞尽 草无垠" title="花飞尽"></p>
+]]></content>
       <categories>
         <category>文辞</category>
       </categories>
@@ -65,9 +132,17 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[望春归]]></title>
-    <url>%2F2019%2F01%2F14%2F%E2%80%9C%E6%9C%9B%E6%98%A5%E5%BD%92%2F</url>
-    <content type="text"><![CDATA[细雨斜风作晓寒淡烟疏柳媚晴滩入淮清洛渐漫漫雪沫乳花浮午盏蓼茸蒿笋试春盘人间有味是清欢 细雨长廊的尽头是被风拂过的翠绿 少了些许红艳的点缀 但却丝毫没有单调的气氛只要有那些晶莹透亮的山风细雨就满足了 乳花我站立在无尽的白桦林的边缘，漫天的黄沙是我的眼睛蒙上了一层浑浊的水雾。我不知道哪座山背后栖息着来自故乡的啼鸣，我只是走着，走着。 清欢最好是有阳光的 梳着无限细分的发丝的 清圆的脸 徒步亦是逆旅 从来依依不舍]]></content>
+    <title>望春归</title>
+    <url>/2019/01/14/%E2%80%9C%E6%9C%9B%E6%98%A5%E5%BD%92/</url>
+    <content><![CDATA[<blockquote>
+<p>细雨斜风作晓寒<br>淡烟疏柳媚晴滩<br>入淮清洛渐漫漫<br>雪沫乳花浮午盏<br>蓼茸蒿笋试春盘<br>人间有味是清欢</p>
+</blockquote>
+<h2 id="细雨"><a href="#细雨" class="headerlink" title="细雨"></a>细雨</h2><p>长廊的尽头是被风拂过的翠绿 少了些许红艳的点缀 但却丝毫没有单调的气氛<br>只要有那些晶莹透亮的山风细雨就满足了</p>
+<p><img src="/img/xfxy.jpg" alt="细雨斜风作晓寒" title="细雨斜风作晓寒"></p>
+<h2 id="乳花"><a href="#乳花" class="headerlink" title="乳花"></a>乳花</h2><p>我站立在无尽的白桦林的边缘，漫天的黄沙是我的眼睛蒙上了一层浑浊的水雾。<br>我不知道哪座山背后栖息着来自故乡的啼鸣，我只是走着，走着。</p>
+<p><img src="http://ppe.oss-cn-shenzhen.aliyuncs.com/collections/130/2/thumb.jpg" alt="雪沫乳花浮午盏" title="雪沫乳花浮午盏"></p>
+<h2 id="清欢"><a href="#清欢" class="headerlink" title="清欢"></a>清欢</h2><p>最好是有阳光的 梳着无限细分的发丝的 清圆的脸<br><img src="/img/rjyw.jpg" alt="人间有味是清欢" title="人间有味是清欢"></p>
+<h1 id="徒步亦是逆旅-从来依依不舍"><a href="#徒步亦是逆旅-从来依依不舍" class="headerlink" title="徒步亦是逆旅 从来依依不舍"></a>徒步亦是逆旅 从来依依不舍</h1>]]></content>
       <categories>
         <category>文辞</category>
       </categories>
@@ -76,16 +151,32 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Another Day]]></title>
-    <url>%2F2019%2F01%2F12%2FAnother-Day%2F</url>
-    <content type="text"><![CDATA[别后有天相见时难别亦难 一年将尽夜 万里未归人 辗转于天地，莫非时间一个回首CQU Market 1234function Like(You)&#123; alert(&quot;Just For You!&quot;);&#125;]]></content>
+    <title>Another Day</title>
+    <url>/2019/01/12/Another-Day/</url>
+    <content><![CDATA[<h1 id="别后有天"><a href="#别后有天" class="headerlink" title="别后有天"></a>别后有天</h1><h2 id="相见时难别亦难"><a href="#相见时难别亦难" class="headerlink" title="相见时难别亦难"></a>相见时难别亦难</h2><blockquote>
+<p>一年将尽夜 万里未归人</p>
+</blockquote>
+<p><img src="https://cdn.pixabay.com/photo/2018/11/29/23/32/dawn-3846778__340.jpg" alt="风起于青萍 坠于草莽" title="微茫天地"></p>
+<p><img src="https://cdn.magdeleine.co/wp-content/uploads/2018/12/winter_frost_9-860x573.jpg" alt="清霜最醉" title="寒芒"></p>
+<p>辗转于天地，莫非时间一个回首<br><a href="http://cqu.fnzs.tk" target="_blank" rel="noopener">CQU Market</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function Like(You)</span><br><span class="line">&#123;</span><br><span class="line">	alert(&quot;Just For You!&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
       <tags>
         <tag>Passage</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F01%2F12%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title>Hello World</title>
+    <url>/2019/01/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
 </search>
