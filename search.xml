@@ -23,21 +23,15 @@
 </li>
 </ul>
 <h3 id="viewSet"><a href="#viewSet" class="headerlink" title="viewSet"></a>viewSet</h3><ul>
-<li><p>perform_create(self, serializer)<br>执行创建,serializer为已经实例化的serializer<br>可以通过serializer.save()修改或者添加数据</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">perform_create</span><span class="params">(self,serializer)</span>:</span></span><br><span class="line">user = <span class="keyword">None</span></span><br><span class="line"><span class="keyword">if</span> self.request <span class="keyword">and</span> hasattr(self.request,<span class="string">'user'</span>):<span class="comment">#必须要有request并且request里面有user</span></span><br><span class="line">    user = self.request.user</span><br><span class="line"><span class="keyword">else</span>:<span class="comment">#否则不予创建</span></span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">serializer.save(user=user)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>perform_update(self,instance)同</p>
-</li>
+<li>perform_create(self, serializer)<br>执行创建,serializer为已经实例化的serializer<br>可以通过serializer.save()修改或者添加数据<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">perform_create</span><span class="params">(self,serializer)</span>:</span></span><br><span class="line">user = <span class="keyword">None</span></span><br><span class="line"><span class="keyword">if</span> self.request <span class="keyword">and</span> hasattr(self.request,<span class="string">'user'</span>):<span class="comment">#必须要有request并且request里面有user</span></span><br><span class="line">    user = self.request.user</span><br><span class="line"><span class="keyword">else</span>:<span class="comment">#否则不予创建</span></span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">serializer.save(user=user)</span><br></pre></td></tr></table></figure></li>
+<li>perform_update(self,instance)同</li>
 <li>perform_delete(self,instance)同<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#重写destroy，删除联系的时候likeCount--</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">perform_destroy</span><span class="params">(self,instance)</span>:</span></span><br><span class="line">    post = instance.post</span><br><span class="line">    post.replyCount-=<span class="number">1</span></span><br><span class="line">    post.save()</span><br><span class="line">    instance.delete()</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="action修饰器"><a href="#action修饰器" class="headerlink" title="@action修饰器"></a>@action修饰器</h2></li>
 </ul>
-<h2 id="action修饰器"><a href="#action修饰器" class="headerlink" title="@action修饰器"></a>@action修饰器</h2><p>@action(methods=[‘get’],detail=True)<br>定义一个动作,执行不同的操作,detail指明是否对单个实例</p>
+<p>@action(methods=[‘get’],detail=True)<br>定义一个动作,执行不同的操作,detail指明是否对单个实例</p>
 <ul>
-<li><p>获取列表</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@action(methods=['get'],detail=False)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getMyPost</span><span class="params">(self,request)</span>:</span></span><br><span class="line">    <span class="comment">#保证又权限</span></span><br><span class="line">    queryset = self.get_queryset().filter(user=request.user.id)</span><br><span class="line">    serializer = self.get_serializer(queryset,many=<span class="keyword">True</span>)</span><br><span class="line">    <span class="keyword">return</span> Response(serializer.data)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改数据</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 删除或者添加关注</span></span><br><span class="line"><span class="meta">@action(methods=['post'],detail=True) </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">addOrDeleteFollow</span><span class="params">(self,request,pk=None)</span>:</span></span><br><span class="line">    obj = self.get_object()</span><br><span class="line">    <span class="comment"># print(request.data)</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        targetUserID = request.data[<span class="string">'targetUser'</span>]<span class="comment">#传id</span></span><br><span class="line">        <span class="keyword">if</span> targetUserID:</span><br><span class="line">            targetUser = User.objects.get(id=targetUserID)</span><br><span class="line">            <span class="keyword">if</span> obj.following.filter(pk = targetUserID):</span><br><span class="line">                obj.following.remove(targetUser)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                obj.following.add(targetUser)            </span><br><span class="line">            <span class="keyword">return</span> Response(&#123;<span class="string">'msg'</span>:<span class="string">'success'</span>&#125;)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> Response(&#123;<span class="string">'msg'</span>:<span class="string">'fail'</span>&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>获取列表<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@action(methods=['get'],detail=False)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getMyPost</span><span class="params">(self,request)</span>:</span></span><br><span class="line">    <span class="comment">#保证又权限</span></span><br><span class="line">    queryset = self.get_queryset().filter(user=request.user.id)</span><br><span class="line">    serializer = self.get_serializer(queryset,many=<span class="keyword">True</span>)</span><br><span class="line">    <span class="keyword">return</span> Response(serializer.data)</span><br></pre></td></tr></table></figure></li>
+<li>修改数据<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 删除或者添加关注</span></span><br><span class="line"><span class="meta">@action(methods=['post'],detail=True) </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">addOrDeleteFollow</span><span class="params">(self,request,pk=None)</span>:</span></span><br><span class="line">    obj = self.get_object()</span><br><span class="line">    <span class="comment"># print(request.data)</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        targetUserID = request.data[<span class="string">'targetUser'</span>]<span class="comment">#传id</span></span><br><span class="line">        <span class="keyword">if</span> targetUserID:</span><br><span class="line">            targetUser = User.objects.get(id=targetUserID)</span><br><span class="line">            <span class="keyword">if</span> obj.following.filter(pk = targetUserID):</span><br><span class="line">                obj.following.remove(targetUser)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                obj.following.add(targetUser)            </span><br><span class="line">            <span class="keyword">return</span> Response(&#123;<span class="string">'msg'</span>:<span class="string">'success'</span>&#125;)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> Response(&#123;<span class="string">'msg'</span>:<span class="string">'fail'</span>&#125;)</span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
   </entry>
@@ -51,10 +45,10 @@
     <url>/2019/08/23/%E6%9C%AA%E6%9D%A5%E4%B9%8B%E4%BD%9C/</url>
     <content><![CDATA[<p>#TODO</p>
 <ul>
-<li style="list-style: none"><input type="checkbox"> 发表评论</li>
-<li style="list-style: none"><input type="checkbox" checked> 获取评论</li>
-<li style="list-style: none"><input type="checkbox"> 内容请求工具化</li>
-<li style="list-style: none"><input type="checkbox"> 登录</li>
+<li style="list-style: none"><input type="checkbox"></input> 发表评论</li>
+<li style="list-style: none"><input type="checkbox" checked></input> 获取评论</li>
+<li style="list-style: none"><input type="checkbox"></input> 内容请求工具化</li>
+<li style="list-style: none"><input type="checkbox"></input> 登录</li>
 </ul>
 ]]></content>
       <categories>
@@ -118,11 +112,11 @@
     <content><![CDATA[<h1 id="浮云吹作雪"><a href="#浮云吹作雪" class="headerlink" title="浮云吹作雪"></a>浮云吹作雪</h1><blockquote>
 <p>月，阴晴圆缺，如你的发梢</p>
 </blockquote>
-<p>转眼又是如此的岁末年初，对于年这个从古至今深深烙印在中国人脑海记忆深处的印记，我似乎是丧失了只停留在儿时的敏锐的嗅觉<br>转而觉得难以忘却的，更多的化成了一种时过境迁，命途难测<br>感时伤事的道理，竟是如此的令人萧条<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548591653184&amp;di=7a5fb12124ca3e891fa552178fed8b2f&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20190111%2F4066627e6c364360b5eef23caa369cd0.jpeg" alt="寒冰冻，珠钗掉" title="珠钗掉"></p>
+<p>转眼又是如此的岁末年初，对于年这个从古至今深深烙印在中国人脑海记忆深处的印记，我似乎是丧失了只停留在儿时的敏锐的嗅觉<br>转而觉得难以忘却的，更多的化成了一种时过境迁，命途难测<br>感时伤事的道理，竟是如此的令人萧条<br><img src="/" alt="寒冰冻，珠钗掉" title="珠钗掉" class="lazyload" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548591653184&amp;di=7a5fb12124ca3e891fa552178fed8b2f&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20190111%2F4066627e6c364360b5eef23caa369cd0.jpeg"></p>
 <h1 id="世味煮成茶"><a href="#世味煮成茶" class="headerlink" title="世味煮成茶"></a>世味煮成茶</h1><blockquote>
 <p>结，年年今夜，悄悄地缠绕</p>
 </blockquote>
-<p>说不清楚，依旧是那样的繁复纠缠地事务。却没了一种完成后的依托，它的经由也是如此的凄冷。<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548599683372&amp;di=29881c1f7cee12899f26b23741695f91&amp;imgtype=0&amp;src=http%3A%2F%2Fpic.rmb.bdstatic.com%2F49cf8854a349611ec5198d5ccb3dc93b.jpeg" alt="花飞尽 草无垠" title="花飞尽"></p>
+<p>说不清楚，依旧是那样的繁复纠缠地事务。却没了一种完成后的依托，它的经由也是如此的凄冷。<br><img src="/" alt="花飞尽 草无垠" title="花飞尽" class="lazyload" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548599683372&amp;di=29881c1f7cee12899f26b23741695f91&amp;imgtype=0&amp;src=http%3A%2F%2Fpic.rmb.bdstatic.com%2F49cf8854a349611ec5198d5ccb3dc93b.jpeg"></p>
 ]]></content>
       <categories>
         <category>文辞</category>
@@ -138,10 +132,10 @@
 <p>细雨斜风作晓寒<br>淡烟疏柳媚晴滩<br>入淮清洛渐漫漫<br>雪沫乳花浮午盏<br>蓼茸蒿笋试春盘<br>人间有味是清欢</p>
 </blockquote>
 <h2 id="细雨"><a href="#细雨" class="headerlink" title="细雨"></a>细雨</h2><p>长廊的尽头是被风拂过的翠绿 少了些许红艳的点缀 但却丝毫没有单调的气氛<br>只要有那些晶莹透亮的山风细雨就满足了</p>
-<p><img src="/img/xfxy.jpg" alt="细雨斜风作晓寒" title="细雨斜风作晓寒"></p>
+<p><img src="/" alt="细雨斜风作晓寒" title="细雨斜风作晓寒" class="lazyload" data-src="/img/xfxy.jpg"></p>
 <h2 id="乳花"><a href="#乳花" class="headerlink" title="乳花"></a>乳花</h2><p>我站立在无尽的白桦林的边缘，漫天的黄沙是我的眼睛蒙上了一层浑浊的水雾。<br>我不知道哪座山背后栖息着来自故乡的啼鸣，我只是走着，走着。</p>
-<p><img src="http://ppe.oss-cn-shenzhen.aliyuncs.com/collections/130/2/thumb.jpg" alt="雪沫乳花浮午盏" title="雪沫乳花浮午盏"></p>
-<h2 id="清欢"><a href="#清欢" class="headerlink" title="清欢"></a>清欢</h2><p>最好是有阳光的 梳着无限细分的发丝的 清圆的脸<br><img src="/img/rjyw.jpg" alt="人间有味是清欢" title="人间有味是清欢"></p>
+<p><img src="/" alt="雪沫乳花浮午盏" title="雪沫乳花浮午盏" class="lazyload" data-src="http://ppe.oss-cn-shenzhen.aliyuncs.com/collections/130/2/thumb.jpg"></p>
+<h2 id="清欢"><a href="#清欢" class="headerlink" title="清欢"></a>清欢</h2><p>最好是有阳光的 梳着无限细分的发丝的 清圆的脸<br><img src="/" alt="人间有味是清欢" title="人间有味是清欢" class="lazyload" data-src="/img/rjyw.jpg"></p>
 <h1 id="徒步亦是逆旅-从来依依不舍"><a href="#徒步亦是逆旅-从来依依不舍" class="headerlink" title="徒步亦是逆旅 从来依依不舍"></a>徒步亦是逆旅 从来依依不舍</h1>]]></content>
       <categories>
         <category>文辞</category>
@@ -156,8 +150,8 @@
     <content><![CDATA[<h1 id="别后有天"><a href="#别后有天" class="headerlink" title="别后有天"></a>别后有天</h1><h2 id="相见时难别亦难"><a href="#相见时难别亦难" class="headerlink" title="相见时难别亦难"></a>相见时难别亦难</h2><blockquote>
 <p>一年将尽夜 万里未归人</p>
 </blockquote>
-<p><img src="https://cdn.pixabay.com/photo/2018/11/29/23/32/dawn-3846778__340.jpg" alt="风起于青萍 坠于草莽" title="微茫天地"></p>
-<p><img src="https://cdn.magdeleine.co/wp-content/uploads/2018/12/winter_frost_9-860x573.jpg" alt="清霜最醉" title="寒芒"></p>
+<p><img src="/" alt="风起于青萍 坠于草莽" title="微茫天地" class="lazyload" data-src="https://cdn.pixabay.com/photo/2018/11/29/23/32/dawn-3846778__340.jpg"></p>
+<p><img src="/" alt="清霜最醉" title="寒芒" class="lazyload" data-src="https://cdn.magdeleine.co/wp-content/uploads/2018/12/winter_frost_9-860x573.jpg"></p>
 <p>辗转于天地，莫非时间一个回首<br><a href="http://cqu.fnzs.tk" target="_blank" rel="noopener">CQU Market</a></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function Like(You)</span><br><span class="line">&#123;</span><br><span class="line">	alert(&quot;Just For You!&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
