@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[django-channels开发日记]]></title>
+    <url>%2F2020%2F02%2F13%2Fdjango-channels%2F</url>
+    <content type="text"><![CDATA[前言原本打算用dwebsocket从头开始撸个简单的通讯框架，写了一点简单的通信功能，感觉还行。但是偶尔去作者的GitHub时发现作者是国人，原以为沟通会比较好，但是查看issue的时候发现很多issue都没有回复就被草草的关闭了。本来以为dwebsocket是个比较成熟的项目，但其实只有200余个star，顿时心生失落。几天后，收到了消息模块写完了的消息，pull下来一看，挺专业。但是框架用的是django-channels。这个django-channels，我也早有耳闻。是django官方推荐的websocket通信框架，但是django的东西几乎都有个特点，有门槛。但是本着不重复造轮子的名言我就开始看看django-channels。 文档之前几天陆陆续续看了一下，还是老样子，摸不着头脑，连如何使用都一时找不到由头。代码借鉴了一个现有的GitHub开源项目onehome，从而导致代码和我们的项目的吻合度不高，阅读有些障碍。于是今天粗略的看了一下django-channels的官方文档，发现主要的内容其实不算多。大致看了之后就着手修改、运行已有的代码。 调试按照网上的教程（CSDN、简书），尝试跑起来，连接。发现在Chanel_layer那里死活连不上，后来发现其实不仅需要这个框架，还需要redis的支持。安装好redis后发现能够连接上，但是后来又不行。调试了一上午，发现是断点的锅，把断点打在了一个await语句上。导致正常运行出错。 鉴权 &amp;&amp; 认证由于项目使用的是JWT的鉴权机制，而channels自带的是session的鉴权，所以需要自己手动实现鉴权。此处参考了EarthChen的Django使用Channels实现websocket]]></content>
+      <tags>
+        <tag>django django-channels 采声 Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[drf]]></title>
+    <url>%2F2019%2F11%2F07%2Fdrf%2F</url>
+    <content type="text"><![CDATA[DRF重写serializer create(self, validated_data)利用validated_data创建实例返货一个serializer实例 12345678def create(self, validated_data):#重载# print(self.context)print(validated_data)user = super(userSerializers, self).create(validated_data=validated_data)user.set_password(validated_data['password'])user.save()return user update(self, instance, validated_data)setattr(instance,attr,value)修改现有实例 viewSet perform_create(self, serializer)执行创建,serializer为已经实例化的serializer可以通过serializer.save()修改或者添加数据 1234567def perform_create(self,serializer):user = Noneif self.request and hasattr(self.request,'user'):#必须要有request并且request里面有user user = self.request.userelse:#否则不予创建 returnserializer.save(user=user) perform_update(self,instance)同 perform_delete(self,instance)同123456#重写destroy，删除联系的时候likeCount--def perform_destroy(self,instance): post = instance.post post.replyCount-=1 post.save() instance.delete() @action修饰器@action(methods=[‘get’],detail=True)定义一个动作,执行不同的操作,detail指明是否对单个实例 获取列表 123456@action(methods=['get'],detail=False)def getMyPost(self,request): #保证又权限 queryset = self.get_queryset().filter(user=request.user.id) serializer = self.get_serializer(queryset,many=True) return Response(serializer.data) 修改数据 12345678910111213141516# 删除或者添加关注@action(methods=['post'],detail=True) def addOrDeleteFollow(self,request,pk=None): obj = self.get_object() # print(request.data) try: targetUserID = request.data['targetUser']#传id if targetUserID: targetUser = User.objects.get(id=targetUserID) if obj.following.filter(pk = targetUserID): obj.following.remove(targetUser) else: obj.following.add(targetUser) return Response(&#123;'msg':'success'&#125;) except: return Response(&#123;'msg':'fail'&#125;)]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[科学开发]]></title>
+    <url>%2F2019%2F09%2F23%2F%E7%A7%91%E5%AD%A6%E5%BC%80%E5%8F%91%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[未来之作]]></title>
+    <url>%2F2019%2F08%2F23%2F%E6%9C%AA%E6%9D%A5%E4%B9%8B%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[#TODO 发表评论 获取评论 内容请求工具化 登录]]></content>
+      <categories>
+        <category>coding</category>
+      </categories>
+      <tags>
+        <tag>coding</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[说明书宇宙]]></title>
     <url>%2F2019%2F08%2F19%2F%E8%AF%B4%E6%98%8E%E4%B9%A6%E5%AE%87%E5%AE%99%2F</url>
-    <content type="text"><![CDATA[海威特蓝牙闹钟蓝牙音箱* 简介]]></content>
+    <content type="text"><![CDATA[海威特蓝牙闹钟蓝牙音箱 简介一个闹钟伪装的蓝牙音箱–即是闹钟，也是蓝牙音箱 用途 吵醒自己 吵醒室友 在没人的时候放歌 再有人的时候放歌 在洗澡的时候放歌 在上厕所的时候放歌 （但我不能放歌） 使用说明*]]></content>
       <tags>
         <tag>璠之说明</tag>
       </tags>
