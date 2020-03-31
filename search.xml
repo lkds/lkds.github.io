@@ -151,7 +151,10 @@
 <h1 id="鉴权-amp-amp-认证"><a href="#鉴权-amp-amp-认证" class="headerlink" title="鉴权 &amp;&amp; 认证"></a>鉴权 &amp;&amp; 认证</h1><p>由于项目使用的是JWT的鉴权机制，而channels自带的是session的鉴权，所以需要自己手动实现鉴权。此处参考了<a href="https://www.jianshu.com/u/85a919706c15" target="_blank" rel="noopener">EarthChen</a>的<a href="https://www.jianshu.com/p/3de90e457bb4" target="_blank" rel="noopener">Django使用Channels实现websocket</a></p>
 ]]></content>
       <tags>
-        <tag>django django-channels 采声 Python</tag>
+        <tag>django</tag>
+        <tag>django-channels</tag>
+        <tag>采声</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -176,6 +179,9 @@
 <li>修改数据<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 删除或者添加关注</span></span><br><span class="line"><span class="meta">@action(methods=['post'],detail=True) </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">addOrDeleteFollow</span><span class="params">(self,request,pk=None)</span>:</span></span><br><span class="line">    obj = self.get_object()</span><br><span class="line">    <span class="comment"># print(request.data)</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        targetUserID = request.data[<span class="string">'targetUser'</span>]<span class="comment">#传id</span></span><br><span class="line">        <span class="keyword">if</span> targetUserID:</span><br><span class="line">            targetUser = User.objects.get(id=targetUserID)</span><br><span class="line">            <span class="keyword">if</span> obj.following.filter(pk = targetUserID):</span><br><span class="line">                obj.following.remove(targetUser)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                obj.following.add(targetUser)            </span><br><span class="line">            <span class="keyword">return</span> Response(&#123;<span class="string">'msg'</span>:<span class="string">'success'</span>&#125;)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> Response(&#123;<span class="string">'msg'</span>:<span class="string">'fail'</span>&#125;)</span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
+      <tags>
+        <tag>django-rest-framework</tag>
+      </tags>
   </entry>
   <entry>
     <title>未来之作</title>
@@ -193,22 +199,6 @@
       </categories>
       <tags>
         <tag>coding</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>prepre</title>
-    <url>/2019/05/29/prepre/</url>
-    <content><![CDATA[<h1 id="初阶-level-1"><a href="#初阶-level-1" class="headerlink" title="初阶 level 1"></a>初阶 level 1</h1><p><del>1.注册一个<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>账号</del><br><del>2.follow我<a href="https://github.com/lkds" target="_blank" rel="noopener">Link</a></del><br><del>3.fork 我的任意一个repo</del><br><del>4.clone 我的任意一个repo到本地</del><br><del>5.创建一个repo</del></p>
-<h1 id="初阶-level-2"><a href="#初阶-level-2" class="headerlink" title="初阶 level 2"></a>初阶 level 2</h1><ol start="6">
-<li>找到we重大的fork的repo</li>
-<li>找到算法导论第三版答案并fork</li>
-<li>emmmmm再找个你觉得我没见过的有点意思的新奇玩意？</li>
-<li>找到vue.js的repo 阅读README 找到其中文文档并且根据文档弄清楚Vue.js是什么东西，有什么用</li>
-<li>同理找到React.js的repo，与Vue.js比较，借助第三方工具（百度、知乎等），你更喜欢哪个？</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>tech</tag>
       </tags>
   </entry>
   <entry>

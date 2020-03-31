@@ -52,7 +52,7 @@
     <link href="http://blog.fnzs.tk/2020/02/13/django-channels/"/>
     <id>http://blog.fnzs.tk/2020/02/13/django-channels/</id>
     <published>2020-02-13T04:04:04.000Z</published>
-    <updated>2020-02-13T09:04:45.818Z</updated>
+    <updated>2020-03-31T15:18:33.216Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>原本打算用dwebsocket从头开始撸个简单的通讯框架，写了一点简单的通信功能，感觉还行。但是偶尔去作者的<a href="https://github.com/duanhongyi/dwebsocket" target="_blank" rel="noopener">GitHub</a>时发现作者是国人，原以为沟通会比较好，但是查看issue的时候发现很多issue都没有回复就被草草的关闭了。本来以为dwebsocket是个比较成熟的项目，但其实只有200余个star，顿时心生失落。<br>几天后，收到了消息模块写完了的消息，pull下来一看，挺专业。但是框架用的是django-channels。<br>这个django-channels，我也早有耳闻。是django官方推荐的websocket通信框架，但是django的东西几乎都有个特点，有门槛。但是本着不重复造轮子的名言我就开始看看django-channels。</p><h1 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h1><p>之前几天陆陆续续看了一下，还是老样子，摸不着头脑，连如何使用都一时找不到由头。代码借鉴了一个现有的GitHub开源项目<a href="https://github.com/michwh/onehome-server" target="_blank" rel="noopener">onehome</a>，从而导致代码和我们的项目的吻合度不高，阅读有些障碍。<br>于是今天粗略的看了一下django-channels的<a href="https://channels.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">官方文档</a>，发现主要的内容其实不算多。大致看了之后就着手修改、运行已有的代码。</p><h1 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h1><p>按照网上的教程（CSDN、简书），尝试跑起来，连接。发现在Chanel_layer那里死活连不上，后来发现其实不仅需要这个框架，还需要<a href="https://github.com/microsoftarchive/redis/releases" target="_blank" rel="noopener">redis</a>的支持。<br>安装好redis后发现能够连接上，但是后来又不行。调试了一上午，发现是断点的锅，把断点打在了一个await语句上。导致正常运行出错。</p><h1 id="鉴权-amp-amp-认证"><a href="#鉴权-amp-amp-认证" class="headerlink" title="鉴权 &amp;&amp; 认证"></a>鉴权 &amp;&amp; 认证</h1><p>由于项目使用的是JWT的鉴权机制，而channels自带的是session的鉴权，所以需要自己手动实现鉴权。此处参考了<a href="https://www.jianshu.com/u/85a919706c15" target="_blank" rel="noopener">EarthChen</a>的<a href="https://www.jianshu.com/p/3de90e457bb4" target="_blank" rel="noopener">Django使用Channels实现websocket</a></p>]]></content>
     
@@ -66,7 +66,13 @@
     </summary>
     
     
-      <category term="django django-channels 采声 Python" scheme="http://blog.fnzs.tk/tags/django-django-channels-%E9%87%87%E5%A3%B0-Python/"/>
+      <category term="django" scheme="http://blog.fnzs.tk/tags/django/"/>
+    
+      <category term="django-channels" scheme="http://blog.fnzs.tk/tags/django-channels/"/>
+    
+      <category term="采声" scheme="http://blog.fnzs.tk/tags/%E9%87%87%E5%A3%B0/"/>
+    
+      <category term="Python" scheme="http://blog.fnzs.tk/tags/Python/"/>
     
   </entry>
   
@@ -75,7 +81,7 @@
     <link href="http://blog.fnzs.tk/2019/11/07/drf/"/>
     <id>http://blog.fnzs.tk/2019/11/07/drf/</id>
     <published>2019-11-07T13:16:14.000Z</published>
-    <updated>2019-11-07T13:32:50.695Z</updated>
+    <updated>2020-03-31T15:19:04.268Z</updated>
     
     <content type="html"><![CDATA[<h2 id="DRF重写"><a href="#DRF重写" class="headerlink" title="DRF重写"></a>DRF重写</h2><h3 id="serializer"><a href="#serializer" class="headerlink" title="serializer"></a>serializer</h3><ul><li><p>create(self, validated_data)<br>利用validated_data创建实例<br>返货一个serializer实例</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create</span><span class="params">(self, validated_data)</span>:</span></span><br><span class="line"><span class="comment">#重载</span></span><br><span class="line"><span class="comment"># print(self.context)</span></span><br><span class="line">print(validated_data)</span><br><span class="line">user = super(userSerializers, self).create(validated_data=validated_data)</span><br><span class="line">user.set_password(validated_data[<span class="string">'password'</span>])</span><br><span class="line">user.save()</span><br><span class="line"><span class="keyword">return</span> user</span><br></pre></td></tr></table></figure></li><li><p>update(self, instance, validated_data)<br>setattr(instance,attr,value)修改现有实例</p></li></ul><h3 id="viewSet"><a href="#viewSet" class="headerlink" title="viewSet"></a>viewSet</h3><ul><li>perform_create(self, serializer)<br>执行创建,serializer为已经实例化的serializer<br>可以通过serializer.save()修改或者添加数据<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">perform_create</span><span class="params">(self,serializer)</span>:</span></span><br><span class="line">user = <span class="keyword">None</span></span><br><span class="line"><span class="keyword">if</span> self.request <span class="keyword">and</span> hasattr(self.request,<span class="string">'user'</span>):<span class="comment">#必须要有request并且request里面有user</span></span><br><span class="line">    user = self.request.user</span><br><span class="line"><span class="keyword">else</span>:<span class="comment">#否则不予创建</span></span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">serializer.save(user=user)</span><br></pre></td></tr></table></figure></li><li>perform_update(self,instance)同</li><li>perform_delete(self,instance)同<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#重写destroy，删除联系的时候likeCount--</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">perform_destroy</span><span class="params">(self,instance)</span>:</span></span><br><span class="line">    post = instance.post</span><br><span class="line">    post.replyCount-=<span class="number">1</span></span><br><span class="line">    post.save()</span><br><span class="line">    instance.delete()</span><br></pre></td></tr></table></figure><h2 id="action修饰器"><a href="#action修饰器" class="headerlink" title="@action修饰器"></a>@action修饰器</h2></li></ul><p>@action(methods=[‘get’],detail=True)<br>定义一个动作,执行不同的操作,detail指明是否对单个实例</p><ul><li>获取列表<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">@action(methods=['get'],detail=False)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getMyPost</span><span class="params">(self,request)</span>:</span></span><br><span class="line">    <span class="comment">#保证又权限</span></span><br><span class="line">    queryset = self.get_queryset().filter(user=request.user.id)</span><br><span class="line">    serializer = self.get_serializer(queryset,many=<span class="keyword">True</span>)</span><br><span class="line">    <span class="keyword">return</span> Response(serializer.data)</span><br></pre></td></tr></table></figure></li><li>修改数据<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 删除或者添加关注</span></span><br><span class="line"><span class="meta">@action(methods=['post'],detail=True) </span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">addOrDeleteFollow</span><span class="params">(self,request,pk=None)</span>:</span></span><br><span class="line">    obj = self.get_object()</span><br><span class="line">    <span class="comment"># print(request.data)</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        targetUserID = request.data[<span class="string">'targetUser'</span>]<span class="comment">#传id</span></span><br><span class="line">        <span class="keyword">if</span> targetUserID:</span><br><span class="line">            targetUser = User.objects.get(id=targetUserID)</span><br><span class="line">            <span class="keyword">if</span> obj.following.filter(pk = targetUserID):</span><br><span class="line">                obj.following.remove(targetUser)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                obj.following.add(targetUser)            </span><br><span class="line">            <span class="keyword">return</span> Response(&#123;<span class="string">'msg'</span>:<span class="string">'success'</span>&#125;)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> Response(&#123;<span class="string">'msg'</span>:<span class="string">'fail'</span>&#125;)</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
@@ -88,6 +94,8 @@
     
     </summary>
     
+    
+      <category term="django-rest-framework" scheme="http://blog.fnzs.tk/tags/django-rest-framework/"/>
     
   </entry>
   
@@ -116,29 +124,6 @@
     
     
       <category term="coding" scheme="http://blog.fnzs.tk/tags/coding/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>prepre</title>
-    <link href="http://blog.fnzs.tk/2019/05/29/prepre/"/>
-    <id>http://blog.fnzs.tk/2019/05/29/prepre/</id>
-    <published>2019-05-29T12:49:01.000Z</published>
-    <updated>2019-05-29T17:03:12.832Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="初阶-level-1"><a href="#初阶-level-1" class="headerlink" title="初阶 level 1"></a>初阶 level 1</h1><p><del>1.注册一个<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>账号</del><br><del>2.follow我<a href="https://github.com/lkds" target="_blank" rel="noopener">Link</a></del><br><del>3.fork 我的任意一个repo</del><br><del>4.clone 我的任意一个repo到本地</del><br><del>5.创建一个repo</del></p><h1 id="初阶-level-2"><a href="#初阶-level-2" class="headerlink" title="初阶 level 2"></a>初阶 level 2</h1><ol start="6"><li>找到we重大的fork的repo</li><li>找到算法导论第三版答案并fork</li><li>emmmmm再找个你觉得我没见过的有点意思的新奇玩意？</li><li>找到vue.js的repo 阅读README 找到其中文文档并且根据文档弄清楚Vue.js是什么东西，有什么用</li><li>同理找到React.js的repo，与Vue.js比较，借助第三方工具（百度、知乎等），你更喜欢哪个？</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;初阶-level-1&quot;&gt;&lt;a href=&quot;#初阶-level-1&quot; class=&quot;headerlink&quot; title=&quot;初阶 level 1&quot;&gt;&lt;/a&gt;初阶 level 1&lt;/h1&gt;&lt;p&gt;&lt;del&gt;1.注册一个&lt;a href=&quot;https://github.com
-      
-    
-    </summary>
-    
-    
-      <category term="tech" scheme="http://blog.fnzs.tk/tags/tech/"/>
     
   </entry>
   
