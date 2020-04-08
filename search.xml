@@ -7,18 +7,24 @@
 <li>FCFS:先来先服务</li>
 <li>SSTF：最短寻道时间优先</li>
 <li>SCAN：（电梯调度）扫描算法</li>
-<li>CSCAN：循环扫描算法<h3 id="进程线程区别"><a href="#进程线程区别" class="headerlink" title="进程线程区别"></a>进程线程区别</h3></li>
+<li>CSCAN：循环扫描算法</li>
+</ul>
+<h3 id="进程线程区别"><a href="#进程线程区别" class="headerlink" title="进程线程区别"></a>进程线程区别</h3><ul>
 <li>进程是操作进行资源分配的基本单位</li>
 <li>线程是任务调度和执行的基本单位</li>
 <li>线程有自己的运行栈和程序计数器PC</li>
-<li>线程使用资源来自其所属进程<h3 id="URL到页面渲染"><a href="#URL到页面渲染" class="headerlink" title="URL到页面渲染"></a>URL到页面渲染</h3></li>
+<li>线程使用资源来自其所属进程</li>
+</ul>
+<h3 id="URL到页面渲染"><a href="#URL到页面渲染" class="headerlink" title="URL到页面渲染"></a>URL到页面渲染</h3><ul>
 <li>DNS</li>
 <li>TCP</li>
 <li>HTTP请求</li>
 <li>服务器响应</li>
 <li>浏览器解析</li>
 <li>获取静态资源</li>
-<li>渲染页面<h3 id="DNS查找-解析的过程"><a href="#DNS查找-解析的过程" class="headerlink" title="DNS查找/解析的过程"></a>DNS查找/解析的过程</h3></li>
+<li>渲染页面</li>
+</ul>
+<h3 id="DNS查找-解析的过程"><a href="#DNS查找-解析的过程" class="headerlink" title="DNS查找/解析的过程"></a>DNS查找/解析的过程</h3><ul>
 <li>浏览器缓存</li>
 <li>系统缓存</li>
 <li>路由器缓存</li>
@@ -28,7 +34,9 @@
 </ul>
 <h3 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a><strong>虚函数</strong></h3><ul>
 <li>指向子类的父类指针调用子类中与父类同名的方法</li>
-<li>实现运行时多态<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3></li>
+<li>实现运行时多态</li>
+</ul>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><ul>
 <li>对于不同对象接收相同消息时产生不同的动作</li>
 <li><strong>编译时多态</strong><ul>
 <li>函数和运算符的重载</li>
@@ -47,19 +55,29 @@
 </ul>
 </li>
 <li><strong>缺点</strong><ul>
-<li>不能使用子类的成员<h3 id="重载-amp-重写"><a href="#重载-amp-重写" class="headerlink" title="重载&amp;重写"></a>重载&amp;重写</h3></li>
+<li>不能使用子类的成员</li>
 </ul>
 </li>
+</ul>
+<h3 id="重载-amp-重写"><a href="#重载-amp-重写" class="headerlink" title="重载&amp;重写"></a>重载&amp;重写</h3><ul>
 <li>重载：是指允许存在多个同名函数，而这些函数的参数表不同（或许参数个数不同，或许参数类型不同，或许两者都不同）。</li>
-<li>重写：是指子类重新定义父类虚函数的方法。<h3 id="多继承-amp-菱形继承"><a href="#多继承-amp-菱形继承" class="headerlink" title="多继承&amp;菱形继承"></a>多继承&amp;菱形继承</h3></li>
+<li>重写：是指子类重新定义父类虚函数的方法。</li>
+</ul>
+<h3 id="多继承-amp-菱形继承"><a href="#多继承-amp-菱形继承" class="headerlink" title="多继承&amp;菱形继承"></a>多继承&amp;菱形继承</h3><ul>
 <li>可能出现菱形继承问题，可以虚继承</li>
 </ul>
 <h3 id="ping协议-ICMP，控制报文协议"><a href="#ping协议-ICMP，控制报文协议" class="headerlink" title="ping协议/ICMP，控制报文协议"></a>ping协议/ICMP，控制报文协议</h3><ul>
-<li>ICMP，TCP/IP协议簇的一个子协议，工作在网络层<h3 id="SYN泛洪攻击处理办法"><a href="#SYN泛洪攻击处理办法" class="headerlink" title="SYN泛洪攻击处理办法"></a>SYN泛洪攻击处理办法</h3></li>
+<li>ICMP，TCP/IP协议簇的一个子协议，工作在网络层</li>
+</ul>
+<h3 id="SYN泛洪攻击处理办法"><a href="#SYN泛洪攻击处理办法" class="headerlink" title="SYN泛洪攻击处理办法"></a>SYN泛洪攻击处理办法</h3><ul>
 <li>攻击者利用TCP三次握手的缺陷，大量发生SYN包但是不响应第二次握手，导致服务器产生大量的挂起连接，消耗资源甚至宕机</li>
 <li>可以挂起的连接的超时时间，尽快释放</li>
-<li>对来自同一IP的短时大量连接拒绝响应<h3 id="ARP协议-地址解析协议"><a href="#ARP协议-地址解析协议" class="headerlink" title="ARP协议/地址解析协议"></a>ARP协议/地址解析协议</h3></li>
-<li>以太网中，把IP映射到MAC<h3 id="HTTPS以及连接过程"><a href="#HTTPS以及连接过程" class="headerlink" title="HTTPS以及连接过程"></a>HTTPS以及连接过程</h3></li>
+<li>对来自同一IP的短时大量连接拒绝响应</li>
+</ul>
+<h3 id="ARP协议-地址解析协议"><a href="#ARP协议-地址解析协议" class="headerlink" title="ARP协议/地址解析协议"></a>ARP协议/地址解析协议</h3><ul>
+<li>以太网中，把IP映射到MAC</li>
+</ul>
+<h3 id="HTTPS以及连接过程"><a href="#HTTPS以及连接过程" class="headerlink" title="HTTPS以及连接过程"></a>HTTPS以及连接过程</h3><ul>
 <li>发送请求</li>
 <li>返回证书</li>
 <li>验证证书生成对称密钥并用服务端公钥加密</li>
@@ -81,8 +99,7 @@
 <li>FIN-WAIT-2：收到了ACK</li>
 <li>LAST-ACK：发出了FIN</li>
 <li>TIME-WAIT：收到了SYN，等待2MSL</li>
-<li>CLOSING：同时收到SYN<!-- * CLOSED -->
-</li>
+<li>CLOSING：同时收到SYN</li>
 </ul>
 </li>
 </ul>
@@ -95,9 +112,11 @@
 <li>权重优先</li>
 <li>轮转调度</li>
 <li>多级反馈队列<ul>
-<li>Q1-&gt;Q2-&gt;Q3<h3 id="Redis数据类型-zset等底层"><a href="#Redis数据类型-zset等底层" class="headerlink" title="Redis数据类型/zset等底层"></a>Redis数据类型/zset等底层</h3></li>
+<li>Q1-&gt;Q2-&gt;Q3</li>
 </ul>
 </li>
+</ul>
+<h3 id="Redis数据类型-zset等底层"><a href="#Redis数据类型-zset等底层" class="headerlink" title="Redis数据类型/zset等底层"></a>Redis数据类型/zset等底层</h3><ul>
 <li>Redis为什么高效<ul>
 <li>完全基于内存</li>
 <li>数据结构简单</li>
@@ -119,17 +138,21 @@
 </li>
 <li>Zset<ul>
 <li>有序集合</li>
-<li>排好序<h3 id="B树-B-树-B-树"><a href="#B树-B-树-B-树" class="headerlink" title="B树 B+树 B* 树"></a><strong>B树 B+树 B* 树</strong></h3></li>
+<li>排好序</li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<h3 id="B树-B-树-B-树"><a href="#B树-B-树-B-树" class="headerlink" title="B树 B+树 B* 树"></a><strong>B树 B+树 B* 树</strong></h3><ul>
 <li>B树<ul>
 <li>平衡多路查找树</li>
 </ul>
 </li>
 <li>B+树</li>
-<li>B*树<h3 id="linux常用命令"><a href="#linux常用命令" class="headerlink" title="linux常用命令"></a>linux常用命令</h3></li>
+<li>B*树</li>
+</ul>
+<h3 id="linux常用命令"><a href="#linux常用命令" class="headerlink" title="linux常用命令"></a>linux常用命令</h3><ul>
 <li>cd</li>
 <li>ls<ul>
 <li>ls -l 显示详细信息</li>
@@ -153,7 +176,9 @@
 <li>df</li>
 <li><strong>grep</strong></li>
 <li>ps/process status</li>
-<li>top<h3 id="mySQL的引擎极其特点"><a href="#mySQL的引擎极其特点" class="headerlink" title="mySQL的引擎极其特点"></a>mySQL的引擎极其特点</h3></li>
+<li>top</li>
+</ul>
+<h3 id="mySQL的引擎极其特点"><a href="#mySQL的引擎极其特点" class="headerlink" title="mySQL的引擎极其特点"></a>mySQL的引擎极其特点</h3><ul>
 <li>innoDB<ul>
 <li>支持事务<ul>
 <li>ACID</li>
@@ -168,17 +193,21 @@
 </li>
 <li>MyISAM<ul>
 <li>支持表锁</li>
-<li>查询快<h3 id="乐观锁和悲观锁"><a href="#乐观锁和悲观锁" class="headerlink" title="乐观锁和悲观锁"></a><strong>乐观锁和悲观锁</strong></h3></li>
+<li>查询快</li>
 </ul>
 </li>
+</ul>
+<h3 id="乐观锁和悲观锁"><a href="#乐观锁和悲观锁" class="headerlink" title="乐观锁和悲观锁"></a><strong>乐观锁和悲观锁</strong></h3><ul>
 <li>乐观锁<ul>
 <li>每次读取都认为不会被修改，但是更新的时候会检查，适用于读</li>
 </ul>
 </li>
 <li>悲观锁<ul>
-<li>每次读都认为会被修改，适用于写<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a><strong>排序</strong></h3></li>
+<li>每次读都认为会被修改，适用于写</li>
 </ul>
 </li>
+</ul>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a><strong>排序</strong></h3><ul>
 <li>选择</li>
 <li>冒泡</li>
 <li>插入</li>
@@ -186,12 +215,15 @@
 <li>堆</li>
 <li>快速</li>
 <li>基数</li>
-<li>。。。<h3 id="Python中的is和-的区别"><a href="#Python中的is和-的区别" class="headerlink" title="Python中的is和==的区别"></a>Python中的is和==的区别</h3></li>
+</ul>
+<h3 id="Python中的is和-的区别"><a href="#Python中的is和-的区别" class="headerlink" title="Python中的is和==的区别"></a>Python中的is和==的区别</h3><ul>
 <li>is用id判断，本质是一个东西</li>
-<li>==用value判断，可以不是一个东西<h3 id="Python装饰器"><a href="#Python装饰器" class="headerlink" title="Python装饰器"></a>Python装饰器</h3></li>
+<li>==用value判断，可以不是一个东西</li>
 </ul>
 <h3 id="操作系统内存管理"><a href="#操作系统内存管理" class="headerlink" title="操作系统内存管理"></a>操作系统内存管理</h3><ul>
-<li><a href="https://blog.csdn.net/qq_29677867/article/details/91038642" target="_blank" rel="noopener">https://blog.csdn.net/qq_29677867/article/details/91038642</a><h3 id="mySQL的索引"><a href="#mySQL的索引" class="headerlink" title="mySQL的索引"></a>mySQL的索引</h3></li>
+<li><a href="https://blog.csdn.net/qq_29677867/article/details/91038642" target="_blank" rel="noopener">https://blog.csdn.net/qq_29677867/article/details/91038642</a></li>
+</ul>
+<h3 id="mySQL的索引"><a href="#mySQL的索引" class="headerlink" title="mySQL的索引"></a>mySQL的索引</h3><ul>
 <li>数据结构可视化<a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html" target="_blank" rel="noopener">https://www.cs.usfca.edu/~galles/visualization/Algorithms.html</a></li>
 <li>B+</li>
 </ul>
@@ -217,11 +249,13 @@
 </ul>
 </li>
 <li>检测&amp;接触<ul>
-<li>杀死进程<h3 id="黑盒白盒测试"><a href="#黑盒白盒测试" class="headerlink" title="黑盒白盒测试"></a>黑盒白盒测试</h3></li>
+<li>杀死进程</li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<h3 id="黑盒白盒测试"><a href="#黑盒白盒测试" class="headerlink" title="黑盒白盒测试"></a>黑盒白盒测试</h3><ul>
 <li>黑盒<ul>
 <li>已知产品功能设计规格，可以测试功能</li>
 <li>优点：能够站在用户角度思考测试</li>
@@ -277,13 +311,15 @@
 </li>
 <li>Socket<ul>
 <li>应用层和传输层之间</li>
-<li>封装了TCP/IP的操作<h3 id="闭包是啥"><a href="#闭包是啥" class="headerlink" title="闭包是啥"></a>闭包是啥</h3></li>
+<li>封装了TCP/IP的操作</li>
 </ul>
 </li>
+</ul>
+<h3 id="闭包是啥"><a href="#闭包是啥" class="headerlink" title="闭包是啥"></a>闭包是啥</h3><ul>
 <li>词法作用域</li>
 <li>函数变量</li>
 </ul>
-<h3 id="OSI七层-5层-TCP四层各层功能"><a href="#OSI七层-5层-TCP四层各层功能" class="headerlink" title="OSI七层/5层/TCP四层各层功能"></a>OSI七层/5层/TCP四层各层功能</h3><p><img src="/" alt="参考" class="lazyload" data-src="https://img-blog.csdn.net/20180803151958318?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rhb3RvbmduaW5n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></p>
+<h3 id="OSI七层-5层-TCP四层各层功能"><a href="#OSI七层-5层-TCP四层各层功能" class="headerlink" title="OSI七层/5层/TCP四层各层功能"></a>OSI七层/5层/TCP四层各层功能</h3><p><img src="/" alt="参考" class="lazyload" data-src="https://tva3.sinaimg.cn/large/a540b426gy1gdmqafzuxkj20id0butd4.jpg"></p>
 <ul>
 <li>主机间的传输<ul>
 <li>应用层    主机之间建立连接</li>
@@ -299,13 +335,15 @@
 </ul>
 </li>
 </ul>
-<h3 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h3><h3 id="元组和列表的区别-Python"><a href="#元组和列表的区别-Python" class="headerlink" title="元组和列表的区别-Python"></a>元组和列表的区别-Python</h3><ul>
+<h3 id="元组和列表的区别-Python"><a href="#元组和列表的区别-Python" class="headerlink" title="元组和列表的区别-Python"></a>元组和列表的区别-Python</h3><ul>
 <li>元组不可变</li>
 <li>列表可变<ul>
 <li>算法：找出两个链表的第一个公共节点</li>
-<li>算法：最长公共子序列<h3 id="set-list-map"><a href="#set-list-map" class="headerlink" title="set list map"></a>set list map</h3></li>
+<li>算法：最长公共子序列</li>
 </ul>
 </li>
+</ul>
+<h3 id="set-list-map"><a href="#set-list-map" class="headerlink" title="set list map"></a>set list map</h3><ul>
 <li><strong>List</strong><ul>
 <li>允许重复</li>
 <li>允许多个null</li>
@@ -324,9 +362,11 @@
 <li>一个接口</li>
 <li>键值</li>
 <li>随意个null值和一个null键</li>
-<li>HashMap LinkedHashMap HashTable TreeMap<h3 id="http请求-get-post"><a href="#http请求-get-post" class="headerlink" title="http请求/get/post"></a>http请求/get/post</h3></li>
+<li>HashMap LinkedHashMap HashTable TreeMap</li>
 </ul>
 </li>
+</ul>
+<h3 id="http请求-get-post"><a href="#http请求-get-post" class="headerlink" title="http请求/get/post"></a>http请求/get/post</h3><ul>
 <li>GET<ul>
 <li>读取数据</li>
 <li>无副作用</li>
@@ -335,13 +375,13 @@
 <li>POPST<ul>
 <li>提交数据</li>
 <li>有副作用</li>
-<li>leetcode 200</li>
-<li>算法：随机链表复制<h3 id="缓存雪崩-击穿-穿透"><a href="#缓存雪崩-击穿-穿透" class="headerlink" title="缓存雪崩/击穿/穿透"></a>缓存雪崩/击穿/穿透</h3></li>
+</ul>
+</li>
+</ul>
+<h3 id="缓存雪崩-击穿-穿透"><a href="#缓存雪崩-击穿-穿透" class="headerlink" title="缓存雪崩/击穿/穿透"></a>缓存雪崩/击穿/穿透</h3><ul>
 <li>雪崩-集体失效</li>
 <li>击穿-缓存不存在，但是数据库存在，大量访问数据库导致数据库压力过大</li>
 <li>穿透-缓存和数据库都不存在，通常为恶意攻击</li>
-</ul>
-</li>
 </ul>
 <h3 id="线程共享进程的什么"><a href="#线程共享进程的什么" class="headerlink" title="线程共享进程的什么"></a>线程共享进程的什么</h3><ul>
 <li>共享<ul>
@@ -353,7 +393,11 @@
 <li>独享<ul>
 <li>堆栈</li>
 <li>程序计数器</li>
-<li>寄存器<h3 id="中断，CPU在中断时会干嘛"><a href="#中断，CPU在中断时会干嘛" class="headerlink" title="中断，CPU在中断时会干嘛"></a>中断，CPU在中断时会干嘛</h3></li>
+<li>寄存器</li>
+</ul>
+</li>
+</ul>
+<h3 id="中断，CPU在中断时会干嘛"><a href="#中断，CPU在中断时会干嘛" class="headerlink" title="中断，CPU在中断时会干嘛"></a>中断，CPU在中断时会干嘛</h3><ul>
 <li>当前指令结束</li>
 <li>判断终端类型</li>
 <li>保存现场</li>
@@ -363,17 +407,22 @@
 <li>跳转回来</li>
 <li>恢复系现场</li>
 </ul>
-</li>
-</ul>
 <h3 id="TCP流量控制"><a href="#TCP流量控制" class="headerlink" title="TCP流量控制"></a>TCP流量控制</h3><ul>
 <li>滑动窗口</li>
 <li>发送窗口，接收窗口，拥塞窗口的关系</li>
 <li>拥塞窗口的变化规律</li>
 <li>算法：找出和为k的所有数对</li>
 <li>算法：单链表按照中间左右的顺序输出 12345-》32415</li>
-<li>版本号？<h3 id="websocket"><a href="#websocket" class="headerlink" title="websocket"></a>websocket</h3></li>
-<li>应用层<h3 id="Redis性能为什么这么高"><a href="#Redis性能为什么这么高" class="headerlink" title="Redis性能为什么这么高"></a>Redis性能为什么这么高</h3><h3 id="事务-特性"><a href="#事务-特性" class="headerlink" title="事务/特性"></a>事务/特性</h3></li>
-<li>ACID<h3 id="select-poll-epoll"><a href="#select-poll-epoll" class="headerlink" title="select poll epoll"></a>select poll epoll</h3></li>
+<li>版本号？</li>
+</ul>
+<h3 id="websocket"><a href="#websocket" class="headerlink" title="websocket"></a>websocket</h3><ul>
+<li>应用层</li>
+</ul>
+<h3 id="Redis性能为什么这么高"><a href="#Redis性能为什么这么高" class="headerlink" title="Redis性能为什么这么高"></a>Redis性能为什么这么高</h3><p><a href="https://lkds.github.io/2020/03/31/%E9%9D%A2%E8%AF%95%E5%B8%B8%E8%80%83%E7%82%B9/#Redis%E4%B8%BA%E4%BB%80%E4%B9%88%E9%AB%98%E6%95%88" target="_blank" rel="noopener">Redis 为什么高效</a></p>
+<h3 id="事务-特性"><a href="#事务-特性" class="headerlink" title="事务/特性"></a>事务/特性</h3><ul>
+<li>ACID</li>
+</ul>
+<h3 id="select-poll-epoll"><a href="#select-poll-epoll" class="headerlink" title="select poll epoll"></a>select poll epoll</h3><ul>
 <li>select<ul>
 <li>轮询</li>
 <li>线性</li>
@@ -397,9 +446,11 @@
 <li>算法：10亿个数字取最小的100个/最大堆/大顶堆</li>
 <li>HTTP为什么时TCP<ul>
 <li>主要还是因为TCP面向连接，可靠</li>
-<li>但是也可以使用UDP之类的，因为HTTP是应用层协议，TCP是传输层，只要能达到目的，用什么协议都是可以的<h3 id="虚拟地址和物理地址"><a href="#虚拟地址和物理地址" class="headerlink" title="虚拟地址和物理地址"></a>虚拟地址和物理地址</h3></li>
+<li>但是也可以使用UDP之类的，因为HTTP是应用层协议，TCP是传输层，只要能达到目的，用什么协议都是可以的</li>
 </ul>
 </li>
+</ul>
+<h3 id="虚拟地址和物理地址"><a href="#虚拟地址和物理地址" class="headerlink" title="虚拟地址和物理地址"></a>虚拟地址和物理地址</h3><ul>
 <li>虚拟地址将所有的存储介质（硬盘和内存）统一规划，实现存储空间的扩容</li>
 <li>物理地址为内存地址</li>
 <li>虚拟地址到物理地址的映射<ul>
