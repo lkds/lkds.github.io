@@ -55,9 +55,9 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>C/C++</tag>
         <tag>leetcode</tag>
         <tag>数组</tag>
+        <tag>C/C++</tag>
         <tag>周赛</tag>
       </tags>
   </entry>
@@ -110,9 +110,9 @@
         <category>算法</category>
       </categories>
       <tags>
-        <tag>C/C++</tag>
         <tag>leetcode</tag>
         <tag>数组</tag>
+        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -1318,8 +1318,8 @@ path[]:path[i]表示从v0到i之间的最短路径的前驱结点，可以还原
         <category>复习</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
         <tag>算法</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -1977,8 +1977,8 @@ path[]:path[i]表示从v0到i之间的最短路径的前驱结点，可以还原
         <category>面试</category>
       </categories>
       <tags>
-        <tag>数据结构</tag>
         <tag>算法</tag>
+        <tag>数据结构</tag>
         <tag>计算机网络</tag>
         <tag>操作系统</tag>
       </tags>
