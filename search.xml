@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Another Day</title>
+    <url>/2019/01/12/Another-Day/</url>
+    <content><![CDATA[<h1 id="别后有天"><a class="markdownIt-Anchor" href="#别后有天"></a> 别后有天</h1>
+<h2 id="相见时难别亦难"><a class="markdownIt-Anchor" href="#相见时难别亦难"></a> 相见时难别亦难</h2>
+<blockquote>
+<p>一年将尽夜 万里未归人</p>
+</blockquote>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="风起于青萍 坠于草莽" title="微茫天地" / class="lazyload" data-src="https://cdn.pixabay.com/photo/2018/11/29/23/32/dawn-3846778__340.jpg"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="清霜最醉" title="寒芒" / class="lazyload" data-src="https://cdn.magdeleine.co/wp-content/uploads/2018/12/winter_frost_9-860x573.jpg"></p>
+<p>辗转于天地，莫非时间一个回首<br />
+<a href="http://cqu.fnzs.tk">CQU Market</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function Like(You)</span><br><span class="line">&#123;</span><br><span class="line">	alert(&quot;Just For You!&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Passage</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2020暑期实习面经--腾讯</title>
     <url>/2020/04/28/2020%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E7%BB%8F-%E8%85%BE%E8%AE%AF/</url>
     <content><![CDATA[<h3 id="写在前面"><a class="markdownIt-Anchor" href="#写在前面"></a> 写在前面</h3>
@@ -313,7 +331,7 @@
 <li>
 <p>计算机如何表示浮点数<br />
 <a href="https://blog.csdn.net/jvandc/article/details/81176294">浮点数在计算机中的表示</a><br />
-<img src="/" alt="IEEE754" / class="lazyload" data-src="https://img-blog.csdn.net/20180723223131262?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p2YW5kYw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="IEEE754" / class="lazyload" data-src="https://img-blog.csdn.net/20180723223131262?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p2YW5kYw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></p>
 </li>
 <li>
 <p>一个URL的构成因素</p>
@@ -460,21 +478,64 @@
       </tags>
   </entry>
   <entry>
-    <title>Another Day</title>
-    <url>/2019/01/12/Another-Day/</url>
-    <content><![CDATA[<h1 id="别后有天"><a class="markdownIt-Anchor" href="#别后有天"></a> 别后有天</h1>
-<h2 id="相见时难别亦难"><a class="markdownIt-Anchor" href="#相见时难别亦难"></a> 相见时难别亦难</h2>
-<blockquote>
-<p>一年将尽夜 万里未归人</p>
-</blockquote>
-<p><img src="/" alt="风起于青萍 坠于草莽" title="微茫天地" / class="lazyload" data-src="https://cdn.pixabay.com/photo/2018/11/29/23/32/dawn-3846778__340.jpg"></p>
-<p><img src="/" alt="清霜最醉" title="寒芒" / class="lazyload" data-src="https://cdn.magdeleine.co/wp-content/uploads/2018/12/winter_frost_9-860x573.jpg"></p>
-<p>辗转于天地，莫非时间一个回首<br />
-<a href="http://cqu.fnzs.tk">CQU Market</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function Like(You)</span><br><span class="line">&#123;</span><br><span class="line">	alert(&quot;Just For You!&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>LeetCode_Week_7.12</title>
+    <url>/2020/07/13/LeetCode-Week-7-12/</url>
+    <content><![CDATA[<h2 id="5460好数对的数目"><a class="markdownIt-Anchor" href="#5460好数对的数目"></a> 5460.好数对的数目</h2>
+<p>给你一个整数数组 <code>nums</code> 。</p>
+<p>如果一组数字 <code>(i,j)</code> 满足 <code>nums[i]</code> == <code>nums[j]</code> 且 <code>i</code> &lt; <code>j</code> ，就可以认为这是一组 <strong>好数对</strong> 。</p>
+<p>返回好数对的数目。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">输入：nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>]</span><br><span class="line">输出：<span class="number">4</span></span><br><span class="line">解释：有 <span class="number">4</span> 组好数对，分别是 (<span class="number">0</span>,<span class="number">3</span>), (<span class="number">0</span>,<span class="number">4</span>), (<span class="number">3</span>,<span class="number">4</span>), (<span class="number">2</span>,<span class="number">5</span>) ，下标从 <span class="number">0</span> 开始</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：nums &#x3D; [1,1,1,1]</span><br><span class="line">输出：6</span><br><span class="line">解释：数组中的每组数字都是好数对</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：nums &#x3D; [1,2,3]</span><br><span class="line">输出：0</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 100</code></li>
+<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
+</ul>
+<h3 id="初步思路"><a class="markdownIt-Anchor" href="#初步思路"></a> 初步思路</h3>
+<p>找数组中重复的元素，存储重复次数和重复种类，可以考虑用Map，然后根据组合公式</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>C</mi><mi>n</mi><mi>m</mi></msubsup><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false">!</mo></mrow><mrow><mi>m</mi><mo stretchy="false">!</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo stretchy="false">)</mo><mo stretchy="false">!</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">C^m_n=\frac{n!}{m!(n-m)!}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9613919999999999em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7143919999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.30744em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">m</span><span class="mclose">!</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">m</span><span class="mclose">)</span><span class="mclose">!</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="mclose">!</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>后来发现就是狗屁，直接计算重复的累加和就行了，即</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>p</mi></munderover></mrow><annotation encoding="application/x-tex">\sum_{m=1}^k\sum_{i=1}^{p}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.1137820000000005em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8361130000000003em;"><span style="top:-1.882887em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.267113em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6985050000000004em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.347113em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span></span></span></span></span></p>
+<h3 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码🐎</h3>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getARes</span><span class="params">(<span class="keyword">int</span> t)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(t&gt;<span class="number">0</span>)</span><br><span class="line">            res+=t--;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">numIdenticalPairs</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; m = <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> n:nums)&#123;</span><br><span class="line">            m[n]+=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> kv:m)&#123;</span><br><span class="line">            <span class="keyword">if</span>(kv.second&gt;<span class="number">1</span>)</span><br><span class="line">                res+=getARes(kv.second<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="仅含-1-的子串数"><a class="markdownIt-Anchor" href="#仅含-1-的子串数"></a> 仅含 1 的子串数</h2>
+<p>给你一个二进制字符串 <code>s</code>（仅由 ‘0’ 和 ‘1’ 组成的字符串）。</p>
+<p>返回所有字符都为 1 的子字符串的数目。</p>
+<p>由于答案可能很大，请你将它对 10^9 + 7 取模后返回。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;0110111&quot;</span><br><span class="line">输出：9</span><br><span class="line">解释：共有 9 个子字符串仅由 &#39;1&#39; 组成</span><br><span class="line">&quot;1&quot; -&gt; 5 次</span><br><span class="line">&quot;11&quot; -&gt; 3 次</span><br><span class="line">&quot;111&quot; -&gt; 1 次</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;101&quot;</span><br><span class="line">输出：2</span><br><span class="line">解释：子字符串 &quot;1&quot; 在 s 中共出现 2 次</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;111111&quot;</span><br><span class="line">输出：21</span><br><span class="line">解释：每个子字符串都仅由 &#39;1&#39; 组成</span><br></pre></td></tr></table></figure>
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;000&quot;</span><br><span class="line">输出：0</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>s[i] == '0'</code> 或 <code>s[i] == '1'</code></li>
+<li><code>1 &lt;= s.length &lt;= 10^5</code></li>
+</ul>
+<h3 id="初步思路-2"><a class="markdownIt-Anchor" href="#初步思路-2"></a> 初步思路</h3>
+<p>和上题类似，遍历字符串，计算每一个全为1的字串的贡献</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>e</mi><mi>s</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>a</mi><mi>l</mi><mi>l</mi></mrow></munderover><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover></mrow><annotation encoding="application/x-tex">res=\sum_{k=1}^{all}\sum_{i=1}^{k}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.1382260000000004em;vertical-align:-1.302113em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.836113em;"><span style="top:-1.8478869999999998em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.300005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight" style="margin-right:0.01968em;">l</span><span class="mord mathdefault mtight" style="margin-right:0.01968em;">l</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.302113em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8361130000000003em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span></span></span></span></span></p>
+<h3 id="代码-2"><a class="markdownIt-Anchor" href="#代码-2"></a> 代码🐎</h3>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">subRes</span><span class="params">(<span class="keyword">int</span> l)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(l) res=(res+l--)%<span class="number">1000000007</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">numSub</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> c:s)&#123;</span><br><span class="line">            <span class="keyword">if</span>(c==<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">                count+=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(count&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                    res+=subRes(count);</span><br><span class="line">                    count=<span class="number">0</span>;   </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(count) res+=subRes(count);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
       <tags>
-        <tag>Passage</tag>
+        <tag>C/C++</tag>
+        <tag>leetcode</tag>
+        <tag>数组</tag>
+        <tag>周赛</tag>
       </tags>
   </entry>
   <entry>
@@ -562,67 +623,6 @@
       <tags>
         <tag>C/C++</tag>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LeetCode_Week_7.12</title>
-    <url>/2020/07/13/LeetCode-Week-7-12/</url>
-    <content><![CDATA[<h2 id="5460好数对的数目"><a class="markdownIt-Anchor" href="#5460好数对的数目"></a> 5460.好数对的数目</h2>
-<p>给你一个整数数组 <code>nums</code> 。</p>
-<p>如果一组数字 <code>(i,j)</code> 满足 <code>nums[i]</code> == <code>nums[j]</code> 且 <code>i</code> &lt; <code>j</code> ，就可以认为这是一组 <strong>好数对</strong> 。</p>
-<p>返回好数对的数目。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">输入：nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>]</span><br><span class="line">输出：<span class="number">4</span></span><br><span class="line">解释：有 <span class="number">4</span> 组好数对，分别是 (<span class="number">0</span>,<span class="number">3</span>), (<span class="number">0</span>,<span class="number">4</span>), (<span class="number">3</span>,<span class="number">4</span>), (<span class="number">2</span>,<span class="number">5</span>) ，下标从 <span class="number">0</span> 开始</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：nums &#x3D; [1,1,1,1]</span><br><span class="line">输出：6</span><br><span class="line">解释：数组中的每组数字都是好数对</span><br></pre></td></tr></table></figure>
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：nums &#x3D; [1,2,3]</span><br><span class="line">输出：0</span><br></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= nums.length &lt;= 100</code></li>
-<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
-</ul>
-<h3 id="初步思路"><a class="markdownIt-Anchor" href="#初步思路"></a> 初步思路</h3>
-<p>找数组中重复的元素，存储重复次数和重复种类，可以考虑用Map，然后根据组合公式</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>C</mi><mi>n</mi><mi>m</mi></msubsup><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false">!</mo></mrow><mrow><mi>m</mi><mo stretchy="false">!</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mi>m</mi><mo stretchy="false">)</mo><mo stretchy="false">!</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">C^m_n=\frac{n!}{m!(n-m)!}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9613919999999999em;vertical-align:-0.247em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7143919999999999em;"><span style="top:-2.4530000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.30744em;vertical-align:-0.936em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">m</span><span class="mclose">!</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">m</span><span class="mclose">)</span><span class="mclose">!</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="mclose">!</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<p>后来发现就是狗屁，直接计算重复的累加和就行了，即</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>p</mi></munderover></mrow><annotation encoding="application/x-tex">\sum_{m=1}^k\sum_{i=1}^{p}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.1137820000000005em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8361130000000003em;"><span style="top:-1.882887em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.267113em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6985050000000004em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.347113em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span></span></span></span></span></p>
-<h3 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码🐎</h3>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getARes</span><span class="params">(<span class="keyword">int</span> t)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(t&gt;<span class="number">0</span>)</span><br><span class="line">            res+=t--;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">numIdenticalPairs</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; m = <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> n:nums)&#123;</span><br><span class="line">            m[n]+=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> kv:m)&#123;</span><br><span class="line">            <span class="keyword">if</span>(kv.second&gt;<span class="number">1</span>)</span><br><span class="line">                res+=getARes(kv.second<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h2 id="仅含-1-的子串数"><a class="markdownIt-Anchor" href="#仅含-1-的子串数"></a> 仅含 1 的子串数</h2>
-<p>给你一个二进制字符串 <code>s</code>（仅由 ‘0’ 和 ‘1’ 组成的字符串）。</p>
-<p>返回所有字符都为 1 的子字符串的数目。</p>
-<p>由于答案可能很大，请你将它对 10^9 + 7 取模后返回。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;0110111&quot;</span><br><span class="line">输出：9</span><br><span class="line">解释：共有 9 个子字符串仅由 &#39;1&#39; 组成</span><br><span class="line">&quot;1&quot; -&gt; 5 次</span><br><span class="line">&quot;11&quot; -&gt; 3 次</span><br><span class="line">&quot;111&quot; -&gt; 1 次</span><br></pre></td></tr></table></figure>
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;101&quot;</span><br><span class="line">输出：2</span><br><span class="line">解释：子字符串 &quot;1&quot; 在 s 中共出现 2 次</span><br></pre></td></tr></table></figure>
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;111111&quot;</span><br><span class="line">输出：21</span><br><span class="line">解释：每个子字符串都仅由 &#39;1&#39; 组成</span><br></pre></td></tr></table></figure>
-<p><strong>示例 4：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：s &#x3D; &quot;000&quot;</span><br><span class="line">输出：0</span><br></pre></td></tr></table></figure>
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>s[i] == '0'</code> 或 <code>s[i] == '1'</code></li>
-<li><code>1 &lt;= s.length &lt;= 10^5</code></li>
-</ul>
-<h3 id="初步思路-2"><a class="markdownIt-Anchor" href="#初步思路-2"></a> 初步思路</h3>
-<p>和上题类似，遍历字符串，计算每一个全为1的字串的贡献</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>e</mi><mi>s</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>a</mi><mi>l</mi><mi>l</mi><mi mathvariant="normal">为</mi><mn>1</mn><mi mathvariant="normal">字</mi><mi mathvariant="normal">串</mi></mrow></munderover><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi mathvariant="normal">第</mi><mi>k</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">串</mi><mn>1</mn><mi mathvariant="normal">的</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">数</mi></mrow></munderover></mrow><annotation encoding="application/x-tex">res=\sum_{k=1}^{all为1字串}\sum_{i=1}^{第k个字串1的个数}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.1382260000000004em;vertical-align:-1.302113em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.836113em;"><span style="top:-1.8478869999999998em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.300005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span><span class="mord mathdefault mtight" style="margin-right:0.01968em;">l</span><span class="mord mathdefault mtight" style="margin-right:0.01968em;">l</span><span class="mord cjk_fallback mtight">为</span><span class="mord mtight">1</span><span class="mord cjk_fallback mtight">字</span><span class="mord cjk_fallback mtight">串</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.302113em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8361130000000003em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback mtight">第</span><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span><span class="mord cjk_fallback mtight">个</span><span class="mord cjk_fallback mtight">字</span><span class="mord cjk_fallback mtight">串</span><span class="mord mtight">1</span><span class="mord cjk_fallback mtight">的</span><span class="mord cjk_fallback mtight">个</span><span class="mord cjk_fallback mtight">数</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span></span></span></span></span></p>
-<h3 id="代码-2"><a class="markdownIt-Anchor" href="#代码-2"></a> 代码🐎</h3>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">subRes</span><span class="params">(<span class="keyword">int</span> l)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(l) res=(res+l--)%<span class="number">1000000007</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">numSub</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> c:s)&#123;</span><br><span class="line">            <span class="keyword">if</span>(c==<span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">                count+=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(count&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                    res+=subRes(count);</span><br><span class="line">                    count=<span class="number">0</span>;   </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(count) res+=subRes(count);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>leetcode</tag>
-        <tag>数组</tag>
-        <tag>周赛</tag>
       </tags>
   </entry>
   <entry>
@@ -727,7 +727,7 @@ setattr(instance,attr,value)修改现有实例</p>
 <p>动态规划！！！</p>
 <h3 id="418"><a class="markdownIt-Anchor" href="#418"></a> 4.18</h3>
 <p><a href="https://leetcode-cn.com/problems/container-with-most-water/">leetcode-11.盛最多水的容器</a><br />
-<img src="/" alt="leetcode-11" / class="lazyload" data-src="https://tva4.sinaimg.cn/large/a540b426gy1gdxo3pen39j20hv0jjt9o.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="leetcode-11" / class="lazyload" data-src="https://tva4.sinaimg.cn/large/a540b426gy1gdxo3pen39j20hv0jjt9o.jpg"></p>
 <h4 id="解法-2"><a class="markdownIt-Anchor" href="#解法-2"></a> 解法</h4>
 <p><strong>双指针法</strong><br />
 维护两个指针，起始分别指向两端，同时记录最大的盛水量，接着移动较短的指针（避免短板效应，移动短的可能出现盛水量增加的情况，移动长的一定减少），比较并决定是否更新最大盛水量。</p>
@@ -768,14 +768,14 @@ setattr(instance,attr,value)修改现有实例</p>
 <h2 id="细雨"><a class="markdownIt-Anchor" href="#细雨"></a> 细雨</h2>
 <p>长廊的尽头是被风拂过的翠绿 少了些许红艳的点缀 但却丝毫没有单调的气氛<br />
 只要有那些晶莹透亮的山风细雨就满足了</p>
-<p><img src="/" alt="细雨斜风作晓寒" title="细雨斜风作晓寒" / class="lazyload" data-src="/img/xfxy.jpg"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="细雨斜风作晓寒" title="细雨斜风作晓寒" / class="lazyload" data-src="/img/xfxy.jpg"></p>
 <h2 id="乳花"><a class="markdownIt-Anchor" href="#乳花"></a> 乳花</h2>
 <p>我站立在无尽的白桦林的边缘，漫天的黄沙是我的眼睛蒙上了一层浑浊的水雾。<br />
 我不知道哪座山背后栖息着来自故乡的啼鸣，我只是走着，走着。</p>
-<p><img src="/" alt="雪沫乳花浮午盏" title="雪沫乳花浮午盏" / class="lazyload" data-src="http://ppe.oss-cn-shenzhen.aliyuncs.com/collections/130/2/thumb.jpg"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="雪沫乳花浮午盏" title="雪沫乳花浮午盏" / class="lazyload" data-src="http://ppe.oss-cn-shenzhen.aliyuncs.com/collections/130/2/thumb.jpg"></p>
 <h2 id="清欢"><a class="markdownIt-Anchor" href="#清欢"></a> 清欢</h2>
 <p>最好是有阳光的 梳着无限细分的发丝的 清圆的脸<br />
-<img src="/" alt="人间有味是清欢" title="人间有味是清欢" / class="lazyload" data-src="/img/rjyw.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="人间有味是清欢" title="人间有味是清欢" / class="lazyload" data-src="/img/rjyw.jpg"></p>
 <h1 id="徒步亦是逆旅-从来依依不舍"><a class="markdownIt-Anchor" href="#徒步亦是逆旅-从来依依不舍"></a> 徒步亦是逆旅 从来依依不舍</h1>
 ]]></content>
       <categories>
@@ -791,7 +791,7 @@ setattr(instance,attr,value)修改现有实例</p>
     <content><![CDATA[<h3 id="初夏新风"><a class="markdownIt-Anchor" href="#初夏新风"></a> 初夏，新风</h3>
 <blockquote>
 <p>没有燥热，没有暴雨，新来的日子数着天过着，我往复的看着，没有丝毫犹豫，却张张惶惶。<br />
-<img src="/" alt="img" / class="lazyload" data-src="https://tvax1.sinaimg.cn/large/a540b426gy1gepzptc08oj23402bsx6q.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="img" / class="lazyload" data-src="https://tvax1.sinaimg.cn/large/a540b426gy1gepzptc08oj23402bsx6q.jpg"></p>
 </blockquote>
 <p>我们算不算《后浪》，我是不是《后浪》，我从不曾思考过这个问题，似乎显然我已经将自己置身于事外了。但是其实是一种痴缠的无理，算便是算，不算便是不算，一张弃权票显得那么真实又让我低语、无言。</p>
 <p>东京几时下雨，几时放晴，会不会被淹没，人们往哪里去，站在黄昏的高楼看夕阳时，我会不会想到这些呢？似乎我不太在意那个最刺眼的，更加青睐层次分明，有着明显过度的朦胧，无论冷暖。或许还是更偏心于蓝色的冷漠，但其实是蓄意渲染的悲凉，用这些来浸润一种似乎是从灵魂中冒出来的支撑、慰藉的凄寒。</p>
@@ -799,16 +799,16 @@ setattr(instance,attr,value)修改现有实例</p>
 <h3 id="东京暴雨"><a class="markdownIt-Anchor" href="#东京暴雨"></a> 东京，暴雨</h3>
 <blockquote>
 <p>是否会有一场这样的雨，因你而起，因我难终。<br />
-<img src="/" alt="东京、雨" / class="lazyload" data-src="https://tva4.sinaimg.cn/large/a540b426gy1geq0sfd3ilj21bs0ovkjl.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="东京、雨" / class="lazyload" data-src="https://tva4.sinaimg.cn/large/a540b426gy1geq0sfd3ilj21bs0ovkjl.jpg"></p>
 </blockquote>
 <p>雨还在下，不过不在我的天空，风还在吹，吹到了我的天台，惊扰了蜷在杂物里的幼猫。 享受雨天的静僻，那种被阴暗覆没，世界将倾倒，唯我安宁的感觉，刺激着隐匿在人类基因里的洞穴记忆。一团火载一群人，映半盏旧梦。难以想起当雨一直下，阴郁替代光亮的感受，但至少这个春天我们体验了一次“东京”之“雨”。</p>
 <p>或许可以升华到一个烂俗的高度，但是现实就是学校里的钟铃比手机里无数个闹钟更加震撼，路上比床上更舒心，坦荡。</p>
 <p>如果帆高不知道、那梵高会不会知道，但我知道，璠高一定知道。<br />
-<img src="/" alt="阳菜" / class="lazyload" data-src="https://tvax2.sinaimg.cn/large/a540b426gy1geq23ddbfbj21hc0u07wh.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="阳菜" / class="lazyload" data-src="https://tvax2.sinaimg.cn/large/a540b426gy1geq23ddbfbj21hc0u07wh.jpg"></p>
 <h3 id="北斗疏星"><a class="markdownIt-Anchor" href="#北斗疏星"></a> 北斗，疏星</h3>
 <blockquote>
 <p>天旋地转，当时空交错，你是否还知道，何处是天枢<br />
-<img src="/" alt="北斗、星轨" / class="lazyload" data-src="https://tva1.sinaimg.cn/large/a540b426gy1geq286nuwfj21110kudh6.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="北斗、星轨" / class="lazyload" data-src="https://tva1.sinaimg.cn/large/a540b426gy1geq286nuwfj21110kudh6.jpg"></p>
 </blockquote>
 <p>似乎想了很久，但是一直拖延，直到没了热情，就死在半路。所幸能够寻得闲情，终以夙愿。它们旋转到屋檐后面，无谓的躲藏？我们向西行进，原地踏步，以银河之眼，亦是渺茫，便舍弃自作多情。</p>
 <p>星辰、宇宙、人与世界。</p>
@@ -831,31 +831,6 @@ setattr(instance,attr,value)修改现有实例</p>
 ]]></content>
       <tags>
         <tag>passage</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>来世聚散</title>
-    <url>/2019/01/27/%E6%9D%A5%E4%B8%96%E8%81%9A%E6%95%A3/</url>
-    <content><![CDATA[<h1 id="浮云吹作雪"><a class="markdownIt-Anchor" href="#浮云吹作雪"></a> 浮云吹作雪</h1>
-<blockquote>
-<p>月，阴晴圆缺，如你的发梢</p>
-</blockquote>
-<p>转眼又是如此的岁末年初，对于年这个从古至今深深烙印在中国人脑海记忆深处的印记，我似乎是丧失了只停留在儿时的敏锐的嗅觉<br />
-转而觉得难以忘却的，更多的化成了一种时过境迁，命途难测<br />
-感时伤事的道理，竟是如此的令人萧条<br />
-<img src="/" alt="寒冰冻，珠钗掉" title="珠钗掉" / class="lazyload" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548591653184&amp;di=7a5fb12124ca3e891fa552178fed8b2f&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20190111%2F4066627e6c364360b5eef23caa369cd0.jpeg"></p>
-<h1 id="世味煮成茶"><a class="markdownIt-Anchor" href="#世味煮成茶"></a> 世味煮成茶</h1>
-<blockquote>
-<p>结，年年今夜，悄悄地缠绕</p>
-</blockquote>
-<p>说不清楚，依旧是那样的繁复纠缠地事务。却没了一种完成后的依托，它的经由也是如此的凄冷。<br />
-<img src="/" alt="花飞尽 草无垠" title="花飞尽" / class="lazyload" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548599683372&amp;di=29881c1f7cee12899f26b23741695f91&amp;imgtype=0&amp;src=http%3A%2F%2Fpic.rmb.bdstatic.com%2F49cf8854a349611ec5198d5ccb3dc93b.jpeg"></p>
-]]></content>
-      <categories>
-        <category>文辞</category>
-      </categories>
-      <tags>
-        <tag>聚 散</tag>
       </tags>
   </entry>
   <entry>
@@ -1260,7 +1235,7 @@ setattr(instance,attr,value)修改现有实例</p>
 <li>函数变量</li>
 </ul>
 <h3 id="osi七层5层tcp四层各层功能"><a class="markdownIt-Anchor" href="#osi七层5层tcp四层各层功能"></a> OSI七层/5层/TCP四层各层功能</h3>
-<p><img src="/" alt="参考" / class="lazyload" data-src="https://tva3.sinaimg.cn/large/a540b426gy1gdmqafzuxkj20id0butd4.jpg"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="参考" / class="lazyload" data-src="https://tva3.sinaimg.cn/large/a540b426gy1gdmqafzuxkj20id0butd4.jpg"></p>
 <ul>
 <li>主机间的传输
 <ul>
@@ -1481,9 +1456,9 @@ setattr(instance,attr,value)修改现有实例</p>
 <ul>
 <li>进程有其自己的地址空间,包括代码段和数据段,打开文件描述符,PCB块,进程ID等</li>
 <li>进程之间不能共享资源,而属于同一个进程的线程之间则可以共享资源.如地址空间等,但是线程有自己独有的栈和栈指针,程序计数器等.<br />
-<img src="/" alt="线程&amp;进程&amp;协程1" / class="lazyload" data-src="https://pic2.zhimg.com/v2-0286f1c2a82b32a8aad5bf42fb04f1f2_r.jpg"><br />
-<img src="/" alt="2" / class="lazyload" data-src="https://pic4.zhimg.com/v2-f1380c8d9bd70517a8390c707cadbb80_r.jpg"><br />
-<img src="/" alt="3" / class="lazyload" data-src="https://pic3.zhimg.com/v2-71da6e6200b101f7cca936f72ff4ffcc_r.jpg"></li>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="线程&amp;进程&amp;协程1" / class="lazyload" data-src="https://pic2.zhimg.com/v2-0286f1c2a82b32a8aad5bf42fb04f1f2_r.jpg"><br />
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="2" / class="lazyload" data-src="https://pic4.zhimg.com/v2-f1380c8d9bd70517a8390c707cadbb80_r.jpg"><br />
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="3" / class="lazyload" data-src="https://pic3.zhimg.com/v2-71da6e6200b101f7cca936f72ff4ffcc_r.jpg"></li>
 </ul>
 <center><a link="https://www.zhihu.com/question/25532384/answer/720946992">线程和进程的区别是什么？ - 无与童比的回答 - 知乎</a></center>
 <br>
@@ -1511,7 +1486,7 @@ setattr(instance,attr,value)修改现有实例</p>
 <p>域名解析过程<br />
 查找浏览器缓存 ——&gt; 查找操作系统缓存 ——&gt; 查找路由器缓存 ——&gt; 查找本地DNS缓存 ——&gt; 递归查询<br />
 （DNS：域名和IP地址相互映射的一个分布式数据库）<br />
-<img src="/" alt="DNS查询" title="DNS查询" / class="lazyload" data-src="https://image-static.segmentfault.com/364/224/3642243792-5911b7a9a4a24_articlex"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="DNS查询" title="DNS查询" / class="lazyload" data-src="https://image-static.segmentfault.com/364/224/3642243792-5911b7a9a4a24_articlex"></p>
 </li>
 <li>
 <p><strong>HTTP常见状态码</strong><br />
@@ -1545,7 +1520,7 @@ C++通过Virtual关键字声明一个虚函数,实现使用指向子类实例的
 <h3 id="多继承及其问题"><a class="markdownIt-Anchor" href="#多继承及其问题"></a> 多继承及其问题</h3>
 <p>多继承就是同一个对象继承自多个父类<br />
 会产生问题,比如菱形继承,不仅会出现二义性,而且在子类中还会保存多个父类的副本,浪费空间.解决办法,对于二义性,可以使用作用域限定,对于多个副本,可以使用虚继承.</p>
-<p><img src="/" alt="C++ 继承" / class="lazyload" data-src="https://img-blog.csdnimg.cn/20190116230607742.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW8zNDA0,size_16,color_FFFFFF,t_70"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="C++ 继承" / class="lazyload" data-src="https://img-blog.csdnimg.cn/20190116230607742.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW8zNDA0,size_16,color_FFFFFF,t_70"></p>
 <h3 id="tcp三次握手四次挥手"><a class="markdownIt-Anchor" href="#tcp三次握手四次挥手"></a> TCP三次握手&amp;四次挥手</h3>
 <ul>
 <li>
@@ -1555,7 +1530,7 @@ C++通过Virtual关键字声明一个虚函数,实现使用指向子类实例的
 <li>A向B发送一个SYN同步信号表示要建立连接,同时带上了其随机生成生成初始序列号,ISN,然后进入到SYN_SNET状态.</li>
 <li>B收到后回复一个SYN同步信号和ACK信号表示接收到了A发来的请求,也带上其随机生成的初始序列号然后进入SYN_RECV状态</li>
 <li>A收到B发来的SYN信号后,就会回复一个ACK用以确认.然后进入到ESTABLISHED单方面连接建立状态.B收到ACK后也进入ESTABLISHED状态,连接建立完成.<br />
-<img src="/" alt="" title="3次握手" / class="lazyload" data-src="https://img-blog.csdn.net/20180717202520531?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4OTUwMzE2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></li>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="" title="3次握手" / class="lazyload" data-src="https://img-blog.csdn.net/20180717202520531?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4OTUwMzE2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></li>
 </ul>
 </li>
 <li>
@@ -1594,7 +1569,7 @@ C++通过Virtual关键字声明一个虚函数,实现使用指向子类实例的
 <li>B发送完数据后,再发送一个FIN表示关闭进入LAST-ACK状态</li>
 <li>A收到FIN后发送一个ACK用以确认然后进入TIME-WAIT状态,等待2MSL后就进入CLOSED状态</li>
 <li>B收到ACK后就会进入CLOSE状态<br />
-<img src="/" alt="" title="4次挥手" / class="lazyload" data-src="https://img-blog.csdn.net/20180717204202563?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4OTUwMzE2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></li>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="" title="4次挥手" / class="lazyload" data-src="https://img-blog.csdn.net/20180717204202563?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM4OTUwMzE2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></li>
 </ul>
 </li>
 <li>
@@ -1666,7 +1641,7 @@ C++通过Virtual关键字声明一个虚函数,实现使用指向子类实例的
 </li>
 <li>
 <p>Serializable/序列化<br />
-<img src="/" alt="" title="隔离级别" / class="lazyload" data-src="https://img-blog.csdn.net/20170725154818659"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="" title="隔离级别" / class="lazyload" data-src="https://img-blog.csdn.net/20170725154818659"></p>
 </li>
 </ul>
 <h3 id="redis为什么高效"><a class="markdownIt-Anchor" href="#redis为什么高效"></a> Redis为什么高效</h3>
@@ -1683,7 +1658,7 @@ C++通过Virtual关键字声明一个虚函数,实现使用指向子类实例的
 <li>poll：把select的数据结构从数组换成了链表，解决了最大长度限制的问题。</li>
 <li>epoll：采用的是哈希表实现，当IO被激活时，系统将其加入一个就绪队列并通知相关进程，相关进程只需要遍历这部分就绪进程就行了。大大提高了效率。并且epoll只需要一次的fd拷贝，也没有最大数量限制。</li>
 </ul>
-<p><img src="/" alt="" title="对比" / class="lazyload" data-src="https://tvax3.sinaimg.cn/large/a540b426gy1gddh9h4da3j20oi0i3q4e.jpg"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="" title="对比" / class="lazyload" data-src="https://tvax3.sinaimg.cn/large/a540b426gy1gddh9h4da3j20oi0i3q4e.jpg"></p>
 ]]></content>
       <categories>
         <category>面试</category>
@@ -1692,6 +1667,31 @@ C++通过Virtual关键字声明一个虚函数,实现使用指向子类实例的
         <tag>计算机网络</tag>
         <tag>操作系统</tag>
         <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>来世聚散</title>
+    <url>/2019/01/27/%E6%9D%A5%E4%B8%96%E8%81%9A%E6%95%A3/</url>
+    <content><![CDATA[<h1 id="浮云吹作雪"><a class="markdownIt-Anchor" href="#浮云吹作雪"></a> 浮云吹作雪</h1>
+<blockquote>
+<p>月，阴晴圆缺，如你的发梢</p>
+</blockquote>
+<p>转眼又是如此的岁末年初，对于年这个从古至今深深烙印在中国人脑海记忆深处的印记，我似乎是丧失了只停留在儿时的敏锐的嗅觉<br />
+转而觉得难以忘却的，更多的化成了一种时过境迁，命途难测<br />
+感时伤事的道理，竟是如此的令人萧条<br />
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="寒冰冻，珠钗掉" title="珠钗掉" / class="lazyload" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548591653184&amp;di=7a5fb12124ca3e891fa552178fed8b2f&amp;imgtype=0&amp;src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20190111%2F4066627e6c364360b5eef23caa369cd0.jpeg"></p>
+<h1 id="世味煮成茶"><a class="markdownIt-Anchor" href="#世味煮成茶"></a> 世味煮成茶</h1>
+<blockquote>
+<p>结，年年今夜，悄悄地缠绕</p>
+</blockquote>
+<p>说不清楚，依旧是那样的繁复纠缠地事务。却没了一种完成后的依托，它的经由也是如此的凄冷。<br />
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="花飞尽 草无垠" title="花飞尽" / class="lazyload" data-src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548599683372&amp;di=29881c1f7cee12899f26b23741695f91&amp;imgtype=0&amp;src=http%3A%2F%2Fpic.rmb.bdstatic.com%2F49cf8854a349611ec5198d5ccb3dc93b.jpeg"></p>
+]]></content>
+      <categories>
+        <category>文辞</category>
+      </categories>
+      <tags>
+        <tag>聚 散</tag>
       </tags>
   </entry>
   <entry>
@@ -1735,7 +1735,7 @@ dp[i][j]=\left\{
 <h4 id="滑动窗口"><a class="markdownIt-Anchor" href="#滑动窗口"></a> 滑动窗口</h4>
 <ul>
 <li>
-<p><img src="/" alt="滑动窗口" / class="lazyload" data-src="https://pic.leetcode-cn.com/9ed48b9b51214a8bafffcad17356d438b4c969b4999623247278d23f1e43977f-%E9%94%99%E5%BC%80%E6%AF%94%E8%BE%83.gif"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="滑动窗口" / class="lazyload" data-src="https://pic.leetcode-cn.com/9ed48b9b51214a8bafffcad17356d438b4c969b4999623247278d23f1e43977f-%E9%94%99%E5%BC%80%E6%AF%94%E8%BE%83.gif"></p>
 </li>
 <li>
 <p>思想就是逐个对齐，然后在当前的对齐条件下寻找最大的</p>
@@ -2086,8 +2086,8 @@ G(n)=\sum_{i=1}^nG(n-1)\times G(n-i)
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>d</mi><mi>p</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo>=</mo><mi>d</mi><mi>p</mi><mo stretchy="false">[</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo stretchy="false">]</mo><mo>+</mo><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>i</mi><mo>−</mo><mn>1</mn></mrow></msubsup><mi>n</mi><mi>u</mi><mi>m</mi><mi>s</mi><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo><mo>&gt;</mo><mi>n</mi><mi>u</mi><mi>m</mi><mi>s</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">dp[i]=dp[i-1]+\sum_{j=0}^{i-1} nums[j]&gt;nums[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">p</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">p</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.400382em;vertical-align:-0.43581800000000004em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.964564em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.43581800000000004em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mord mathdefault">s</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mord mathdefault">s</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span></p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">reversePairs</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.size()==<span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">dp</span><span class="params">(nums.size(),<span class="number">0</span>)</span></span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;nums.size();i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[j]&gt;nums[i]) dp[i]++;</span><br><span class="line">            &#125;</span><br><span class="line">            dp[i] += dp[i<span class="number">-1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[nums.size()<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>然而，创业未半而中道崩殂<br />
-<img src="/" alt="image" / class="lazyload" data-src="https://tvax2.sinaimg.cn/large/a540b426gy1ge4mj3hqgnj20il05hgln.jpg"><br />
-<img src="/" alt="image" / class="lazyload" data-src="https://tva2.sinaimg.cn/large/a540b426gy1ge4mju0pdxj214i084gm7.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="image" / class="lazyload" data-src="https://tvax2.sinaimg.cn/large/a540b426gy1ge4mj3hqgnj20il05hgln.jpg"><br />
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="image" / class="lazyload" data-src="https://tva2.sinaimg.cn/large/a540b426gy1ge4mju0pdxj214i084gm7.jpg"></p>
 <h4 id="归并教作人"><a class="markdownIt-Anchor" href="#归并教作人"></a> 归并教作人</h4>
 <p>其实上面的过程无非是时间复杂度为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>，所以只需要把时间复杂度降下来就可以了，因此可以考虑<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(nlogn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>甚至<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>，本着万物皆可hash的思想，原本想hash一把梭，但是梭了20分钟没什么d用，就果断题解了。</p>
 <p>从未想过，居然是merge，也就是分治，在合并的过程中计算逆序对数。<br />
@@ -2174,13 +2174,13 @@ G(n)=\sum_{i=1}^nG(n-1)\times G(n-i)
 </ol>
 <p></p>
 <p>示例 1：<br />
-<img src="/" alt="img" / class="lazyload" data-src="https://tva3.sinaimg.cn/large/a540b426gy1ge8n7p0hfkj204e03zt8k.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="img" / class="lazyload" data-src="https://tva3.sinaimg.cn/large/a540b426gy1ge8n7p0hfkj204e03zt8k.jpg"></p>
 <blockquote>
 <p>输入：nums = [[1,2,3],[4,5,6],[7,8,9]]<br />
 输出：[1,4,2,7,5,3,8,6,9]</p>
 </blockquote>
 <p>示例 2：<br />
-<img src="/" alt="img" / class="lazyload" data-src="https://tvax2.sinaimg.cn/large/a540b426gy1ge8n7p5pk5j206e04x3yj.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="img" / class="lazyload" data-src="https://tvax2.sinaimg.cn/large/a540b426gy1ge8n7p5pk5j206e04x3yj.jpg"></p>
 <blockquote>
 <p>输入：nums = [[1,2,3,4,5],[6,7],[8],[9,10,11],[12,13,14,15,16]]<br />
 输出：[1,6,2,8,7,3,9,4,12,10,5,13,11,14,15,16]</p>
@@ -2480,13 +2480,13 @@ map内的vector无需初始化</p>
 <h4 id="旋转"><a class="markdownIt-Anchor" href="#旋转"></a> <strong>旋转</strong></h4>
 <ul>
 <li>LL，left child left subtree （右单旋）<br />
-<img src="/" alt="LL" / class="lazyload" data-src="https://tva1.sinaimg.cn/large/a540b426gy1gde3ydnnkaj20mv097q68.jpg"></li>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="LL" / class="lazyload" data-src="https://tva1.sinaimg.cn/large/a540b426gy1gde3ydnnkaj20mv097q68.jpg"></li>
 <li>RR（左单旋）<br />
-<img src="/" alt="RR" / class="lazyload" data-src="https://tva2.sinaimg.cn/large/a540b426gy1gde3yec9bwj20p2099q8i.jpg"></li>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="RR" / class="lazyload" data-src="https://tva2.sinaimg.cn/large/a540b426gy1gde3yec9bwj20p2099q8i.jpg"></li>
 <li>LR（先左后右双旋转）<br />
-<img src="/" alt="LR" / class="lazyload" data-src="https://tva3.sinaimg.cn/large/a540b426gy1gde3ydutsbj20mt0arteo.jpg"></li>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="LR" / class="lazyload" data-src="https://tva3.sinaimg.cn/large/a540b426gy1gde3ydutsbj20mt0arteo.jpg"></li>
 <li>RL（先右后左）<br />
-<img src="/" alt="RL" / class="lazyload" data-src="https://tva1.sinaimg.cn/large/a540b426gy1gde3ye5rncj20mc0a4tes.jpg"></li>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="RL" / class="lazyload" data-src="https://tva1.sinaimg.cn/large/a540b426gy1gde3ye5rncj20mc0a4tes.jpg"></li>
 </ul>
 <h3 id="哈夫曼树最优二叉树"><a class="markdownIt-Anchor" href="#哈夫曼树最优二叉树"></a> 哈夫曼树/最优二叉树</h3>
 <p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>W</mi><mi>P</mi><mi>L</mi><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>w</mi><mi>i</mi></msub><mo>×</mo><msub><mi>l</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">WPL=\sum^{n}_{i=1}w_i\times l_i
@@ -2547,14 +2547,14 @@ path[]:path[i]表示从v0到i之间的最短路径的前驱结点，可以还原
 <h3 id="floyd算法"><a class="markdownIt-Anchor" href="#floyd算法"></a> <strong>Floyd算法</strong></h3>
 <p><a href="https://www.cnblogs.com/wangyuliang/p/9216365.html">Floyd-傻子也能看懂的弗洛伊德算法</a></p>
 <h2 id="查找-2"><a class="markdownIt-Anchor" href="#查找-2"></a> 查找</h2>
-<p><img src="/" alt="查找" / class="lazyload" data-src="https://tva1.sinaimg.cn/large/a540b426gy1gdelwr1z8rj20hk0bstcs.jpg"></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="查找" / class="lazyload" data-src="https://tva1.sinaimg.cn/large/a540b426gy1gdelwr1z8rj20hk0bstcs.jpg"></p>
 <h3 id="顺序查找"><a class="markdownIt-Anchor" href="#顺序查找"></a> <strong>顺序查找</strong></h3>
 <p>略</p>
 <h3 id="折半二分查找"><a class="markdownIt-Anchor" href="#折半二分查找"></a> <strong>折半/二分查找</strong></h3>
 <p>略</p>
 <h3 id="分块查找"><a class="markdownIt-Anchor" href="#分块查找"></a> 分块查找</h3>
 <p>吸收顺序和二分的优点<br />
-<img src="/" alt="image" / class="lazyload" data-src="https://tva3.sinaimg.cn/large/a540b426gy1ge3u9y0ltaj20oo07iae5.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="image" / class="lazyload" data-src="https://tva3.sinaimg.cn/large/a540b426gy1ge3u9y0ltaj20oo07iae5.jpg"></p>
 <h3 id="b树"><a class="markdownIt-Anchor" href="#b树"></a> <strong>B树</strong></h3>
 <p>多路平衡查找树，B树中所有结点的孩子节点数的最大值为B树的阶，通常用m表示。<br />
 1. 树中每个结点至多有m棵子树<br />
@@ -2562,7 +2562,7 @@ path[]:path[i]表示从v0到i之间的最短路径的前驱结点，可以还原
 3. 除根结点外所有非叶子结点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">⌈</mo><mi>m</mi><mi mathvariant="normal">/</mi><mn>2</mn><mo stretchy="false">⌉</mo></mrow><annotation encoding="application/x-tex">\lceil m/2 \rceil</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌈</span><span class="mord mathdefault">m</span><span class="mord">/</span><span class="mord">2</span><span class="mclose">⌉</span></span></span></span>棵子树，也就是至少<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">⌈</mo><mi>m</mi><mi mathvariant="normal">/</mi><mn>2</mn><mo stretchy="false">⌉</mo><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\lceil m/2 \rceil-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌈</span><span class="mord mathdefault">m</span><span class="mord">/</span><span class="mord">2</span><span class="mclose">⌉</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span><br />
 4. n-P0-K1-P1-K2-P2-…-Kn-Pn（结点构成，n为结点中关键字的个数）<br />
 5. 叶子结点都在同一层，实际上不存在，上一层直接指向空<br />
-<img src="/" alt="3阶B树" / class="lazyload" data-src="https://tvax2.sinaimg.cn/large/a540b426gy1gdenfn2nvkj20hb07etc3.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="3阶B树" / class="lazyload" data-src="https://tvax2.sinaimg.cn/large/a540b426gy1gdenfn2nvkj20hb07etc3.jpg"></p>
 <h4 id="查找-3"><a class="markdownIt-Anchor" href="#查找-3"></a> 查找</h4>
 <h4 id="插入-2"><a class="markdownIt-Anchor" href="#插入-2"></a> 插入</h4>
 <ul>
@@ -2618,7 +2618,7 @@ path[]:path[i]表示从v0到i之间的最短路径的前驱结点，可以还原
 <p>时间复杂度<br />
 空间复杂度w<br />
 稳定性：相同元素顺序不变<br />
-<img src="/" alt="sort" / class="lazyload" data-src="https://tva4.sinaimg.cn/large/a540b426gy1ge3tygle3mj20g20amwih.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="sort" / class="lazyload" data-src="https://tva4.sinaimg.cn/large/a540b426gy1ge3tygle3mj20g20amwih.jpg"></p>
 <h3 id="插入排序"><a class="markdownIt-Anchor" href="#插入排序"></a> 插入排序</h3>
 <h4 id="直接插入排序"><a class="markdownIt-Anchor" href="#直接插入排序"></a> 直接插入排序</h4>
 <p>有序序列L[1…i-1] <strong>|</strong> L(i) <strong>|</strong> 无序序列L[i+1…n]<br />
@@ -2675,7 +2675,7 @@ path[]:path[i]表示从v0到i之间的最短路径的前驱结点，可以还原
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AdjustDown</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;<span class="built_in">list</span>, <span class="keyword">int</span> k, <span class="keyword">int</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span> * k + <span class="number">1</span>; i &lt; len; i = i * <span class="number">2</span> + <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">list</span>[i] &lt; <span class="built_in">list</span>[i + <span class="number">1</span>] &amp;&amp; i &lt; len)</span><br><span class="line">        &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">list</span>[i] &lt; <span class="built_in">list</span>[k])</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">list</span>[k] = <span class="built_in">list</span>[k] ^ <span class="built_in">list</span>[i];</span><br><span class="line">            <span class="built_in">list</span>[i] = <span class="built_in">list</span>[k] ^ <span class="built_in">list</span>[i];</span><br><span class="line">            <span class="built_in">list</span>[k] = <span class="built_in">list</span>[k] ^ <span class="built_in">list</span>[i];<span class="comment">//奇怪的交换增加了</span></span><br><span class="line">            k = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BuildHeap</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;<span class="built_in">list</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = (<span class="built_in">list</span>.size() - <span class="number">1</span>) / <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        AdjustDown(<span class="built_in">list</span>, i, <span class="built_in">list</span>.size());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">HeapSort</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;<span class="built_in">list</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    BuildHeap(<span class="built_in">list</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="built_in">list</span>.size() - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> tmp = <span class="built_in">list</span>[<span class="number">0</span>];</span><br><span class="line">        <span class="built_in">list</span>[<span class="number">0</span>] = <span class="built_in">list</span>[i];</span><br><span class="line">        <span class="built_in">list</span>[i] = tmp;</span><br><span class="line"></span><br><span class="line">        AdjustDown(<span class="built_in">list</span>, <span class="number">0</span>, i - <span class="number">1</span>);</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="built_in">list</span>[i] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="归并排序"><a class="markdownIt-Anchor" href="#归并排序"></a> 归并排序</h4>
 <p>将<strong>两个或两个以上</strong>有序表组合成新的有序表，自底向上。<br />
-<img src="/" alt="归并" / class="lazyload" data-src="https://tvax4.sinaimg.cn/large/a540b426gy1gdgx56r431j20hu08n77c.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="归并" / class="lazyload" data-src="https://tvax4.sinaimg.cn/large/a540b426gy1gdgx56r431j20hu08n77c.jpg"></p>
 <ul>
 <li>空间效率 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></li>
 <li>时间效率：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>×</mo><mo stretchy="false">⌈</mo><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><mi>n</mi><mo stretchy="false">⌉</mo><mo>=</mo><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)\times \lceil log_2n \rceil = O(nlog_2n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌈</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">n</span><span class="mclose">⌉</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></li>
@@ -2687,7 +2687,7 @@ path[]:path[i]表示从v0到i之间的最短路径的前驱结点，可以还原
 <p>多关键字排序思想，适用于数字排序，字符串也可用。<br />
 有高位优先（MSD）和低位优先（LSD）两种。<br />
 不多bb，看例子<br />
-<img src="/" alt="image" / class="lazyload" data-src="https://tvax4.sinaimg.cn/large/a540b426gy1ge3t74bnz2j20ly08zq9p.jpg"></p>
+<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="image" / class="lazyload" data-src="https://tvax4.sinaimg.cn/large/a540b426gy1ge3t74bnz2j20ly08zq9p.jpg"></p>
 <p>先考察个位，再十位，再百位</p>
 <ul>
 <li>空间效率：O®，r是基数位数这里是10</li>
@@ -2706,6 +2706,77 @@ path[]:path[i]表示从v0到i之间的最短路径的前驱结点，可以还原
       <tags>
         <tag>算法</tag>
         <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode周赛202</title>
+    <url>/2020/08/16/leetcode%E5%91%A8%E8%B5%9B202/</url>
+    <content><![CDATA[<h2 id="leetcode周赛-202"><a class="markdownIt-Anchor" href="#leetcode周赛-202"></a> <a href="https://leetcode-cn.com/contest/weekly-contest-202">LeetCode周赛-202</a></h2>
+<h3 id="t3-5489-两球之间的磁力"><a class="markdownIt-Anchor" href="#t3-5489-两球之间的磁力"></a> T3 <a href="https://leetcode-cn.com/problems/magnetic-force-between-two-balls/">5489. 两球之间的磁力</a></h3>
+<p>在代号为 C-137 的地球上，Rick 发现如果他将两个球放在他新发明的篮子里，它们之间会形成特殊形式的磁力。Rick 有 <code>n</code> 个空的篮子，第 <code>i</code> 个篮子的位置在 <code>position[i]</code> Morty 想把 <code>m</code> 个球放到这些篮子里，使得任意两球间 <strong>最小磁力</strong> 最大。已知两个球如果分别位于 <code>x</code> 和 <code>y</code> ，那么它们之间的磁力为 <code>|x - y|</code> 。给你一个整数数组 <code>position</code> 和一个整数 <code>m</code> ，请你返回最大化的最小磁力。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="img" / class="lazyload" data-src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/08/16/q3v1.jpg"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：position &#x3D; [1,2,3,4,7], m &#x3D; 3</span><br><span class="line">输出：3</span><br><span class="line">解释：将 3 个球分别放入位于 1，4 和 7 的三个篮子，两球间的磁力分别为 [3, 3, 6]。最小磁力为 3 。我们没办法让最小磁力大于 3 。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：position &#x3D; [5,4,3,2,1,1000000000], m &#x3D; 2</span><br><span class="line">输出：999999999</span><br><span class="line">解释：我们使用位于 1 和 1000000000 的篮子时最小磁力最大。</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>n == position.length</code></li>
+<li><code>2 &lt;= n &lt;= 10^5</code></li>
+<li><code>1 &lt;= position[i] &lt;= 10^9</code></li>
+<li>所有 <code>position</code> 中的整数 <strong>互不相同</strong> 。</li>
+<li><code>2 &lt;= m &lt;= position.length</code></li>
+</ul>
+<h4 id="算法二分"><a class="markdownIt-Anchor" href="#算法二分"></a> 算法：二分</h4>
+<p>最小：相邻槽位的最小值</p>
+<p>最大：总长度/分成的间隔数（球数-1）</p>
+<p>检查：所需球数 &gt; 规定的球数</p>
+<h4 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h4>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;pos;</span><br><span class="line">    <span class="keyword">int</span> ballCnt;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> dis)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> cnt = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> prev = pos[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> p:pos)&#123;</span><br><span class="line">            <span class="keyword">if</span>(p - prev &gt;= dis)&#123;</span><br><span class="line">                ++cnt;</span><br><span class="line">                prev = p;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//early stop</span></span><br><span class="line">            <span class="comment">//todo</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cnt &gt;= ballCnt;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maxDistance</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; <span class="built_in">position</span>, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">        sort(<span class="built_in">position</span>.<span class="built_in">begin</span>(), <span class="built_in">position</span>.<span class="built_in">end</span>());</span><br><span class="line">        pos = <span class="built_in">position</span>;</span><br><span class="line">        ballCnt = m;</span><br><span class="line">        <span class="keyword">int</span> maxDis = (<span class="built_in">position</span>.back() - <span class="built_in">position</span>[<span class="number">0</span>]) / (m<span class="number">-1</span>), minDis = maxDis;</span><br><span class="line">        <span class="keyword">int</span> last = -maxDis;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> p:<span class="built_in">position</span>)&#123;</span><br><span class="line">            minDis = <span class="built_in">min</span>(minDis, p - last);</span><br><span class="line">            last = p;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> l = minDis, r = maxDis, mid, ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(l &lt; r)&#123;</span><br><span class="line">            mid = l - (l - r) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span>(check(mid))&#123;</span><br><span class="line">                ans = mid;</span><br><span class="line">                l = mid + <span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                r = mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(check(l)) <span class="keyword">return</span> l;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="复杂度分析"><a class="markdownIt-Anchor" href="#复杂度分析"></a> 复杂度分析</h4>
+<p>**时间：**遍历：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>，二分<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(log_2n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>，故<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(log_2n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></p>
+<p><strong>空间：</strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></p>
+<h3 id="t4-5490-吃掉-n-个橘子的最少天数hard"><a class="markdownIt-Anchor" href="#t4-5490-吃掉-n-个橘子的最少天数hard"></a> T4 <a href="https://leetcode-cn.com/problems/minimum-number-of-days-to-eat-n-oranges/">5490. 吃掉 N 个橘子的最少天数</a><code>hard</code></h3>
+<p>厨房里总共有 <code>n</code> 个橘子，你决定每一天选择如下方式之一吃这些橘子：</p>
+<ul>
+<li>吃掉一个橘子。</li>
+<li>如果剩余橘子数 <code>n</code> 能被 2 整除，那么你可以吃掉 <code>n/2</code> 个橘子。</li>
+<li>如果剩余橘子数 <code>n</code> 能被 3 整除，那么你可以吃掉 <code>2*(n/3)</code> 个橘子。</li>
+</ul>
+<p>每天你只能从以上 3 种方案中选择一种方案。</p>
+<p>请你返回吃掉所有 <code>n</code> 个橘子的最少天数。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：n &#x3D; 10</span><br><span class="line">输出：4</span><br><span class="line">解释：你总共有 10 个橘子。</span><br><span class="line">第 1 天：吃 1 个橘子，剩余橘子数 10 - 1 &#x3D; 9。</span><br><span class="line">第 2 天：吃 6 个橘子，剩余橘子数 9 - 2*(9&#x2F;3) &#x3D; 9 - 6 &#x3D; 3。（9 可以被 3 整除）</span><br><span class="line">第 3 天：吃 2 个橘子，剩余橘子数 3 - 2*(3&#x2F;3) &#x3D; 3 - 2 &#x3D; 1。</span><br><span class="line">第 4 天：吃掉最后 1 个橘子，剩余橘子数 1 - 1 &#x3D; 0。</span><br><span class="line">你需要至少 4 天吃掉 10 个橘子。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：n &#x3D; 6</span><br><span class="line">输出：3</span><br><span class="line">解释：你总共有 6 个橘子。</span><br><span class="line">第 1 天：吃 3 个橘子，剩余橘子数 6 - 6&#x2F;2 &#x3D; 6 - 3 &#x3D; 3。（6 可以被 2 整除）</span><br><span class="line">第 2 天：吃 2 个橘子，剩余橘子数 3 - 2*(3&#x2F;3) &#x3D; 3 - 2 &#x3D; 1。（3 可以被 3 整除）</span><br><span class="line">第 3 天：吃掉剩余 1 个橘子，剩余橘子数 1 - 1 &#x3D; 0。</span><br><span class="line">你至少需要 3 天吃掉 6 个橘子。</span><br></pre></td></tr></table></figure>
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：n &#x3D; 1</span><br><span class="line">输出：1</span><br></pre></td></tr></table></figure>
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：n &#x3D; 56</span><br><span class="line">输出：6</span><br></pre></td></tr></table></figure>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= n &lt;= 2*10^9</code></li>
+</ul>
+<h4 id="算法bfs哈希表"><a class="markdownIt-Anchor" href="#算法bfs哈希表"></a> 算法：BFS+哈希表</h4>
+<p>每次多种路径，我们自然会想到从上而下的构建一颗树<img src= "data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-lazy-src="/" alt="lc-wk202-t4-tree" / class="lazyload" data-src="https://tva4.sinaimg.cn/large/a540b426ly1ghsx2dws4cj20py0f7glm.jpg"></p>
+<p>本题的关键在于这样的一个事实，我们构建的树包括有太多的重复计算，需要对其进行剪枝处理。不难想到，<strong>当我们以BFS的方式层次地形成这颗树地时候，如果树地节点的数值在之前形成过，那么一定有之前的算法处理步骤要比当前的步骤节省天数</strong>，那么当前的这个就可以不算，也就是剪枝。具体表现为，不将当前的值加入到下一轮的迭代之中，这样可以大幅的减少处理的数量。</p>
+<p>为了记录某个数之前是否出现过，最佳方法自然是使用哈希，也就是用一个哈希表记录运算的历史</p>
+<h4 id="代码-2"><a class="markdownIt-Anchor" href="#代码-2"></a> 代码</h4>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">minDays</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">unordered_set</span>&lt;<span class="keyword">int</span>&gt; isReached;</span><br><span class="line">        <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line">        q.push(n);</span><br><span class="line">        <span class="keyword">int</span> days = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(!q.empty())&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=q.<span class="built_in">size</span>(); i &gt; <span class="number">0</span>; --i)&#123;</span><br><span class="line">                <span class="keyword">int</span> orange = q.front();</span><br><span class="line">                q.pop();</span><br><span class="line">                <span class="keyword">if</span>(orange == <span class="number">0</span>) <span class="keyword">return</span> days;</span><br><span class="line">                <span class="keyword">if</span>(orange % <span class="number">3</span> == <span class="number">0</span> &amp;&amp; isReached.count(orange / <span class="number">3</span>) == <span class="number">0</span>)&#123;</span><br><span class="line">                    q.push(orange / <span class="number">3</span>);</span><br><span class="line">                    isReached.insert(orange / <span class="number">3</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(orange % <span class="number">2</span> == <span class="number">0</span> &amp;&amp; isReached.count(orange / <span class="number">2</span>) == <span class="number">0</span>)&#123;</span><br><span class="line">                    q.push(orange / <span class="number">2</span>);</span><br><span class="line">                    isReached.insert(orange / <span class="number">2</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(isReached.count(orange - <span class="number">1</span>) == <span class="number">0</span>)&#123;</span><br><span class="line">                    q.push(orange - <span class="number">1</span>);</span><br><span class="line">                    isReached.insert(orange - <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            days++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> days;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="复杂度分析-2"><a class="markdownIt-Anchor" href="#复杂度分析-2"></a> 复杂度分析</h4>
+<p>关于时间复杂度，由于数据的不确定性对运算的流程影响比较大，难以估计</p>
+<p>空间复杂度，主要的空间使用为哈希表和队列，这些也和过程有关，也不好说</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>leetcode</tag>
+        <tag>c/c++</tag>
+        <tag>二分</tag>
+        <tag>BFS</tag>
+        <tag>剪枝</tag>
       </tags>
   </entry>
 </search>
