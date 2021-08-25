@@ -1,0 +1,925 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>常见面试题杂记 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="常见面试题杂记">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-04-08 22:18" pubdate>
+        2020年4月8日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      28
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">常见面试题杂记</h1>
+            
+            <div class="markdown-body">
+              <h3 id="磁盘寻道算法"><a href="#磁盘寻道算法" class="headerlink" title="磁盘寻道算法"></a>磁盘寻道算法</h3><ul>
+<li>FCFS:先来先服务</li>
+<li>SSTF：最短寻道时间优先</li>
+<li>SCAN：（电梯调度）扫描算法</li>
+<li>CSCAN：循环扫描算法</li>
+</ul>
+<h3 id="进程线程区别"><a href="#进程线程区别" class="headerlink" title="进程线程区别"></a>进程线程区别</h3><ul>
+<li>进程是操作进行资源分配的基本单位</li>
+<li>线程是任务调度和执行的基本单位</li>
+<li>线程有自己的运行栈和程序计数器PC</li>
+<li>线程使用资源来自其所属进程</li>
+</ul>
+<h3 id="URL到页面渲染"><a href="#URL到页面渲染" class="headerlink" title="URL到页面渲染"></a>URL到页面渲染</h3><ul>
+<li>DNS</li>
+<li>TCP</li>
+<li>HTTP请求</li>
+<li>服务器响应</li>
+<li>浏览器解析</li>
+<li>获取静态资源</li>
+<li>渲染页面</li>
+</ul>
+<h3 id="DNS查找-解析的过程"><a href="#DNS查找-解析的过程" class="headerlink" title="DNS查找/解析的过程"></a>DNS查找/解析的过程</h3><ul>
+<li>浏览器缓存</li>
+<li>系统缓存</li>
+<li>路由器缓存</li>
+<li>根域名服务器</li>
+<li>顶级域名</li>
+<li>主域名服务器</li>
+</ul>
+<h3 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a><strong>虚函数</strong></h3><ul>
+<li>指向子类的父类指针调用子类中与父类同名的方法</li>
+<li>实现运行时多态</li>
+</ul>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><ul>
+<li>对于不同对象接收相同消息时产生不同的动作</li>
+<li><strong>编译时多态</strong><ul>
+<li>函数和运算符的重载</li>
+</ul>
+</li>
+<li><strong>运行时多态</strong><ul>
+<li>虚函数和继承</li>
+</ul>
+</li>
+<li><strong>优点</strong><ul>
+<li>代码复用</li>
+<li>扩展</li>
+<li>接口</li>
+<li>参数统一</li>
+<li>维护性</li>
+</ul>
+</li>
+<li><strong>缺点</strong><ul>
+<li>不能使用子类的成员</li>
+</ul>
+</li>
+</ul>
+<h3 id="重载-amp-重写"><a href="#重载-amp-重写" class="headerlink" title="重载&amp;重写"></a>重载&amp;重写</h3><ul>
+<li>重载：是指允许存在多个同名函数，而这些函数的参数表不同（或许参数个数不同，或许参数类型不同，或许两者都不同）。</li>
+<li>重写：是指子类重新定义父类虚函数的方法。</li>
+</ul>
+<h3 id="多继承-amp-菱形继承"><a href="#多继承-amp-菱形继承" class="headerlink" title="多继承&amp;菱形继承"></a>多继承&amp;菱形继承</h3><ul>
+<li>可能出现菱形继承问题，可以虚继承</li>
+</ul>
+<h3 id="ping协议-ICMP，控制报文协议"><a href="#ping协议-ICMP，控制报文协议" class="headerlink" title="ping协议/ICMP，控制报文协议"></a>ping协议/ICMP，控制报文协议</h3><ul>
+<li>ICMP，TCP/IP协议簇的一个子协议，工作在网络层</li>
+</ul>
+<h3 id="SYN泛洪攻击处理办法"><a href="#SYN泛洪攻击处理办法" class="headerlink" title="SYN泛洪攻击处理办法"></a>SYN泛洪攻击处理办法</h3><ul>
+<li>攻击者利用TCP三次握手的缺陷，大量发生SYN包但是不响应第二次握手，导致服务器产生大量的挂起连接，消耗资源甚至宕机</li>
+<li>可以挂起的连接的超时时间，尽快释放</li>
+<li>对来自同一IP的短时大量连接拒绝响应</li>
+</ul>
+<h3 id="ARP协议-地址解析协议"><a href="#ARP协议-地址解析协议" class="headerlink" title="ARP协议/地址解析协议"></a>ARP协议/地址解析协议</h3><ul>
+<li>以太网中，把IP映射到MAC</li>
+</ul>
+<h3 id="HTTPS以及连接过程"><a href="#HTTPS以及连接过程" class="headerlink" title="HTTPS以及连接过程"></a>HTTPS以及连接过程</h3><ul>
+<li>发送请求</li>
+<li>返回证书</li>
+<li>验证证书生成对称密钥并用服务端公钥加密</li>
+<li>服务端用私钥解密后得到对称密钥，并用堆成密钥加密内容发送给客户端</li>
+<li>客户端解密。。。</li>
+</ul>
+<h3 id="TCP的状态"><a href="#TCP的状态" class="headerlink" title="TCP的状态"></a>TCP的状态</h3><ul>
+<li>建立连接<ul>
+<li>CLOSED：关闭</li>
+<li>LISTEN：监听</li>
+<li>SYN-SENT：发送了SYN请求建立连接</li>
+<li>SYN-RCVD：收到了SYN，发出ACK</li>
+<li>ESTABLISHED：连接建立</li>
+</ul>
+</li>
+<li>释放连接<ul>
+<li>FIN-WAIT-1：发送了关闭请求</li>
+<li>CLOSE-WAIT：收到了FIN请求，等待关闭</li>
+<li>FIN-WAIT-2：收到了ACK</li>
+<li>LAST-ACK：发出了FIN</li>
+<li>TIME-WAIT：收到了SYN，等待2MSL</li>
+<li>CLOSING：同时收到SYN</li>
+</ul>
+</li>
+</ul>
+<h3 id="进程调度算法-FIFO-LRU-权重-RR-多级反馈队列"><a href="#进程调度算法-FIFO-LRU-权重-RR-多级反馈队列" class="headerlink" title="进程调度算法/FIFO LRU 权重 RR 多级反馈队列"></a>进程调度算法/FIFO LRU 权重 RR 多级反馈队列</h3><ul>
+<li>FIFO-先来先服务</li>
+<li>LRU-最近最少使用<ul>
+<li>维护一个最近使用进程的存储数据结构，容量固定，代表最近的使用，同时记录每一个进程的使用次数，新的进程来到时就挑选使用次数最少的替换。</li>
+</ul>
+</li>
+<li>权重优先</li>
+<li>轮转调度</li>
+<li>多级反馈队列<ul>
+<li>Q1-&gt;Q2-&gt;Q3</li>
+</ul>
+</li>
+</ul>
+<h3 id="Redis数据类型-zset等底层"><a href="#Redis数据类型-zset等底层" class="headerlink" title="Redis数据类型/zset等底层"></a>Redis数据类型/zset等底层</h3><ul>
+<li>Redis为什么高效<ul>
+<li>完全基于内存</li>
+<li>数据结构简单</li>
+<li>单线程，避免了上下文切换和竞争</li>
+<li>多路I/O复用，非阻塞IO</li>
+<li>全程使用Hash结构，读取快</li>
+</ul>
+</li>
+<li>数据类型<ul>
+<li>String<ul>
+<li>二进制安全</li>
+</ul>
+</li>
+<li>Hash</li>
+<li>List</li>
+<li>Set<ul>
+<li>哈希实现</li>
+</ul>
+</li>
+<li>Zset<ul>
+<li>有序集合</li>
+<li>排好序</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="B树-B-树-B-树"><a href="#B树-B-树-B-树" class="headerlink" title="B树 B+树 B* 树"></a><strong>B树 B+树 B* 树</strong></h3><ul>
+<li>B树<ul>
+<li>平衡多路查找树</li>
+</ul>
+</li>
+<li>B+树</li>
+<li>B*树</li>
+</ul>
+<h3 id="linux常用命令"><a href="#linux常用命令" class="headerlink" title="linux常用命令"></a>linux常用命令</h3><ul>
+<li>cd</li>
+<li>ls<ul>
+<li>ls -l 显示详细信息</li>
+</ul>
+</li>
+<li>cat-读取文件</li>
+<li>rm-删除</li>
+<li>cp</li>
+<li>mv</li>
+<li>mkdir</li>
+<li>kill</li>
+<li>vim</li>
+<li>查询<ul>
+<li>which</li>
+<li>whereis</li>
+<li>locate</li>
+<li>find</li>
+</ul>
+</li>
+<li>chmod</li>
+<li>df</li>
+<li><strong>grep</strong></li>
+<li>ps/process status</li>
+<li>top</li>
+</ul>
+<h3 id="mySQL的引擎极其特点"><a href="#mySQL的引擎极其特点" class="headerlink" title="mySQL的引擎极其特点"></a>mySQL的引擎极其特点</h3><ul>
+<li>innoDB<ul>
+<li>支持事务<ul>
+<li>ACID</li>
+<li>原子性</li>
+<li>一致性</li>
+<li>隔离性</li>
+<li>持久性</li>
+</ul>
+</li>
+<li>支持行锁</li>
+</ul>
+</li>
+<li>MyISAM<ul>
+<li>支持表锁</li>
+<li>查询快</li>
+</ul>
+</li>
+</ul>
+<h3 id="乐观锁和悲观锁"><a href="#乐观锁和悲观锁" class="headerlink" title="乐观锁和悲观锁"></a><strong>乐观锁和悲观锁</strong></h3><ul>
+<li>乐观锁<ul>
+<li>每次读取都认为不会被修改，但是更新的时候会检查，适用于读</li>
+</ul>
+</li>
+<li>悲观锁<ul>
+<li>每次读都认为会被修改，适用于写</li>
+</ul>
+</li>
+</ul>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a><strong>排序</strong></h3><ul>
+<li>选择</li>
+<li>冒泡</li>
+<li>插入</li>
+<li>归并</li>
+<li>堆</li>
+<li>快速</li>
+<li>基数</li>
+</ul>
+<h3 id="Python中的is和-的区别"><a href="#Python中的is和-的区别" class="headerlink" title="Python中的is和==的区别"></a>Python中的is和==的区别</h3><ul>
+<li>is用id判断，本质是一个东西</li>
+<li>==用value判断，可以不是一个东西</li>
+</ul>
+<h3 id="操作系统内存管理"><a href="#操作系统内存管理" class="headerlink" title="操作系统内存管理"></a>操作系统内存管理</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_29677867/article/details/91038642">https://blog.csdn.net/qq_29677867/article/details/91038642</a></li>
+</ul>
+<h3 id="mySQL的索引"><a href="#mySQL的索引" class="headerlink" title="mySQL的索引"></a>mySQL的索引</h3><ul>
+<li>数据结构可视化<a target="_blank" rel="noopener" href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html">https://www.cs.usfca.edu/~galles/visualization/Algorithms.html</a></li>
+<li>B+</li>
+</ul>
+<h3 id="死锁的条件，原因，解决办法"><a href="#死锁的条件，原因，解决办法" class="headerlink" title="死锁的条件，原因，解决办法"></a>死锁的条件，原因，解决办法</h3><ul>
+<li>条件<ul>
+<li>互斥</li>
+<li>非抢占</li>
+<li>请求和保持</li>
+<li>循环等待</li>
+</ul>
+</li>
+<li>原因<ul>
+<li>竞争</li>
+</ul>
+</li>
+<li>解决办法<ul>
+<li>预防<ul>
+<li>破坏互斥条件</li>
+</ul>
+</li>
+<li>避免<ul>
+<li>银行家算法</li>
+</ul>
+</li>
+<li>检测&amp;接触<ul>
+<li>杀死进程</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="黑盒白盒测试"><a href="#黑盒白盒测试" class="headerlink" title="黑盒白盒测试"></a>黑盒白盒测试</h3><ul>
+<li>黑盒<ul>
+<li>已知产品功能设计规格，可以测试功能</li>
+<li>优点：能够站在用户角度思考测试</li>
+<li>缺点：不能测试程序内部的特定部位</li>
+</ul>
+</li>
+<li>白盒<ul>
+<li>已知产品内部工作过程，测试证明内部操作是否经过检查</li>
+<li>能够检验内部，但无法检验外部特性</li>
+</ul>
+</li>
+</ul>
+<h3 id="进程通信和线程通信"><a href="#进程通信和线程通信" class="headerlink" title="进程通信和线程通信"></a>进程通信和线程通信</h3><ul>
+<li>匿名管道<ul>
+<li>半双工</li>
+<li>仅适用于具有亲缘关系的进程</li>
+<li>面向字节流</li>
+<li>同步<ul>
+<li>多个进程一起多，要么读不到，要么读到完整数据</li>
+</ul>
+</li>
+<li>互斥<ul>
+<li>管道为空，禁止读</li>
+<li>管道为满，禁止写</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>命名管道<ul>
+<li>适用于任何进程之间</li>
+<li>其余同</li>
+</ul>
+</li>
+<li>消息队列<ul>
+<li>本质是内核的一个链表</li>
+<li>适用任何进程</li>
+<li>全双工</li>
+<li>面向数据报文</li>
+<li>内置同步互斥机制</li>
+<li>生命周期随内核</li>
+</ul>
+</li>
+<li>共享内存<ul>
+<li>同一块内存通过页表映射到不同的虚拟地址空间，从而实现不同进程对同一块内存的读写</li>
+<li>全双工</li>
+<li>没有同步互斥</li>
+<li>不存在面向字节流或者数据报的说法，就是一块内存</li>
+</ul>
+</li>
+<li>信号量<ul>
+<li>同步互斥</li>
+</ul>
+</li>
+<li>Socket<ul>
+<li>应用层和传输层之间</li>
+<li>封装了TCP/IP的操作</li>
+</ul>
+</li>
+</ul>
+<h3 id="闭包是啥"><a href="#闭包是啥" class="headerlink" title="闭包是啥"></a>闭包是啥</h3><ul>
+<li>词法作用域</li>
+<li>函数变量</li>
+</ul>
+<h3 id="OSI七层-5层-TCP四层各层功能"><a href="#OSI七层-5层-TCP四层各层功能" class="headerlink" title="OSI七层/5层/TCP四层各层功能"></a>OSI七层/5层/TCP四层各层功能</h3><p><img src="https://tva3.sinaimg.cn/large/a540b426gy1gdmqafzuxkj20id0butd4.jpg" srcset="/img/loading.gif" lazyload alt="参考"></p>
+<ul>
+<li>主机间的传输<ul>
+<li>应用层    主机之间建立连接</li>
+<li>表示出</li>
+<li>会话层</li>
+</ul>
+</li>
+<li>底层数据流<ul>
+<li>传输层    可靠或不可靠传输，流量控制</li>
+<li>网络层    IP路由</li>
+<li>数据链路层    比特-&gt;字节-&gt;帧</li>
+<li>物理层    比特</li>
+</ul>
+</li>
+</ul>
+<h3 id="元组和列表的区别-Python"><a href="#元组和列表的区别-Python" class="headerlink" title="元组和列表的区别-Python"></a>元组和列表的区别-Python</h3><ul>
+<li>元组不可变</li>
+<li>列表可变</li>
+<li>算法：找出两个链表的第一个公共节点</li>
+<li>算法：最长公共子序列</li>
+</ul>
+<h3 id="set-list-map"><a href="#set-list-map" class="headerlink" title="set list map"></a>set list map</h3><ul>
+<li><strong>List</strong><ul>
+<li>允许重复</li>
+<li>允许多个null</li>
+<li>有序</li>
+<li>ArrayList LinkedList Vector</li>
+</ul>
+</li>
+<li><strong>Set</strong><ul>
+<li>不允许重复</li>
+<li>无序</li>
+<li>只允许一个null</li>
+<li>HashSet LinkedHashSet TreeSet</li>
+</ul>
+</li>
+<li><strong>Map</strong><ul>
+<li>一个接口</li>
+<li>键值</li>
+<li>随意个null值和一个null键</li>
+<li>HashMap LinkedHashMap HashTable TreeMap</li>
+</ul>
+</li>
+</ul>
+<h3 id="http请求-get-post"><a href="#http请求-get-post" class="headerlink" title="http请求/get/post"></a>http请求/get/post</h3><ul>
+<li>GET<ul>
+<li>读取数据</li>
+<li>无副作用</li>
+</ul>
+</li>
+<li>POPST<ul>
+<li>提交数据</li>
+<li>有副作用</li>
+</ul>
+</li>
+</ul>
+<h3 id="缓存雪崩-击穿-穿透"><a href="#缓存雪崩-击穿-穿透" class="headerlink" title="缓存雪崩/击穿/穿透"></a>缓存雪崩/击穿/穿透</h3><ul>
+<li>雪崩-集体失效</li>
+<li>击穿-缓存不存在，但是数据库存在，大量访问数据库导致数据库压力过大</li>
+<li>穿透-缓存和数据库都不存在，通常为恶意攻击</li>
+</ul>
+<h3 id="线程共享进程的什么"><a href="#线程共享进程的什么" class="headerlink" title="线程共享进程的什么"></a>线程共享进程的什么</h3><ul>
+<li>共享<ul>
+<li>代码段</li>
+<li>全局变量</li>
+<li>文件</li>
+</ul>
+</li>
+<li>独享<ul>
+<li>堆栈</li>
+<li>程序计数器</li>
+<li>寄存器</li>
+</ul>
+</li>
+</ul>
+<h3 id="中断，CPU在中断时会干嘛"><a href="#中断，CPU在中断时会干嘛" class="headerlink" title="中断，CPU在中断时会干嘛"></a>中断，CPU在中断时会干嘛</h3><ul>
+<li>当前指令结束</li>
+<li>判断终端类型</li>
+<li>保存现场</li>
+<li>设置为中断模式</li>
+<li>跳转到中断处理程序入口</li>
+<li>执行中断处理程序</li>
+<li>跳转回来</li>
+<li>恢复系现场</li>
+</ul>
+<h3 id="TCP流量控制"><a href="#TCP流量控制" class="headerlink" title="TCP流量控制"></a>TCP流量控制</h3><ul>
+<li>滑动窗口</li>
+<li>发送窗口，接收窗口，拥塞窗口的关系</li>
+<li>拥塞窗口的变化规律</li>
+<li>算法：找出和为k的所有数对</li>
+<li>算法：单链表按照中间左右的顺序输出 12345-》32415</li>
+<li>版本号？</li>
+</ul>
+<h3 id="websocket"><a href="#websocket" class="headerlink" title="websocket"></a>websocket</h3><ul>
+<li>应用层</li>
+</ul>
+<h3 id="Redis性能为什么这么高"><a href="#Redis性能为什么这么高" class="headerlink" title="Redis性能为什么这么高"></a>Redis性能为什么这么高</h3><p><a target="_blank" rel="noopener" href="https://lkds.github.io/2020/03/31/%E9%9D%A2%E8%AF%95%E5%B8%B8%E8%80%83%E7%82%B9/#Redis%E4%B8%BA%E4%BB%80%E4%B9%88%E9%AB%98%E6%95%88">Redis 为什么高效</a></p>
+<h3 id="事务-特性"><a href="#事务-特性" class="headerlink" title="事务/特性"></a>事务/特性</h3><ul>
+<li>ACID</li>
+</ul>
+<h3 id="select-poll-epoll"><a href="#select-poll-epoll" class="headerlink" title="select poll epoll"></a>select poll epoll</h3><ul>
+<li>select<ul>
+<li>轮询</li>
+<li>线性</li>
+<li>O（n）</li>
+<li>数量限制</li>
+</ul>
+</li>
+<li>poll<ul>
+<li>轮询</li>
+<li>拷贝到内核</li>
+<li>链表</li>
+<li>无上限</li>
+</ul>
+</li>
+<li>epoll<ul>
+<li>红黑树存储Socket</li>
+<li>双向链表保存就绪态的</li>
+<li>O（1）</li>
+</ul>
+</li>
+<li>算法：10亿个数字取最小的100个/最大堆/大顶堆</li>
+<li>HTTP为什么时TCP<ul>
+<li>主要还是因为TCP面向连接，可靠</li>
+<li>但是也可以使用UDP之类的，因为HTTP是应用层协议，TCP是传输层，只要能达到目的，用什么协议都是可以的</li>
+</ul>
+</li>
+</ul>
+<h3 id="虚拟地址和物理地址"><a href="#虚拟地址和物理地址" class="headerlink" title="虚拟地址和物理地址"></a>虚拟地址和物理地址</h3><ul>
+<li>虚拟地址将所有的存储介质（硬盘和内存）统一规划，实现存储空间的扩容</li>
+<li>物理地址为内存地址</li>
+<li>虚拟地址到物理地址的映射<ul>
+<li>页表</li>
+<li>段</li>
+<li>段页式<ul>
+<li>把程序分段，段内分页</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>碎片<ul>
+<li>外部碎片：由于不连续的地址分配导致存在因为空间太小而无法分配的未分配空间，磁盘整理解决</li>
+<li>内部碎片：已分配的未使用空间，可以不解决</li>
+</ul>
+</li>
+</ul>
+<h3 id="大量数据排序"><a href="#大量数据排序" class="headerlink" title="大量数据排序"></a>大量数据排序</h3><blockquote>
+<p>1、对于内存足够大的大量数据排序，一般来说用归并排序比较好的，因为他的读取次数会比较少（在数据挖掘的理论里面，读取次数越少，排序方法越快），同时是稳定的；<br>2、但是如果内存空间不足，就自然要减少次数了，所以也可以用快速排序，快速排序是目前基于比较的内部排序中被认为是最好的方法，当待排序的关键字是随机分布时，快速排序的平均时间最短；<br>3、也可以利用堆排序，当N很大时，并且有序程度低时，堆排序最快（当N很大时，并且有序程度高时，快速排序最快 ）。</p>
+</blockquote>
+<h3 id="算法：股票问题"><a href="#算法：股票问题" class="headerlink" title="算法：股票问题"></a>算法：股票问题</h3><ul>
+<li>Q1：买卖一次，求最大<ul>
+<li>最大-最小<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span> *price,<span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> minPrice = *price;</span><br><span class="line">    <span class="keyword">int</span> maxProfit = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(minPrice &gt; *(price+i))&#123;</span><br><span class="line">            minPrice = *(price+i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(maxProfit&lt; (*(price+i)-minPrice))&#123;</span><br><span class="line">            maxProfit = (*(price+i)-minPrice));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxProfit;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>Q2：买卖任意次，求最大<ul>
+<li>前-后的最大值和<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span> *price,<span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> profit = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(*(price)&gt;*(price<span class="number">-1</span>))&#123;</span><br><span class="line">            sum+=*(price)-*(price<span class="number">-1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>Q3：买卖k次，求最大<ul>
+<li>动态规划，记录前面的最大差值</li>
+<li>当k足够大时，退化为无限次问题</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/04/23/leetcode-4-13-4-19/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">leetcode_4.13-4.19</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/04/08/STL/">
+                        <span class="hidden-mobile">C++ STL简单总结</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

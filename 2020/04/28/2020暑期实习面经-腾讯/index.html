@@ -1,0 +1,792 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>2020暑期实习面经--腾讯 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="2020暑期实习面经--腾讯">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-04-28 10:29" pubdate>
+        2020年4月28日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      29
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">2020暑期实习面经--腾讯</h1>
+            
+            <div class="markdown-body">
+              <h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>腾讯虽然问的问题虽然也不是那么刁钻，中规中矩，但总觉得不是针对实习生的。不过面试官素质还是在的，尽管面的不怎么顺。本来面过了就不想去回首这些东西的，但是为了不白走这一趟，还是顺手记录一下。</p>
+<h3 id="腾讯PCG不知名部门"><a href="#腾讯PCG不知名部门" class="headerlink" title="腾讯PCG不知名部门"></a>腾讯PCG不知名部门</h3><h4 id="相关信息"><a href="#相关信息" class="headerlink" title="相关信息"></a>相关信息</h4><p>目标岗位：移动客户端开发<br>面试平台：腾讯会议视频面试（单方面视频）<br>技术栈：C++<br>时间：4.11</p>
+<h4 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h4><p>其实在面试的前一天就约了一场，但是面试时间从上午10点，拖到下午两点，再拖到下午四点，然后又从四点拖到四点二十，再到五点，再换个手下的人，又说不熟悉简历拖到五点三十，面了四十分钟就草草收场，估计也是不怎么专业，第二天leader亲自面试一场，反正就是迷的一批。说起来，这还算的上是个二面。</p>
+<p>一上来，确认身份，没有废话，直接开问。（以下问题排名随机）<br>问题不给任何反馈，看你没话说了就下一个，不露脸，看不到表情。</p>
+<p><strong>基础知识</strong></p>
+<ul>
+<li>指针和引用<br>太宽泛，不好讲</li>
+<li>sizeof一个指针和一个引用<ul>
+<li><a target="_blank" rel="noopener" href="http://www.blogjava.net/majianan/archive/2006/08/20/64664.html">关于 sizeof() 的一些思考</a></li>
+<li>sizeof(指针)：固定大小32bit系统-4，64bit-8，因为指针存储的是地址，一个64bit系统的地址空间需要64位/8Byte的空间来存</li>
+<li>sizeof(数组)：数组总共大小</li>
+<li>sizeof(string)：固定，具体和编译器有关</li>
+<li>sizeof(引用)：sizeof操作符应用在引用类型上的时候，返回的是包含被引用对象所需的内存长度（即被引用对象的大小）</li>
+<li>sizeof(结构体)：地址对齐后的大小<ul>
+<li>字节对齐的细节和具体编译器实现相关，但一般而言，满足三个准则：</li>
+</ul>
+<ol>
+<li>结构体变量的首地址能够被其最宽基本类型成员的大小所整除；</li>
+<li>结构体每个成员相对于结构体首地址的偏移量都是当前成员大小的整数倍，如有需要编译器会在成员之间加上填充字节；</li>
+<li>结构体的总大小为结构体最宽基本类型成员大小的整数倍，如有需要编译器会在最末一个成员之后加上填充字节。</li>
+</ol>
+</li>
+<li>sizeof(类)：非static数据成员变量+虚函数指针+对齐；无论多少个虚函数，都只有一个指向虚函数表的指针(4字节)</li>
+<li>sizeof(联合体)：最长成员的大小对齐</li>
+</ul>
+</li>
+<li>sizeof和什么有关<ul>
+<li>编译器</li>
+<li>系统位数</li>
+</ul>
+</li>
+<li>vector的插入和删除的复杂度<ul>
+<li>push_back,pop_back O(1)</li>
+<li>insert,erase O(n)</li>
+</ul>
+</li>
+<li>迭代器失效是怎么回事，怎么避免<ul>
+<li>序列式（vector，deque）<ul>
+<li>插入，插入元素以及以后的迭代器失效</li>
+<li>删除，删除元素以及以后的迭代器失效</li>
+<li>扩容：全部失效</li>
+</ul>
+</li>
+<li>关联式（list，map，set）<ul>
+<li>插入：不影响其它</li>
+<li>删除：不影响其它</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>TCP为什么要四次挥手<ul>
+<li>保证稳定传输，需要等待数据传送完成</li>
+</ul>
+</li>
+<li>C++常引用的作用/意义<ul>
+<li>防止修改被引用对象的值</li>
+</ul>
+</li>
+<li>？如何在函数中修改参数的值<ul>
+<li>传引用/指针</li>
+</ul>
+</li>
+<li>信号量和锁的区别，应用场景<ul>
+<li>锁（互斥锁，自旋锁，读写锁）<ul>
+<li>线程之间，只有两种状态，要么能访问，要么不能。用来互斥</li>
+</ul>
+</li>
+<li>信号量<ul>
+<li>多种状态，可以用来互斥，也可以用来同步。比如有限资源的同步。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>map是怎么实现的，查找复杂度<ul>
+<li>红黑树，log（n）</li>
+</ul>
+</li>
+<li>红黑树简单介绍<ul>
+<li>根是黑的</li>
+<li>没有两个相邻的红色节点</li>
+<li>从根到任何根节点的黑色节点数量相同</li>
+</ul>
+</li>
+<li>HTTPS的流程</li>
+</ul>
+<ol>
+<li><p>客户端请求建立SSL连接，并将自己支持的一套加密规则发送给网站。</p>
+</li>
+<li><p>   网站从中选出一组加密算法与HASH算法，并将自己的身份信息以证书的形式发回给浏览器。证书里面包含了网站地址，加密公钥，以及证书的颁发机构等信息</p>
+</li>
+<li><p>获得网站证书之后浏览器要做以下工作：</p>
+<ul>
+<li><p>验证证书的合法性</p>
+</li>
+<li><p>如果证书受信任，浏览器会生成一串随机数的密码，并用证书中提供的公钥加密。</p>
+</li>
+<li><p> 使用约定好的HASH计算握手消息，</p>
+</li>
+<li><p> 使用生成的随机数对消息进行加密，最后将之前生成的所有信息发送给网站。</p>
+</li>
+</ul>
+</li>
+<li><p>网站接收浏览器发来的数据之后要做以下的操作：</p>
+<ul>
+<li><p> 使用自己的私钥将信息解密取出密码</p>
+</li>
+<li><p> 使用密码解密浏览器发来的握手消息，并验证HASH是否与浏览器发来的一致。</p>
+</li>
+<li><p> 使用密码加密一段握手消息，发送给浏览器</p>
+</li>
+</ul>
+</li>
+<li><p>   浏览器解密并计算握手消息的HASH，如果与服务端发来的HASH一致，此时握手结束。</p>
+</li>
+<li><p>   使用随机密码和对称加密算法对传输的数据加密，传输。</p>
+</li>
+</ol>
+<ul>
+<li>对称加密和非对称加密的区别，应用场景</li>
+</ul>
+<ol>
+<li><p>   非对称加密算法：RSA，DSA/DSS，用于在握手过程中加密生成的密码。</p>
+</li>
+<li><p>   对称加密算法：AES，RC4，3DES，用于对真正传输的数据进行加密。</p>
+</li>
+<li><p>   HASH算法：MD5，SHA1，SHA256，验证数据的完整性。</p>
+</li>
+</ol>
+<ul>
+<li>   HTTP与HTTPS的区别：</li>
+</ul>
+<ol start="5">
+<li><p>   https协议需要申请证书。</p>
+</li>
+<li><p>   http是超文本传输协议，明文传输；https使用的是具有安全性的SSL加密传输协议。</p>
+</li>
+<li><p>   http连接简单无状态；https由SSL+HTTP协议构件的可进行加密传输、身份验证的网络协议</p>
+</li>
+</ol>
+<p><strong>项目相关</strong></p>
+<ul>
+<li>一个API请求时间长，怎么排查</li>
+<li>用过的一些辅助开发工具</li>
+</ul>
+<p><strong>算法</strong></p>
+<ul>
+<li>两个链表找交点<ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists/">相交链表</a></li>
+<li>双指针法</li>
+</ul>
+</li>
+<li>k个不同长度的木材截成相同长度的小段n段，求每段的最大长度，精确到小数点后两位。<ul>
+<li>二分</li>
+<li>首先求出最大长度（总长度/段数），然后判断是否满足条件，不满足就二分，直到满足精度或者停止</li>
+</ul>
+</li>
+</ul>
+<p><strong>反问</strong></p>
+<ul>
+<li>有什么建议</li>
+</ul>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><p>应该是在第二天就灰了，随后被下文的企业微信部捞起来鞭尸，知识密度比较大，虽然感觉答得不算差，但是还是拔太行。</p>
+<h3 id="腾讯WXG企业微信部"><a href="#腾讯WXG企业微信部" class="headerlink" title="腾讯WXG企业微信部"></a>腾讯WXG企业微信部</h3><h4 id="相关信息-1"><a href="#相关信息-1" class="headerlink" title="相关信息"></a>相关信息</h4><p>目标岗位：客户端开发<br>面试平台：牛客网（双向视频）<br>技术栈：C++<br>时间：4.13</p>
+<h4 id="过程-1"><a href="#过程-1" class="headerlink" title="过程"></a>过程</h4><p>头天发短信预约时间，约在第二天上午，准时开始，面试官挺严肃。</p>
+<p><strong>基础知识</strong></p>
+<ul>
+<li><p>C++ const介绍<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jiabei521/p/3335676.html">C++中const关键字的使用方法，烦透了一遍一遍的搜，总结一下，加深印象！！！</a></p>
+</li>
+<li><p>四种智能指针</p>
+<ul>
+<li>使用智能指针可以很大程度上的避免频繁的new/malloc delete/free的问题，因为智能指针就是一个类，当超出了类的作用域是，类会自动调用析构函数，析构函数会自动释放资源。</li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wuyepeng/p/9741241.html">C++智能指针总结</a></li>
+</ul>
+</li>
+<li><p>如何在一个被const修饰的函数中修改成员变量的值</p>
+<ul>
+<li>设置成员变量为mutable类型</li>
+<li>more</li>
+</ul>
+</li>
+<li><p>unique_ptr和普通指针大小是否相同</p>
+<ul>
+<li>相同，unique_ptr零开销</li>
+</ul>
+</li>
+<li><p>浏览器输入URL的过程</p>
+<ul>
+<li>参考以前博文</li>
+</ul>
+</li>
+<li><p>HTTP报文格式，组成</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/CodingUniversal/p/7524088.html">http请求报文格式和响应报文格式</a></li>
+<li>HTTP请求报文<ul>
+<li>请求行、请求头部、空行、请求体</li>
+<li>请求行：方法、URL、版本</li>
+<li>请求头：User-Agent、Accept、Host、Cookie</li>
+<li>空行：分割</li>
+<li>请求体：POST</li>
+</ul>
+</li>
+<li>HTTP响应报文<ul>
+<li>状态行</li>
+<li>响应头<ul>
+<li>Location</li>
+<li>Server</li>
+<li>Connection</li>
+<li>WWW-Authenticate</li>
+</ul>
+</li>
+<li>空行</li>
+<li>响应体</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Linux改变文件权限命令</p>
+<ul>
+<li>chmod</li>
+</ul>
+</li>
+<li><p>Linux成员有哪些</p>
+<ul>
+<li>所有者（owner）</li>
+<li>用户组（group）</li>
+<li>其它（others）</li>
+</ul>
+</li>
+<li><p>Linux文件权限有哪些</p>
+<ul>
+<li>读</li>
+<li>写</li>
+<li>执行</li>
+</ul>
+</li>
+<li><p>Linux的文件软连接和硬连接的区别</p>
+<ul>
+<li>硬连接：多个Inode执行同一个block，多重备份。</li>
+<li>软连接：类似快捷方式，源没了就没了</li>
+</ul>
+</li>
+<li><p>计算机如何表示浮点数<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/jvandc/article/details/81176294">浮点数在计算机中的表示</a><br><img src="https://img-blog.csdn.net/20180723223131262?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2p2YW5kYw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" srcset="/img/loading.gif" lazyload alt="IEEE754"></p>
+</li>
+<li><p>一个URL的构成因素</p>
+<ul>
+<li>Scheme: 通信协议，一般为http、https等；</li>
+<li>Host: 服务器的域名主机名或ip地址；</li>
+<li>Port: 端口号，此项为可选项，默认为80；</li>
+<li>Path: 目录，由“/”隔开的字符串，表示的是主机上的目录或文件地址；</li>
+<li>Query: 查询，此项为可选项，可以给动态网页传递参数，用“&amp;”隔开，每个参数的名和值用“=”隔开；</li>
+<li>Fragment: 信息片段，字符串，用于指定网络资源中的某片断；</li>
+</ul>
+</li>
+<li><p>C++三种继承的区别</p>
+<ul>
+<li>Public<ul>
+<li>基类的原本权限是什么样子就是什么样子</li>
+</ul>
+</li>
+<li>Protectd<ul>
+<li>基类的public会变成protectd</li>
+</ul>
+</li>
+<li>private<ul>
+<li>基类的访问权限全部是私有</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>迭代器的种类</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/kai8wei/article/details/77606685">STL迭代器的种类和简介</a></li>
+<li>输入</li>
+<li>输出</li>
+<li>正向</li>
+<li>双向</li>
+<li>随机</li>
+</ul>
+</li>
+<li><p>虚函数的实现</p>
+<ul>
+<li>虚函数表</li>
+</ul>
+</li>
+<li><p>MD5是什么</p>
+<ul>
+<li>哈希</li>
+</ul>
+</li>
+<li><p>举一个无损压缩算法的例子</p>
+<ul>
+<li>算术编码</li>
+<li>LZ77</li>
+<li>LZSS</li>
+<li>LZW</li>
+</ul>
+</li>
+<li><p>UTF-8和Unicode的关系</p>
+<ul>
+<li>UTF-8是Unicode的一个具体实现</li>
+</ul>
+</li>
+</ul>
+<p><strong>项目相关</strong></p>
+<ul>
+<li>如何管理复杂的不同类型的接口<ul>
+<li>版本？</li>
+</ul>
+</li>
+<li>用到了Json API吗（不清楚是什么）<ul>
+<li>或许就是json格式的API？</li>
+</ul>
+</li>
+<li>项目组成</li>
+<li>websocket工作过程</li>
+<li>RESTful API特点<ul>
+<li>基于资源，所有的操作都可以视为对资源的访问</li>
+<li>统一接口，比如GET获取，POST提交，DELETE删除</li>
+<li>无状态</li>
+<li>鉴权</li>
+<li>幂等性，执行多次和一次是一样的</li>
+</ul>
+</li>
+</ul>
+<p><strong>算法</strong><br>有一种彩票，票面由3位1~6的数字组成，获奖号码也是3位1~6的数字。开奖时比较票面和中奖号里相同数字的个数，2个获奖3元，3个获奖10元，其他未中奖。</p>
+<ol>
+<li>写一个算法，输入为票面数字及获奖号码，输出获奖金额。<br>例: <blockquote>
+<p>输入<br>235<br>223<br>输出<br>3</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>暴力，用票面数字和彩票数字对比，（不建议反过来）防止重复计算。O（MN）</li>
+<li>哈希，记录票面数字出现，以数字为键，然后对比中奖号码。O（M+N）</li>
+</ul>
+<ol start="2">
+<li>为了提升彩票销量，运营方做了一个促销活动。购买时不限制票面的数字长度，开奖时可以自由将票面切割为多组彩票进行兑奖。<br>写一个算法，输入票面数字及获奖号码，计算可获得最大收益的兑奖额，可选：输出一种能达到最大兑奖额的切割票面方法。<br>例：<blockquote>
+<p>输入<br>522136131221542364<br>123<br>输出<br>213 312 215 236 = 26</p>
+</blockquote>
+</li>
+</ol>
+<p><strong>Notice</strong><br>不知道怎么解<br>貌似这里一张有效的票只能是三个数字，而且重复的不算</p>
+<h4 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h4><p>不和你多bb，没过多久，灰<br>答得很一般，死有余辜</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>考虑是否应该去研习一下子Java，leetcode接着刷，最好背熟常用函数。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Linux/">Linux</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%BC%80%E5%8F%91/">客户端开发</a>
+                    
+                      <a class="hover-with-bg" href="/tags/C-C/">C/C++</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/05/12/%E5%A4%A9%E6%B0%94%E4%B9%8B%E5%AD%90/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">天气之子</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/04/27/leetcode-4-20-4-26/">
+                        <span class="hidden-mobile">leetcode-4-20-4-26</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

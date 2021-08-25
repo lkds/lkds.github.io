@@ -1,0 +1,500 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>C++ STL简单总结 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="C++ STL简单总结">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-04-08 21:54" pubdate>
+        2020年4月8日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">C++ STL简单总结</h1>
+            
+            <div class="markdown-body">
+              <h2 id="STL简介"><a href="#STL简介" class="headerlink" title="STL简介"></a>STL简介</h2><blockquote>
+<p>Standard Template Library，标准模板库，是C++的标准库之一，一套基于模板的容器类库，还包括许多常用的算法，提高了程序开发效率和复用性。STL包含6大部件：容器、迭代器、算法、仿函数、适配器和空间配置器。</p>
+</blockquote>
+<ol>
+<li>容器：容纳一组元素的对象。</li>
+<li>迭代器：提供一种访问容器中每个元素的方法。</li>
+<li>函数对象：一个行为类似函数的对象，调用它就像调用函数一样。</li>
+<li>算法：包括查找算法、排序算法等等。</li>
+<li>适配器：用来修饰容器等，比如queue和stack，底层借助了deque。</li>
+<li>空间配置器：负责空间配置和管理。</li>
+</ol>
+<h2 id="容器简单特性"><a href="#容器简单特性" class="headerlink" title="容器简单特性"></a>容器简单特性</h2><ol>
+<li>vector：可变大小的数组</li>
+<li>deque：双端队列，支持快速随机访问</li>
+<li>list：双向链表</li>
+<li>priority_queue：堆实现，按照优先级排序</li>
+<li>map：键值对，底层RB Tree 有序 不允许重复的键</li>
+<li>set：只有键，底层RB Tree 有序 不允许重复的键</li>
+<li>unordered_map/set：哈希表实现的map/set</li>
+</ol>
+<h2 id="常见题目"><a href="#常见题目" class="headerlink" title="常见题目"></a>常见题目</h2><h4 id="vector的reserve和resize的区别"><a href="#vector的reserve和resize的区别" class="headerlink" title="vector的reserve和resize的区别"></a>vector的reserve和resize的区别</h4><p><strong>1. reserve()</strong></p>
+<p>它的函数原型是这样的：</p>
+<p>void reserve(size_type n);<br>对于n值的大小，分两种情况：</p>
+<p>（1）如果n大于容器现有的容量（capacity），比如你容器原来是100的容量，我现在指定n=200，那么就需要在自由内存区为整个容器重新分配一块新的更大的连续空间【因为vector是顺序容器，所以存储空间是连续的，如果之前的存储空间不够了，必须这样做】，然后将容器内所有的有效元素从旧位置全部复制到新位置，这个过程是调用拷贝构造函数，然后释放旧位置的所有存储空间，并调整容器的元素位置指示器。所以reserve的时候如果n比原来的大，结果只是让容器的冗余容量（即没有分配元素的存储区）变大，容器的实际大小，即元素个数并没有改变。</p>
+<p>（2）如果n小于容器原来的容量，那么这个函数什么作用都没有。相当于白调用了。</p>
+<p><strong>2. resize()</strong></p>
+<p>它的函数原型是这样的：</p>
+<p>void resize(size_type n, const T&amp; c = T());<br>其中n是要保留的元素个数，如果是要新增元素的话，c则是新增元素的默认初始值。</p>
+<p>对于n值的大小，分三种情况：</p>
+<p>（1）如果n大于容器当前的大小（即容器的size，这里和capacity无关），则在容器的末尾插入n-size()个初始值为c的元素；如果没有指定初始值，那就元素类型的默认构造函数来初始化。</p>
+<p>（2）如果n小于容器当前的大小，则删除末尾的size()-n个元素，这样就导致容器的大小变了，size 变小了。但是这种类型的容器在删除一个元素的时候并不会释放元素本身的内存空间【这也是为了保留这块空间以避免将来要插入新元素的时候又要进行存储空间重分配】，所以容器的容量即capacity其实是没有改变的。</p>
+<p>（3）n等于容器当前的大小，则什么也不做。</p>
+<p>显然，reserve和resize的共同点就是：都不缩减容器本身的容量。即对内存空间并没有影响。那么要是当你觉得容器的容量太多的时候，应该如何缩减容量呢。这时候需要用到一个利用swap函数的技巧。</p>
+<h4 id="vector中size和capacity的区别"><a href="#vector中size和capacity的区别" class="headerlink" title="vector中size和capacity的区别"></a>vector中size和capacity的区别</h4><ul>
+<li>size表示当前vector中有多少个元素（finish - start）</li>
+<li>capacity函数则表示它已经分配的内存中可以容纳多少元素（end_of_storage - start）。</li>
+</ul>
+<h4 id="vector迭代器失效的情况"><a href="#vector迭代器失效的情况" class="headerlink" title="vector迭代器失效的情况"></a>vector迭代器失效的情况</h4><ul>
+<li><p>当插入一个元素到vector中，由于引起了内存重新分配，所以指向原内存的迭代器全部失效。</p>
+</li>
+<li><p>当删除容器中一个元素后,该迭代器所指向的元素已经被删除，那么也造成迭代器失效。erase方法会返回下一个有效的迭代器，所以当我们要删除某个元素时，需要it=vec.erase(it);。</p>
+</li>
+</ul>
+<h4 id="vector扩容"><a href="#vector扩容" class="headerlink" title="vector扩容"></a>vector扩容</h4><ul>
+<li>为什么要成倍增长？<br>时间复杂度O（1）</li>
+<li>为什么是1.5或2？<br>1-2之间的话，之前分配的空间可以直接使用</li>
+</ul>
+<h4 id="vector-deque-list的使用场景"><a href="#vector-deque-list的使用场景" class="headerlink" title="vector deque list的使用场景"></a>vector deque list的使用场景</h4><ul>
+<li>vector-读多写少</li>
+<li>list-写多读少</li>
+<li>deque-从两端操作</li>
+</ul>
+<h4 id="unordered-map-和-map的区别以及使用场景？"><a href="#unordered-map-和-map的区别以及使用场景？" class="headerlink" title="unordered_map 和 map的区别以及使用场景？"></a>unordered_map 和 map的区别以及使用场景？</h4><ul>
+<li>两者存储的结构不一样，unordered_map使用的是hash表作为底层存储，而map使用红黑树作为底层数据结构。所以unordered_map查找速度比map快，但是因为hash表的特点，内存占用也要高。</li>
+<li>同时map里面的元素是有序的，但是unorderedmap是无序的。</li>
+<li>那么综上所述，当我们有频繁查找的需求并且对内存要求不严格时考虑使用unorderedmap，如果希望数据有序，或者对内存要求严格就用map</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1] <a target="_blank" rel="noopener" href="https://blog.csdn.net/daaikuaichuan/article/details/80717222">STL详解及常见面试题</a><br>[2] <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43762200/article/details/85319689">STL容器特点对比</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/C-C/">C/C++</a>
+                    
+                      <a class="hover-with-bg" href="/tags/STL/">STL</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/04/08/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%9D%82%E8%AE%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">常见面试题杂记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/03/31/%E9%9D%A2%E8%AF%95%E5%B8%B8%E8%80%83%E7%82%B9/">
+                        <span class="hidden-mobile">面试常考点</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
